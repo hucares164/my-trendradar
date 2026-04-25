@@ -2,8 +2,8 @@ name: Get Hot News
 
 on:
   schedule:
-    # 每小时第33分钟运行
-    - cron: "33 * * * *"
+    # 每天北京时间 10:00 运行（UTC 02:00）
+    - cron: "0 2 * * *"
 
   workflow_dispatch:
 
