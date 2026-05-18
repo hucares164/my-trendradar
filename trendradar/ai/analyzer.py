@@ -16,13 +16,13 @@ from trendradar.ai.prompt_loader import load_prompt_template
 
 @dataclass
 class AIAnalysisResult:
-    """AI 分析结果"""
-    # 新版 5 核心板块
-    core_trends: str = ""                # 核心热点与舆情态势
-    sentiment_controversy: str = ""      # 舆论风向与争议
-    signals: str = ""                    # 异动与弱信号
-    rss_insights: str = ""               # RSS 深度洞察
-    outlook_strategy: str = ""           # 研判与策略建议
+    """AI 分析结果 - 商业机会深度分析"""
+    # 商业机会分析 5 大板块
+    signal_radar: str = ""                # 信号雷达：新闻分类标注+传导链
+    opportunity_analysis: str = ""       # 机会深度分析：矩阵+PEST+价值链
+    verification_path: str = ""          # 验证路径：MVP+竞争格局
+    predictions: str = ""                # 预判追踪：3月预判+置信度
+    action_suggestions: str = ""         # 行动建议：具体可执行建议
     standalone_summaries: Dict[str, str] = field(default_factory=dict)  # 独立展示区概括 {源ID: 概括}
 
     # 基础元数据
@@ -201,10 +201,6 @@ class AIAnalyzer:
                     result = retry_result
                 else:
                     print("[AI] JSON 修复失败，使用原始文本兜底")
-
-            # 如果配置未启用 RSS 分析，强制清空 AI 返回的 RSS 洞察
-            if not self.include_rss:
-                result.rss_insights = ""
 
             # 如果配置未启用 standalone 分析，强制清空
             if not self.include_standalone:
@@ -591,17 +587,28 @@ class AIAnalyzer:
             else:
                 result.error = "JSON 解析失败"
             # 兜底：使用已提取的 json_str（不含 markdown 标记），避免推送中出现 ```json
-            result.core_trends = json_str[:500] + "..." if len(json_str) > 500 else json_str
+            result.signal_radar = json_str[:500] + "..." if len(json_str) > 500 else json_str
             result.success = True
             return result
 
         # 解析成功，提取字段
         try:
-            result.core_trends = data.get("core_trends", "")
-            result.sentiment_controversy = data.get("sentiment_controversy", "")
-            result.signals = data.get("signals", "")
-            result.rss_insights = data.get("rss_insights", "")
-            result.outlook_strategy = data.get("outlook_strategy", "")
+            # 新版5大板块
+            result.signal_radar = data.get("signal_radar", "")
+            result.opportunity_analysis = data.get("opportunity_analysis", "")
+            result.verification_path = data.get("verification_path", "")
+            result.predictions = data.get("predictions", "")
+            result.action_suggestions = data.get("action_suggestions", "")
+
+            # 兼容旧版字段（如果 AI 返回旧格式）
+            if not result.signal_radar:
+                result.signal_radar = data.get("core_trends", "")
+            if not result.opportunity_analysis:
+                result.opportunity_analysis = data.get("sentiment_controversy", "")
+            if not result.verification_path:
+                result.verification_path = data.get("signals", "")
+            if not result.predictions:
+                result.predictions = data.get("outlook_strategy", "")
 
             # 解析独立展示区概括
             summaries = data.get("standalone_summaries", {})
@@ -613,7 +620,7 @@ class AIAnalyzer:
             result.success = True
         except (KeyError, TypeError, AttributeError) as e:
             result.error = f"字段提取错误: {type(e).__name__}: {e}"
-            result.core_trends = json_str[:500] + "..." if len(json_str) > 500 else json_str
+            result.signal_radar = json_str[:500] + "..." if len(json_str) > 500 else json_str
             result.success = True
 
         return result

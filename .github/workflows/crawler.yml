@@ -83,3 +83,21 @@ jobs:
           S3_REGION: ${{ secrets.S3_REGION }}
           GITHUB_ACTIONS: true
         run: uv run python -m trendradar
+
+      - name: Track predictions
+        if: always()
+        run: |
+          if [ -f scripts/track_predictions.py ]; then
+            python3 scripts/track_predictions.py auto || echo "[追踪] 预判提取跳过"
+          fi
+
+      - name: Commit prediction data
+        if: always()
+        run: |
+          if [ -f output/predictions/predictions.json ]; then
+            git config user.name "TrendRadar Bot"
+            git config user.email "bot@trendradar.local"
+            git add output/predictions/predictions.json
+            git diff --cached --quiet || git commit -m "chore: update prediction tracking data"
+            git push
+          fi
