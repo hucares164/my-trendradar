@@ -1,1 +1,35 @@
-{"predictions": [], "last_updated": ""}
+{
+  "predictions": [
+    {
+      "date": "2026-05-18",
+      "content": "长鑫科技将于未来三个月（至2026年8月）正式提交科创板注册申请，带动半导体设备和材料板块指数上涨超过10%。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-18",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-18",
+      "content": "受「特朗普涉台四不」信号影响，2026年Q3台海风险溢价将下降，半导体板块（尤其是代工厂和封测）的相对估值有望修复5-10%。",
+      "confidence": "低",
+      "signal_type": "F",
+      "verify_date": "2026-08-18",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-18",
+      "content": "基于HVDC技术的数据中心电源厂商将在2026年Q3获得至少一笔来自东南亚或中东客户的超亿元海外订单，相关企业股价将出现显著异动。",
+      "confidence": "低",
+      "signal_type": "PEAD",
+      "verify_date": "2026-08-18",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    }
+  ],
+  "last_updated": "2026-05-18 12:38:18"
+}
