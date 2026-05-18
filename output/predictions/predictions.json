@@ -29,7 +29,37 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-18",
+      "content": "长鑫科技科创板IPO将在6个月内完成注册并上市，上市首日市值不低于3000亿元",
+      "confidence": "高",
+      "signal_type": "F",
+      "verify_date": "2026-11-18",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-18",
+      "content": "三大运营商Token服务推出后3个月内，至少一家中小云计算厂商宣布转型或退出市场",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-18",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-18",
+      "content": "美伊局势若未升级为直接军事冲突，原油价格将在6月底前回落至90美元/桶以下",
+      "confidence": "低",
+      "signal_type": "G",
+      "verify_date": "2026-06-30",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-05-18 12:38:18"
+  "last_updated": "2026-05-18 14:12:27"
 }
