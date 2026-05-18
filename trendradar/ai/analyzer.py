@@ -7,7 +7,10 @@ AI 分析器模块
 """
 
 import json
+import re
 from dataclasses import dataclass, field
+from datetime import datetime
+from pathlib import Path
 from typing import Any, Callable, Dict, List, Optional
 
 from trendradar.ai.client import AIClient
@@ -212,6 +215,11 @@ class AIAnalyzer:
             result.rss_count = rss_total
             result.analyzed_news = analyzed_count
             result.max_news_limit = self.max_news
+
+            # 保存预判数据到追踪文件
+            if result.success and result.predictions:
+                self._save_predictions(result.predictions, current_time)
+
             return result
         except Exception as e:
             error_type = type(e).__name__
@@ -624,3 +632,91 @@ class AIAnalyzer:
             result.success = True
 
         return result
+
+    def _save_predictions(self, predictions_text: str, current_time: str):
+        """
+        从 AI 分析的 predictions 字段中提取结构化预判，
+        保存到追踪文件中。
+
+        预判格式：预判内容[置信度:高/中/低|验证日:YYYY-MM-DD]
+        """
+        if not predictions_text:
+            return
+
+        # 匹配格式：内容[置信度:高/中/低|验证日:YYYY-MM-DD]
+        pattern = r'([^\n\[]+?)\s*\[置信度[:：]\s*(高|中|低)\s*[|｜]\s*验证日[:：]\s*(\d{4}-\d{2}-\d{2})\]'
+        matches = re.findall(pattern, predictions_text)
+
+        if not matches:
+            return
+
+        date_str = current_time[:10] if current_time else datetime.now().strftime("%Y-%m-%d")
+        new_predictions = []
+
+        for content, confidence, verify_date in matches:
+            content = content.strip()
+            # 去除序号前缀
+            content = re.sub(r'^\d+\.\s*', '', content).strip()
+            if not content:
+                continue
+
+            # 推断信号类型
+            signal_type = "P"
+            if any(kw in content for kw in ["高管", "CEO", "管理层", "股权", "违规", "退市", "处罚", "辞职"]):
+                signal_type = "M"
+            elif any(kw in content for kw in ["业绩", "营收", "利润", "订单", "毛利率", "财报"]):
+                signal_type = "PEAD"
+            elif any(kw in content for kw in ["政策", "新规", "补贴", "准入", "监管", "法规"]):
+                signal_type = "P"
+            elif any(kw in content for kw in ["供需", "缺货", "涨价", "产能", "扩产", "停产"]):
+                signal_type = "S"
+            elif any(kw in content for kw in ["地缘", "制裁", "冲突", "外交", "贸易", "封锁"]):
+                signal_type = "G"
+            else:
+                signal_type = "F"
+
+            new_predictions.append({
+                "date": date_str,
+                "content": content,
+                "confidence": confidence,
+                "signal_type": signal_type,
+                "verify_date": verify_date,
+                "status": "pending",
+                "actual_result": "",
+                "deviation_reason": "",
+            })
+
+        if not new_predictions:
+            return
+
+        # 保存到追踪文件
+        pred_dir = Path("output/predictions")
+        pred_dir.mkdir(parents=True, exist_ok=True)
+        pred_file = pred_dir / "predictions.json"
+
+        # 加载现有数据
+        existing = {"predictions": [], "last_updated": ""}
+        if pred_file.exists():
+            try:
+                with open(pred_file, "r", encoding="utf-8") as f:
+                    existing = json.load(f)
+            except (json.JSONDecodeError, IOError):
+                pass
+
+        # 去重：避免同一天重复提取
+        existing_keys = {(p.get("date", ""), p.get("content", "")[:50]) for p in existing.get("predictions", [])}
+        unique_new = [
+            p for p in new_predictions
+            if (p["date"], p["content"][:50]) not in existing_keys
+        ]
+
+        if not unique_new:
+            return
+
+        existing["predictions"].extend(unique_new)
+        existing["last_updated"] = current_time
+
+        with open(pred_file, "w", encoding="utf-8") as f:
+            json.dump(existing, f, ensure_ascii=False, indent=2)
+
+        print(f"[AI] 已保存 {len(unique_new)} 条预判到追踪文件（总计 {len(existing['predictions'])} 条）")
