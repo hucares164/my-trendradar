@@ -368,7 +368,7 @@ storage:
   formats:
     sqlite: true                      # 主存储（必须启用）
     txt: false                        # 是否生成 TXT 快照
-    html: true                       # 是否生成 HTML 报告（⚠️ 邮件推送或者需要看网页版报告必须设为 true）
+    html: false                      # 是否生成 HTML 报告（邮件推送需设为 true，已改用飞书可关闭）
 
   # 本地存储配置
   local:
