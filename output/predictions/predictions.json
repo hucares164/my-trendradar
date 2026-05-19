@@ -89,7 +89,37 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "英伟达Q2财报（2026年6月）AI数据中心业务营收将超出市场预期，但会发出存储与先进制程供应紧张预警",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-08-31",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "未来3个月内（至2026年8月），存储芯片（HBM与大容量SSD）现货价格将维持高位震荡，不会出现明显拐点，因为黄仁勋确认的需求瓶颈短期内无法化解",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-19",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "美以冲突若在2个月内（至2026年7月）未达成停火，国际油价持续高于85美元将导致全球通胀预期反弹，美股科技板块将出现10-15%的修正",
+      "confidence": "中",
+      "signal_type": "G",
+      "verify_date": "2026-08-19",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-05-19 14:06:31"
+  "last_updated": "2026-05-19 17:29:48"
 }
