@@ -179,7 +179,37 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "未来3个月内，A股有色金属（电解铝）板块指数涨幅将跑赢沪深300指数10%以上，得益于「铝加工爆单」S类信号强化。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-19",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "2026Q2英伟达财报中，数据中心业务对先进存储（HBM）的资本支出指引将环比增长超过20%，验证AI算力瓶颈逻辑。",
+      "confidence": "高",
+      "signal_type": "PEAD",
+      "verify_date": "2026-08-31",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "本次普京访华后一个月内，人民币在双边贸易结算中的使用比例将出现可量化的提升（超过5%），而相关跨境支付概念股（如中油资本、新国都）将出现脉冲式上涨。",
+      "confidence": "中",
+      "signal_type": "G",
+      "verify_date": "2026-06-19",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-05-19 17:39:49"
+  "last_updated": "2026-05-19 18:09:21"
 }
