@@ -209,7 +209,37 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "中美AI政府间对话将在3个月内推动至少一项AI安全或数据流通领域的合作框架出炉，利好AI合规和数据服务商。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-19",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "存储芯片价格在2026年下半年开启明确下行周期，国内存储厂商（如兆易创新）毛利率环比下滑，股价承压。",
+      "confidence": "高",
+      "signal_type": "PEAD",
+      "verify_date": "2026-11-19",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "由于地缘冲突持续，WTI原油在2026年夏季（6-8月）期间将有一次突破85美元的脉冲式上涨。",
+      "confidence": "中",
+      "signal_type": "G",
+      "verify_date": "2026-08-31",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-05-19 18:09:21"
+  "last_updated": "2026-05-19 18:24:25"
 }
