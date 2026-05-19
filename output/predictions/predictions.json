@@ -59,7 +59,37 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "2026年8月底前，美伊冲突将在谈判与制裁间反复，布伦特原油价格将在80-95美元/桶区间高位震荡，期间不出现战争全面爆发",
+      "confidence": "中",
+      "signal_type": "G",
+      "verify_date": "2026-08-19",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "2026年9月底前，中国存储芯片厂商（如长鑫科技）将公布至少一项新的扩产计划，单月产能环比提升超过10%",
+      "confidence": "中",
+      "signal_type": "S",
+      "verify_date": "2026-09-19",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "2026年8月底前，由于市场对通胀和地缘冲突定价已较充分，伴随美联储鹰派表态，美股将出现一次超过10%的回调，标普500指数跌破4500点",
+      "confidence": "低",
+      "signal_type": "G",
+      "verify_date": "2026-08-19",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-05-18 14:12:27"
+  "last_updated": "2026-05-19 14:06:31"
 }
