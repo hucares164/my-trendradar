@@ -119,7 +119,37 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "普京访华期间，中俄将签署至少一项新的能源长期供应协议（如天然气管道或LNG），具体涉及年输气量或投资额超千亿人民币。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-19",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "受存储芯片扩产预期影响，三星、SK海力士等存储原厂股价将在未来三个月进一步承压，而中国存储模组及封测企业将获得超额收益。",
+      "confidence": "中",
+      "signal_type": "S",
+      "verify_date": "2026-08-19",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "在伊朗局势未有明确停战信号前，油价将持续在100美元/桶以上宽幅震荡，能源股（如中国石油）将跑赢大盘。",
+      "confidence": "低",
+      "signal_type": "F",
+      "verify_date": "2026-08-19",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-05-19 17:29:48"
+  "last_updated": "2026-05-19 17:34:12"
 }
