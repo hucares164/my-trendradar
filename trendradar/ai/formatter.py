@@ -3,7 +3,7 @@
 AI 分析结果格式化模块
 
 将 AI 分析结果格式化为各推送渠道的样式
-商业机会深度分析版：5大板块 + 独立展示区
+商业机会深度分析版：6大板块 + 独立展示区
 """
 
 import html as html_lib
@@ -69,10 +69,11 @@ def _format_standalone_summaries(summaries: dict) -> str:
 # 各渠道渲染函数
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-# --- 5大板块标题映射 ---
+# --- 6大板块标题映射 ---
 _SECTION_TITLES = {
     "signal_radar": "信号雷达",
     "opportunity_analysis": "机会深度分析",
+    "huawei_chain": "华为产业链",
     "verification_path": "验证路径",
     "predictions": "预判追踪",
     "action_suggestions": "行动建议",

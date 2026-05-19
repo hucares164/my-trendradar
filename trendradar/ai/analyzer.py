@@ -20,9 +20,10 @@ from trendradar.ai.prompt_loader import load_prompt_template
 @dataclass
 class AIAnalysisResult:
     """AI 分析结果 - 商业机会深度分析"""
-    # 商业机会分析 5 大板块
+    # 商业机会分析 6 大板块
     signal_radar: str = ""                # 信号雷达：新闻分类标注+传导链
     opportunity_analysis: str = ""       # 机会深度分析：矩阵+PEST+价值链
+    huawei_chain: str = ""               # 华为产业链分析：环节分组+企业影响
     verification_path: str = ""          # 验证路径：MVP+竞争格局
     predictions: str = ""                # 预判追踪：3月预判+置信度
     action_suggestions: str = ""         # 行动建议：具体可执行建议
@@ -604,9 +605,10 @@ class AIAnalyzer:
 
         # 解析成功，提取字段
         try:
-            # 新版5大板块
+            # 新版6大板块
             result.signal_radar = data.get("signal_radar", "")
             result.opportunity_analysis = data.get("opportunity_analysis", "")
+            result.huawei_chain = data.get("huawei_chain", "")
             result.verification_path = data.get("verification_path", "")
             result.predictions = data.get("predictions", "")
             result.action_suggestions = data.get("action_suggestions", "")

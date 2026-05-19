@@ -128,6 +128,13 @@ class FeishuClient:
                 "content": f"**🎯 机会深度分析**\n{self._format_for_card(result.opportunity_analysis)}"
             })
 
+        # 华为产业链
+        if result.huawei_chain:
+            elements.append({
+                "tag": "markdown",
+                "content": f"**🔗 华为产业链**\n{self._format_for_card(result.huawei_chain)}"
+            })
+
         # 验证路径
         if result.verification_path:
             elements.append({

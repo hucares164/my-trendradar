@@ -127,6 +127,23 @@ rss:
       name: "雅虎财经"
       url: "https://finance.yahoo.com/news/rssindex"
 
+    # ── 华为产业链专项 RSS ──
+    - id: "cls-huawei"
+      name: "财联社-华为"
+      url: "https://rsshub.app/cls/depth/1500"       # 财联社深度-科技
+
+    - id: "wallstreetcn-hw"
+      name: "华尔街见闻-科技"
+      url: "https://rsshub.app/wallstreetcn/global"   # 华尔街见闻全球
+
+    - id: "36kr-hw"
+      name: "36氪-硬科技"
+      url: "https://36kr.com/feed"                     # 36氪全站RSS
+
+    - id: "eastmoney-hw"
+      name: "东方财富-华为概念"
+      url: "https://rsshub.app/eastmoney/report"       # 东财研报
+
     # 自定义源示例
     # - id: "custom-feed"
     #   name: "自定义源"
@@ -251,11 +268,11 @@ display:
   #   1. 在此列表中
   #   2. 下方 regions 中对应开关为 true
   region_order:
-    - new_items                           # 1️⃣ 新增热点区域
+    - ai_analysis                         # 1️⃣ AI 商业机会分析（置顶，优先查看）
     - hotlist                             # 2️⃣ 热榜区域（关键词匹配 / AI 智能筛选）
-    - rss                                 # 3️⃣ RSS 订阅区域
-    - standalone                          # 4️⃣ 独立展示区
-    - ai_analysis                         # 5️⃣ AI 分析区域
+    - new_items                           # 3️⃣ 新增热点区域
+    - rss                                 # 4️⃣ RSS 订阅区域
+    - standalone                          # 5️⃣ 独立展示区
 
   # 推送区域开关
   # 控制各区域是否启用（配合 region_order 使用）
@@ -438,7 +455,7 @@ ai:
   temperature: 1.0                  # 采样温度 (0.0-2.0)
                                     # 注意：部分模型(如 gpt-5)可能要求必须为 1.0，否则会报错
   
-  max_tokens: 8000                  # 最大生成 token 数
+  max_tokens: 10000                 # 最大生成 token 数
                                     # 注意：如果 API 不支持此参数(报 HTTP 400)，请设为 0 以禁用发送
   # 高级选项
   num_retries: 1                    # 失败重试次数
