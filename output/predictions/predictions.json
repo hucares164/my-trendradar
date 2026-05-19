@@ -149,7 +149,37 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "受中国存储厂扩产和三星前高管指引影响，国内半导体设备/材料产业链（如北方华创、中微公司、沪硅产业）在Q3（2026年7-9月）的订单或业绩预期将获得上调。",
+      "confidence": "中",
+      "signal_type": "M",
+      "verify_date": "2026-09-01",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "若美伊谈判未能在短期（1-2周）内达成全面停火，布伦特原油价格将因供给担忧重回100美元/桶上方。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-06-19",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "继百度之后，将有2家以上中国头部互联网/软件公司在Q2财报中明确强调智能体和应用付费业务收入增长，带动AI应用板块出现一轮上涨。",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-08-19",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-05-19 17:34:12"
+  "last_updated": "2026-05-19 17:39:49"
 }
