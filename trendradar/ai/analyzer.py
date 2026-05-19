@@ -218,7 +218,10 @@ class AIAnalyzer:
 
             # 保存预判数据到追踪文件
             if result.success and result.predictions:
-                self._save_predictions(result.predictions, current_time)
+                pred_list = self._save_predictions(result.predictions, current_time)
+                # 写入飞书多维表格
+                if pred_list:
+                    self._write_predictions_to_feishu(pred_list)
 
             return result
         except Exception as e:
@@ -633,22 +636,25 @@ class AIAnalyzer:
 
         return result
 
-    def _save_predictions(self, predictions_text: str, current_time: str):
+    def _save_predictions(self, predictions_text: str, current_time: str) -> list:
         """
         从 AI 分析的 predictions 字段中提取结构化预判，
         保存到追踪文件中。
 
         预判格式：预判内容[置信度:高/中/低|验证日:YYYY-MM-DD]
+
+        Returns:
+            提取到的新预判列表
         """
         if not predictions_text:
-            return
+            return []
 
         # 匹配格式：内容[置信度:高/中/低|验证日:YYYY-MM-DD]
         pattern = r'([^\n\[]+?)\s*\[置信度[:：]\s*(高|中|低)\s*[|｜]\s*验证日[:：]\s*(\d{4}-\d{2}-\d{2})\]'
         matches = re.findall(pattern, predictions_text)
 
         if not matches:
-            return
+            return []
 
         date_str = current_time[:10] if current_time else datetime.now().strftime("%Y-%m-%d")
         new_predictions = []
@@ -711,7 +717,7 @@ class AIAnalyzer:
         ]
 
         if not unique_new:
-            return
+            return []
 
         existing["predictions"].extend(unique_new)
         existing["last_updated"] = current_time
@@ -720,3 +726,18 @@ class AIAnalyzer:
             json.dump(existing, f, ensure_ascii=False, indent=2)
 
         print(f"[AI] 已保存 {len(unique_new)} 条预判到追踪文件（总计 {len(existing['predictions'])} 条）")
+        return unique_new
+
+    def _write_predictions_to_feishu(self, predictions: list):
+        """将预判写入飞书多维表格"""
+        try:
+            from trendradar.ai.feishu import create_feishu_client_from_env
+            client = create_feishu_client_from_env()
+            if client.bitable_configured:
+                # 转换状态为中文
+                for p in predictions:
+                    status_map = {"pending": "待验证", "hit": "命中", "miss": "失误", "expired": "过期"}
+                    p["status"] = status_map.get(p.get("status", ""), "待验证")
+                client.write_predictions(predictions)
+        except Exception as e:
+            print(f"[AI] 飞书多维表格写入跳过: {e}")

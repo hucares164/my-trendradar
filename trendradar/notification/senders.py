@@ -92,9 +92,10 @@ def send_to_feishu(
     ai_analysis: Any = None,
     display_regions: Optional[Dict] = None,
     standalone_data: Optional[Dict] = None,
+    webhook_secret: str = "",
 ) -> bool:
     """
-    发送到飞书（支持分批发送，支持热榜+RSS合并+独立展示区）
+    发送到飞书（支持分批发送，支持热榜+RSS合并+独立展示区，支持签名验证）
 
     Args:
         webhook_url: 飞书 Webhook URL
@@ -110,6 +111,7 @@ def send_to_feishu(
         get_time_func: 获取当前时间的函数
         rss_items: RSS 统计条目列表（可选，用于合并推送）
         rss_new_items: RSS 新增条目列表（可选，用于新增区块）
+        webhook_secret: 飞书 Webhook 签名密钥（可选，启用签名验证时必填）
 
     Returns:
         bool: 发送是否成功
@@ -189,8 +191,20 @@ def send_to_feishu(
             }
 
         try:
+            # 签名验证：如果配置了 webhook_secret，在 URL 中添加签名参数
+            send_url = webhook_url
+            if webhook_secret:
+                import hashlib, base64, hmac as hmac_mod
+                ts = str(int(time.time()))
+                string_to_sign = f"{ts}\n{webhook_secret}"
+                hmac_code = hmac_mod.new(string_to_sign.encode("utf-8"), digestmod=hashlib.sha256).digest()
+                sign = __import__('urllib.parse', fromlist=['quote_plus']).quote_plus(
+                    base64.b64encode(hmac_code).decode("utf-8")
+                )
+                send_url = f"{webhook_url}?timestamp={ts}&sign={sign}"
+
             response = requests.post(
-                webhook_url, headers=headers, json=payload, proxies=proxies, timeout=30
+                send_url, headers=headers, json=payload, proxies=proxies, timeout=30
             )
             if response.status_code == 200:
                 result = response.json()

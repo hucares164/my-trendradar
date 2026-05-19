@@ -423,6 +423,7 @@ class NotificationDispatcher:
                 ai_analysis=ai,
                 display_regions=display_regions or {},
                 standalone_data=sd,
+                webhook_secret=self.config.get("FEISHU_WEBHOOK_SECRET", ""),
             ),
         )
 
