@@ -239,7 +239,37 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-20",
+      "content": "长鑫存储IPO将在未来3个月内获得监管批准，上市首日市值超过4000亿元人民币，带动半导体设备板块（北方华创、中微公司）累计涨幅超15%",
+      "confidence": "中",
+      "signal_type": "P",
+      "verify_date": "2026-08-20",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-20",
+      "content": "受谷歌I/O大会催化，中国光模块龙头（中际旭创、新易盛）在未来两个月内因AI算力需求预期上调而出现单日涨幅超5%的交易日，累计涨幅超20%",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-07-20",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-20",
+      "content": "中美互降关税政策将在未来60天内正式落地，涉及商品将覆盖约200亿美元贸易额，对相应出口导向型上市公司（如家电、光伏组件）带来3-5个百分点的毛利率提升",
+      "confidence": "高",
+      "signal_type": "PEAD",
+      "verify_date": "2026-07-20",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-05-19 18:24:25"
+  "last_updated": "2026-05-20 14:06:06"
 }
