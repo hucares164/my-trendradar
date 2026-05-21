@@ -269,7 +269,37 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-21",
+      "content": "英伟达FY26Q2财报中，数据中心营收将超预期，带动国内光模块企业（中际旭创、新易盛）Q3业绩预告上调",
+      "confidence": "高",
+      "signal_type": "PEAD",
+      "verify_date": "2026-08-20",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-21",
+      "content": "长江存储IPO将在2026年Q4完成辅导验收并正式提交科创板申请，估值不低于6000亿人民币",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-11-30",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-21",
+      "content": "中美AI政府间对话将在2026年Q3促成一项关于AI安全与跨境数据流动的非约束性共同框架，增加AI监管透明度",
+      "confidence": "低",
+      "signal_type": "P",
+      "verify_date": "2026-09-15",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-05-20 14:06:06"
+  "last_updated": "2026-05-21 14:20:24"
 }
