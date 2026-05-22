@@ -299,7 +299,37 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-22",
+      "content": "国网68亿电力机器人采购将在3个月内推动申昊科技、亿嘉和等公司股价涨幅超20%",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-22",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-22",
+      "content": "发改委关于国产算力芯片适配的指导政策，将导致华为昇腾芯片相关合作方（如神州数码、拓维信息）在未来3个月内有显著订单催化公告",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-08-22",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-22",
+      "content": "美对台军售议题将持续发酵，短期内A股半导体国产替代板块（北方华创、中微公司）在台海局势紧张时获得短期炒作动能，但波动剧烈",
+      "confidence": "低",
+      "signal_type": "F",
+      "verify_date": "2026-06-22",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-05-21 14:20:24"
+  "last_updated": "2026-05-22 14:05:04"
 }
