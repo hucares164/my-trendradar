@@ -329,7 +329,37 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-23",
+      "content": "证监会整治境外非法跨境经营正式文件发布后，富途/老虎证券在美股价将在1周内下跌20%以上",
+      "confidence": "高",
+      "signal_type": "F",
+      "verify_date": "2026-06-06",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-23",
+      "content": "受美联储鹰派预期影响，北向资金在6月单月净流出将超过500亿元人民币，拖累上证指数回调至3200点以下",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-06-30",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-23",
+      "content": "美伊冲突升级将推动布伦特原油价格在6月内突破95美元/桶，能源板块跑赢大盘",
+      "confidence": "中",
+      "signal_type": "G",
+      "verify_date": "2026-06-23",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-05-22 14:05:04"
+  "last_updated": "2026-05-23 13:38:24"
 }
