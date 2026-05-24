@@ -359,7 +359,37 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-24",
+      "content": "DeepSeek降价后，API调用量环比增长将超过80%，并在未来3个月内带动国内2-3家头部大模型厂商跟进降价，A股云计算板块（如金山办公、用友网络）将获资金追买，相关公司AI云服务收入季增超30%以上。",
+      "confidence": "高",
+      "signal_type": "F",
+      "verify_date": "2026-08-23",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-24",
+      "content": "山西煤矿事故将引发全国性安全监察，焦煤供给短期偏紧，吨焦利润或上涨20-30%。但鉴于整体产能过剩，影响在3个月内退潮，A股钢铁及焦化板块出现短期脉冲式行情后回到基本面。",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-08-23",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-24",
+      "content": "美伊协议若顺利执行，布伦特原油价格将在3个月内回落10-15%，刺激中石油、中石化等航空/物流成本敏感性标的出现15%以上的阶段性反弹。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-23",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-05-23 13:38:24"
+  "last_updated": "2026-05-24 14:00:02"
 }
