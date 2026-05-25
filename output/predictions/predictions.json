@@ -389,7 +389,37 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-25",
+      "content": "美伊协议大概率不会在2026年Q3前正式签署，布伦特原油将在76-82美元区间震荡",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-25",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-25",
+      "content": "华为2026年手机芯片（逻辑折叠概念）将带动A股半导体指数（885634）在秋季发布前迎来一波主题性上涨，较当前位置涨幅超过15%",
+      "confidence": "高",
+      "signal_type": "F",
+      "verify_date": "2026-09-30",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-25",
+      "content": "以DeepSeek为代表的大模型价格战将在3个月内导致至少2家国内中型AI创业公司（估值10亿以上）宣布关停或被并购，加速行业洗牌",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-25",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-05-24 14:00:02"
+  "last_updated": "2026-05-25 14:26:17"
 }
