@@ -419,7 +419,37 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-26",
+      "content": "中国对日本稀土出口管制将持续至少3个月，稀土价格（如镨钕氧化物）将上涨超15%",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-25",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-26",
+      "content": "到2026年8月底，头部AI应用（如豆包）的付费用户占比将提升至10%以上",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-25",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-26",
+      "content": "到2026年8月底，A股科创50指数将因芯片自主可控和AI商业化双重驱动，突破1600点关口",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-25",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-05-25 14:26:17"
+  "last_updated": "2026-05-26 14:05:11"
 }
