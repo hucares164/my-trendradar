@@ -449,7 +449,37 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-27",
+      "content": "美光科技2026年9月季度营收将因HBM3E需求超市场预期，股价在现有基础上再涨15-30%",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-08-27",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-27",
+      "content": "A股存储芯片概念股（如兆易创新、长鑫存储相关）在2026年8月前将有一波跟涨行情，涨幅领先半导体指数",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-01",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-27",
+      "content": "取消固定分时电价政策将在2026年底前推广至10个以上省份，直接利好储能和智能电网设备商订单增长超20%",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-11-27",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-05-26 14:05:11"
+  "last_updated": "2026-05-27 14:19:04"
 }
