@@ -509,7 +509,18 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-28",
+      "content": "华为鹏/昇腾下一代芯片性能指标（如算力或AI性能）将在未来1-2个月通过第三方媒体（如极客湾）泄露或发布，其性能提升幅度将符合或超越韬定律预期，引发新一轮对华为产业链的战略重估。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-15",
+      "basis": "何庭波详解华为韬定律→该定律暗示芯片性能将指数级进化→第三方媒体或券商将进一步挖掘和验证具体数据",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-05-28 14:10:11"
+  "last_updated": "2026-05-28 17:45:47"
 }
