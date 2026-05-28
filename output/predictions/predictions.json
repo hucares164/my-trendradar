@@ -479,7 +479,37 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-28",
+      "content": "长鑫科技科创板上市首日市值将超过1500亿元人民币",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-07-28",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-28",
+      "content": "华为将在2026年9月前公布一项基于韬定律的新型芯片封装技术方案",
+      "confidence": "低",
+      "signal_type": "F",
+      "verify_date": "2026-08-28",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-28",
+      "content": "香港金管局新规将导致2026年Q3北水南下资金净流入环比下降15%-25%",
+      "confidence": "高",
+      "signal_type": "P",
+      "verify_date": "2026-09-28",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-05-27 14:19:04"
+  "last_updated": "2026-05-28 14:10:11"
 }
