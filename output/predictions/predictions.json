@@ -1,0 +1,526 @@
+{
+  "predictions": [
+    {
+      "date": "2026-05-18",
+      "content": "长鑫科技将于未来三个月（至2026年8月）正式提交科创板注册申请，带动半导体设备和材料板块指数上涨超过10%。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-18",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-18",
+      "content": "受「特朗普涉台四不」信号影响，2026年Q3台海风险溢价将下降，半导体板块（尤其是代工厂和封测）的相对估值有望修复5-10%。",
+      "confidence": "低",
+      "signal_type": "F",
+      "verify_date": "2026-08-18",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-18",
+      "content": "基于HVDC技术的数据中心电源厂商将在2026年Q3获得至少一笔来自东南亚或中东客户的超亿元海外订单，相关企业股价将出现显著异动。",
+      "confidence": "低",
+      "signal_type": "PEAD",
+      "verify_date": "2026-08-18",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-18",
+      "content": "长鑫科技科创板IPO将在6个月内完成注册并上市，上市首日市值不低于3000亿元",
+      "confidence": "高",
+      "signal_type": "F",
+      "verify_date": "2026-11-18",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-18",
+      "content": "三大运营商Token服务推出后3个月内，至少一家中小云计算厂商宣布转型或退出市场",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-18",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-18",
+      "content": "美伊局势若未升级为直接军事冲突，原油价格将在6月底前回落至90美元/桶以下",
+      "confidence": "低",
+      "signal_type": "G",
+      "verify_date": "2026-06-30",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "2026年8月底前，美伊冲突将在谈判与制裁间反复，布伦特原油价格将在80-95美元/桶区间高位震荡，期间不出现战争全面爆发",
+      "confidence": "中",
+      "signal_type": "G",
+      "verify_date": "2026-08-19",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "2026年9月底前，中国存储芯片厂商（如长鑫科技）将公布至少一项新的扩产计划，单月产能环比提升超过10%",
+      "confidence": "中",
+      "signal_type": "S",
+      "verify_date": "2026-09-19",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "2026年8月底前，由于市场对通胀和地缘冲突定价已较充分，伴随美联储鹰派表态，美股将出现一次超过10%的回调，标普500指数跌破4500点",
+      "confidence": "低",
+      "signal_type": "G",
+      "verify_date": "2026-08-19",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "英伟达Q2财报（2026年6月）AI数据中心业务营收将超出市场预期，但会发出存储与先进制程供应紧张预警",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-08-31",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "未来3个月内（至2026年8月），存储芯片（HBM与大容量SSD）现货价格将维持高位震荡，不会出现明显拐点，因为黄仁勋确认的需求瓶颈短期内无法化解",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-19",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "美以冲突若在2个月内（至2026年7月）未达成停火，国际油价持续高于85美元将导致全球通胀预期反弹，美股科技板块将出现10-15%的修正",
+      "confidence": "中",
+      "signal_type": "G",
+      "verify_date": "2026-08-19",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "普京访华期间，中俄将签署至少一项新的能源长期供应协议（如天然气管道或LNG），具体涉及年输气量或投资额超千亿人民币。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-19",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "受存储芯片扩产预期影响，三星、SK海力士等存储原厂股价将在未来三个月进一步承压，而中国存储模组及封测企业将获得超额收益。",
+      "confidence": "中",
+      "signal_type": "S",
+      "verify_date": "2026-08-19",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "在伊朗局势未有明确停战信号前，油价将持续在100美元/桶以上宽幅震荡，能源股（如中国石油）将跑赢大盘。",
+      "confidence": "低",
+      "signal_type": "F",
+      "verify_date": "2026-08-19",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "受中国存储厂扩产和三星前高管指引影响，国内半导体设备/材料产业链（如北方华创、中微公司、沪硅产业）在Q3（2026年7-9月）的订单或业绩预期将获得上调。",
+      "confidence": "中",
+      "signal_type": "M",
+      "verify_date": "2026-09-01",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "若美伊谈判未能在短期（1-2周）内达成全面停火，布伦特原油价格将因供给担忧重回100美元/桶上方。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-06-19",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "继百度之后，将有2家以上中国头部互联网/软件公司在Q2财报中明确强调智能体和应用付费业务收入增长，带动AI应用板块出现一轮上涨。",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-08-19",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "未来3个月内，A股有色金属（电解铝）板块指数涨幅将跑赢沪深300指数10%以上，得益于「铝加工爆单」S类信号强化。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-19",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "2026Q2英伟达财报中，数据中心业务对先进存储（HBM）的资本支出指引将环比增长超过20%，验证AI算力瓶颈逻辑。",
+      "confidence": "高",
+      "signal_type": "PEAD",
+      "verify_date": "2026-08-31",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "本次普京访华后一个月内，人民币在双边贸易结算中的使用比例将出现可量化的提升（超过5%），而相关跨境支付概念股（如中油资本、新国都）将出现脉冲式上涨。",
+      "confidence": "中",
+      "signal_type": "G",
+      "verify_date": "2026-06-19",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "中美AI政府间对话将在3个月内推动至少一项AI安全或数据流通领域的合作框架出炉，利好AI合规和数据服务商。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-19",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "存储芯片价格在2026年下半年开启明确下行周期，国内存储厂商（如兆易创新）毛利率环比下滑，股价承压。",
+      "confidence": "高",
+      "signal_type": "PEAD",
+      "verify_date": "2026-11-19",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-19",
+      "content": "由于地缘冲突持续，WTI原油在2026年夏季（6-8月）期间将有一次突破85美元的脉冲式上涨。",
+      "confidence": "中",
+      "signal_type": "G",
+      "verify_date": "2026-08-31",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-20",
+      "content": "长鑫存储IPO将在未来3个月内获得监管批准，上市首日市值超过4000亿元人民币，带动半导体设备板块（北方华创、中微公司）累计涨幅超15%",
+      "confidence": "中",
+      "signal_type": "P",
+      "verify_date": "2026-08-20",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-20",
+      "content": "受谷歌I/O大会催化，中国光模块龙头（中际旭创、新易盛）在未来两个月内因AI算力需求预期上调而出现单日涨幅超5%的交易日，累计涨幅超20%",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-07-20",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-20",
+      "content": "中美互降关税政策将在未来60天内正式落地，涉及商品将覆盖约200亿美元贸易额，对相应出口导向型上市公司（如家电、光伏组件）带来3-5个百分点的毛利率提升",
+      "confidence": "高",
+      "signal_type": "PEAD",
+      "verify_date": "2026-07-20",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-21",
+      "content": "英伟达FY26Q2财报中，数据中心营收将超预期，带动国内光模块企业（中际旭创、新易盛）Q3业绩预告上调",
+      "confidence": "高",
+      "signal_type": "PEAD",
+      "verify_date": "2026-08-20",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-21",
+      "content": "长江存储IPO将在2026年Q4完成辅导验收并正式提交科创板申请，估值不低于6000亿人民币",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-11-30",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-21",
+      "content": "中美AI政府间对话将在2026年Q3促成一项关于AI安全与跨境数据流动的非约束性共同框架，增加AI监管透明度",
+      "confidence": "低",
+      "signal_type": "P",
+      "verify_date": "2026-09-15",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-22",
+      "content": "国网68亿电力机器人采购将在3个月内推动申昊科技、亿嘉和等公司股价涨幅超20%",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-22",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-22",
+      "content": "发改委关于国产算力芯片适配的指导政策，将导致华为昇腾芯片相关合作方（如神州数码、拓维信息）在未来3个月内有显著订单催化公告",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-08-22",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-22",
+      "content": "美对台军售议题将持续发酵，短期内A股半导体国产替代板块（北方华创、中微公司）在台海局势紧张时获得短期炒作动能，但波动剧烈",
+      "confidence": "低",
+      "signal_type": "F",
+      "verify_date": "2026-06-22",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-23",
+      "content": "证监会整治境外非法跨境经营正式文件发布后，富途/老虎证券在美股价将在1周内下跌20%以上",
+      "confidence": "高",
+      "signal_type": "F",
+      "verify_date": "2026-06-06",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-23",
+      "content": "受美联储鹰派预期影响，北向资金在6月单月净流出将超过500亿元人民币，拖累上证指数回调至3200点以下",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-06-30",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-23",
+      "content": "美伊冲突升级将推动布伦特原油价格在6月内突破95美元/桶，能源板块跑赢大盘",
+      "confidence": "中",
+      "signal_type": "G",
+      "verify_date": "2026-06-23",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-24",
+      "content": "DeepSeek降价后，API调用量环比增长将超过80%，并在未来3个月内带动国内2-3家头部大模型厂商跟进降价，A股云计算板块（如金山办公、用友网络）将获资金追买，相关公司AI云服务收入季增超30%以上。",
+      "confidence": "高",
+      "signal_type": "F",
+      "verify_date": "2026-08-23",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-24",
+      "content": "山西煤矿事故将引发全国性安全监察，焦煤供给短期偏紧，吨焦利润或上涨20-30%。但鉴于整体产能过剩，影响在3个月内退潮，A股钢铁及焦化板块出现短期脉冲式行情后回到基本面。",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-08-23",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-24",
+      "content": "美伊协议若顺利执行，布伦特原油价格将在3个月内回落10-15%，刺激中石油、中石化等航空/物流成本敏感性标的出现15%以上的阶段性反弹。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-23",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-25",
+      "content": "美伊协议大概率不会在2026年Q3前正式签署，布伦特原油将在76-82美元区间震荡",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-25",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-25",
+      "content": "华为2026年手机芯片（逻辑折叠概念）将带动A股半导体指数（885634）在秋季发布前迎来一波主题性上涨，较当前位置涨幅超过15%",
+      "confidence": "高",
+      "signal_type": "F",
+      "verify_date": "2026-09-30",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-25",
+      "content": "以DeepSeek为代表的大模型价格战将在3个月内导致至少2家国内中型AI创业公司（估值10亿以上）宣布关停或被并购，加速行业洗牌",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-25",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-26",
+      "content": "中国对日本稀土出口管制将持续至少3个月，稀土价格（如镨钕氧化物）将上涨超15%",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-25",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-26",
+      "content": "到2026年8月底，头部AI应用（如豆包）的付费用户占比将提升至10%以上",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-25",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-26",
+      "content": "到2026年8月底，A股科创50指数将因芯片自主可控和AI商业化双重驱动，突破1600点关口",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-25",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-27",
+      "content": "美光科技2026年9月季度营收将因HBM3E需求超市场预期，股价在现有基础上再涨15-30%",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-08-27",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-27",
+      "content": "A股存储芯片概念股（如兆易创新、长鑫存储相关）在2026年8月前将有一波跟涨行情，涨幅领先半导体指数",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-01",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-27",
+      "content": "取消固定分时电价政策将在2026年底前推广至10个以上省份，直接利好储能和智能电网设备商订单增长超20%",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-11-27",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-28",
+      "content": "长鑫科技科创板上市首日市值将超过1500亿元人民币",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-07-28",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-28",
+      "content": "华为将在2026年9月前公布一项基于韬定律的新型芯片封装技术方案",
+      "confidence": "低",
+      "signal_type": "F",
+      "verify_date": "2026-08-28",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-28",
+      "content": "香港金管局新规将导致2026年Q3北水南下资金净流入环比下降15%-25%",
+      "confidence": "高",
+      "signal_type": "P",
+      "verify_date": "2026-09-28",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-28",
+      "content": "华为鹏/昇腾下一代芯片性能指标（如算力或AI性能）将在未来1-2个月通过第三方媒体（如极客湾）泄露或发布，其性能提升幅度将符合或超越韬定律预期，引发新一轮对华为产业链的战略重估。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-15",
+      "basis": "何庭波详解华为韬定律→该定律暗示芯片性能将指数级进化→第三方媒体或券商将进一步挖掘和验证具体数据",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    }
+  ],
+  "last_updated": "2026-05-28 17:45:47"
+}
