@@ -651,8 +651,9 @@ class AIAnalyzer:
         if not predictions_text:
             return []
 
-        # 匹配格式：内容[置信度:高/中/低|验证日:YYYY-MM-DD]
-        pattern = r'([^\n\[]+?)\s*\[置信度[:：]\s*(高|中|低)\s*[|｜]\s*验证日[:：]\s*(\d{4}-\d{2}-\d{2})\]'
+        # 匹配格式：内容[置信度:高/中/低|验证日:YYYY-MM-DD|依据:判断依据和逻辑链路]
+        # 依据部分为可选，兼容旧格式（不含依据）
+        pattern = r'([^\n\[]+?)\s*\[置信度[:：]\s*(高|中|低)\s*[|｜]\s*验证日[:：]\s*(\d{4}-\d{2}-\d{2})\s*(?:[|｜]\s*依据[:：]\s*([^\]]+?))?\]'
         matches = re.findall(pattern, predictions_text)
 
         if not matches:
@@ -661,7 +662,7 @@ class AIAnalyzer:
         date_str = current_time[:10] if current_time else datetime.now().strftime("%Y-%m-%d")
         new_predictions = []
 
-        for content, confidence, verify_date in matches:
+        for content, confidence, verify_date, basis in matches:
             content = content.strip()
             # 去除序号前缀
             content = re.sub(r'^\d+\.\s*', '', content).strip()
@@ -689,6 +690,7 @@ class AIAnalyzer:
                 "confidence": confidence,
                 "signal_type": signal_type,
                 "verify_date": verify_date,
+                "basis": (basis or "").strip(),
                 "status": "pending",
                 "actual_result": "",
                 "deviation_reason": "",

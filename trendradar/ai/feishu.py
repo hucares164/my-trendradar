@@ -259,6 +259,7 @@ class FeishuClient:
             record = {
                 "fields": {
                     "预判内容": p.get("content", ""),
+                    "判断依据": p.get("basis", ""),
                     "日期": date_ts,
                     "信号类型": p.get("signal_type", "P"),
                     "置信度": p.get("confidence", "中"),
