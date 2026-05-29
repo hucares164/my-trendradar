@@ -520,7 +520,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-29",
+      "content": "戴尔AI服务器收入在下一财季（2026年8月）增速将放缓至300%-400%区间，但仍保持高速增长。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-30",
+      "basis": "华尔街见闻报道「戴尔Q1营收增长88%，AI收入暴增757%」→AI服务器基数效应放大，高基数下增速自然回落，但绝对增量仍大→预判增速放缓至300%-400%",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-29",
+      "content": "中国高压电磁扁线龙头精达股份在2026年Q3财报中将实现营收同比翻倍增长，毛利率提升2-3个百分点。",
+      "confidence": "高",
+      "signal_type": "PEAD",
+      "verify_date": "2026-10-31",
+      "basis": "财联社热门报道「新能源汽车高压电磁扁线产品爆单，订单已排到2027年下半年」→供需严重失衡，龙头产能扩张叠加涨价预期→预判精达股份营收翻倍、毛利率提升",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-29",
+      "content": "受美伊停火协议及美国PCE通胀超预期影响，布伦特原油价格将在一个月内回落至70-75美元/桶区间，随后企稳。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-06-30",
+      "basis": "华尔街见闻报道「美伊停火传言搅动市场」+「美国4月PCE物价指数同比3.8%创三年新高」→供给端风险解除叠加通胀高企打压需求预期→预判油价回落至75美元以下",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-05-28 17:45:47"
+  "last_updated": "2026-05-29 14:12:09"
 }
