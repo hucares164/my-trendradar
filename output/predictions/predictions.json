@@ -586,7 +586,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-31",
+      "content": "云服务商液冷散热渗透率加速提升，英维克等核心供应商于2026年Q3将获大额订单公告",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-08-31",
+      "basis": "信号来源「全国首个绿色算力全栈AI平台上线」与「AI一个月烧5亿美元」→AI算力与电力的矛盾迫使数据中心必须升级散热方案，液冷是2026年最具性价比的解决方案→预计招标高峰在Q3集中释放，英维克作为华为和三大运营商的核心供应商，将率先受益",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-31",
+      "content": "美伊谈判在2026年8月前破裂，国际油价将报复性反弹至90美元/桶以上",
+      "confidence": "低",
+      "signal_type": "F",
+      "verify_date": "2026-08-31",
+      "basis": "信号来源「美伊协议预期砸崩油价，这家投行警告市场跟现实严重脱节」→双方核心诉求（伊核+霍尔木兹）矛盾不可调和，当前油价已过度反映和谈预期→一旦谈判失败，风险溢价将快速回归，原油期货短期暴涨",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-31",
+      "content": "港股大模型公司（MiniMax）上市后估值将承压，其毛利率低于30%",
+      "confidence": "高",
+      "signal_type": "PEAD",
+      "verify_date": "2026-09-30",
+      "basis": "信号来源「一家公司一个月在Claude烧掉5亿美元」与「MiniMax再冲A股」→大模型公司普遍面临高算力成本，导致毛利率极低→上市后，公开财报将暴露其盈利能力不足，引发估值回调",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-05-30 13:46:41"
+  "last_updated": "2026-05-31 00:52:21"
 }
