@@ -619,7 +619,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-31",
+      "content": "MiniMax 2026年9月底前完成港交所聆讯，发行市值超过3000亿港元",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-30",
+      "basis": "财联社报道「MiniMax再冲A股」→ 大模型资本化趋势+港股流动性支撑→高概率完成上市",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-31",
+      "content": "2026年Q3，国内主要AI云厂商将密集发布绿色算力液冷解决方案，同环比增速超50%",
+      "confidence": "高",
+      "signal_type": "F",
+      "verify_date": "2026-09-30",
+      "basis": "多个信号显示「AI Token消耗踩急刹」+「电力负荷新高」+「绿色算力平台上线」→ 需求与政策双轮驱动→厂商加速推新方案",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-31",
+      "content": "2026年Q4，A股半导体指数将因台积电技术领先叙事和华为昇腾出货预期，阶段性跑赢大盘",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-12-31",
+      "basis": "凤凰网报道「台积电领先10年？黄仁勋误读了华为韬定律」→ 刺激国产替代叙事再次发酵→半导体板块资金博弈偏好提升",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-05-31 00:52:21"
+  "last_updated": "2026-05-31 06:57:06"
 }
