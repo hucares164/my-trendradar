@@ -1,9 +1,9 @@
 name: Get Hot News
 
 on:
-  schedule:
-    # 每天北京时间 10:00 运行（UTC 02:00）
-    - cron: "0 2 * * *"
+schedule:
+  - cron: "0 8 * * *"   # UTC 08:00 → 北京 16:00
+  - cron: "0 22 * * *"  # UTC 22:00 → 北京 06:00
 
   workflow_dispatch:
 
