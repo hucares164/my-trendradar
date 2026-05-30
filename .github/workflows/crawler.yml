@@ -1,11 +1,9 @@
 name: Get Hot News
 
 on:
-  schedule:
-    # 北京时间 16:00 运行（UTC 08:00）- A+H股收盘 + 全天热榜
-    - cron: "0 8 * * *"
-    # 北京时间 06:00 运行（UTC 22:00 前一天）- 美股收盘 + 隔夜新闻
-    - cron: "0 22 * * *"
+schedule:
+  - cron: "0 8 * * *"   # UTC 08:00 → 北京 16:00
+  - cron: "0 22 * * *"  # UTC 22:00 → 北京 06:00
 
   workflow_dispatch:
 
