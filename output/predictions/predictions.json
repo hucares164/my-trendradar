@@ -685,7 +685,51 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-01",
+      "content": "2026年Q3（9月30日前），中国主要液冷厂商（如英维克、申菱环境）将披露数据中心订单同比增长超过50%",
+      "confidence": "高",
+      "signal_type": "PEAD",
+      "verify_date": "2026-09-30",
+      "basis": "多地电力负荷创新高信号→算力用电瓶颈催生液冷刚需→订单落地可追踪",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-01",
+      "content": "未来3个月（截至2026年8月31日），A股半导体设备板块（北方华创、中微公司）股价将跑赢大盘10%以上",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-31",
+      "basis": "徐直军表态强化国产化叙事→政策利好预期持续→但需确认实际订单落地及政策文件发布",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-01",
+      "content": "截至2026年8月31日，A股MLCC相关公司（风华高科、三环集团）相关业务营收环比增速不低于15%",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-08-31",
+      "basis": "高盛加入AI瓶颈交易信号→MLCC价值重估→国产替代逻辑需要实际业务增速支撑",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-01",
+      "content": "未来3个月，将有1家以上省级政府发布“绿色算力”专项规划或补贴政策",
+      "confidence": "中",
+      "signal_type": "P",
+      "verify_date": "2026-08-31",
+      "basis": "全国首个绿色算力平台上线→政策示范效应扩散→但需跟踪各地区政策出台频率",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-05-31 18:07:53"
+  "last_updated": "2026-06-01 06:59:19"
 }
