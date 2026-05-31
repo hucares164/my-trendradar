@@ -652,7 +652,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-31",
+      "content": "高盛MLCC报告后一个月内，A股MLCC概念板块（风华高科、三环集团、火炬电子）出现一轮10%以上涨幅",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-07-15",
+      "basis": "高盛报告「MLCC是新存储，已成AI服务器第三大成本项」→ AI服务器出货量持续增长，高容MLCC需求每代翻倍 → MLCC国产替代概念受追捧",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-31",
+      "content": "2026年7月核心城市电力负荷同比再增15%以上，带动科华数据、英维克等绿色算力相关股价受益",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-15",
+      "basis": "「多地电力负荷连创新高」+「算力用电年均或增超千亿度」→ 夏季用电高峰叠加算力中心扩张 → 电力设备/液冷需求确认",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-31",
+      "content": "GitHub按token计费新规实施后，国产AI编程工具（通义灵码、CodeGeeX）企业用户注册量在3个月内增长50%-100%",
+      "confidence": "中",
+      "signal_type": "P",
+      "verify_date": "2026-09-01",
+      "basis": "GitHub不装了，用户炸锅了！AI编程的低价时代结束，从此按token计费 → 企业用户成本敏感，寻求替代方案 → 国产AI编程工具渗透率提升",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-05-31 06:57:06"
+  "last_updated": "2026-05-31 18:07:53"
 }
