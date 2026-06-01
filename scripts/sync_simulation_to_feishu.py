@@ -16,7 +16,6 @@ sync_simulation_to_feishu.py
   FEISHU_APP_SECRET         飞书应用 App Secret
   FEISHU_BITABLE_APP_TOKEN  多维表格 App Token
   FEISHU_SIM_TABLE_ID       模拟盘专用表格 Table ID
-  HTML_REPORT_URL           网页版 HTML 链接（可选）
 """
 
 import json
@@ -430,7 +429,7 @@ def get_expected_range(preds: list, stock_name: str) -> str:
 
 def build_daily_change_sequence(rows: list, start_date: str, verify_date: str) -> str:
     """
-    每日涨跌文字序列（A 方案）。
+    每日涨跌文字序列。
     格式：06-02: 📈+1.20%  06-03: 📉-0.85%  ...
     起始日为基准不出条目。验证日期过后追加【验证已结束】。
     """
@@ -460,6 +459,32 @@ def build_daily_change_sequence(rows: list, start_date: str, verify_date: str) -
     return seq
 
 
+def calc_5day_change(rows: list, start_date: str) -> str:
+    """
+    前 5 个交易日的涨跌幅（从起始日开始计，不足 5 日则为空）。
+    返回格式如 '+3.21%' 或 '—'。
+    """
+    today = datetime.now().strftime("%Y-%m-%d")
+    sorted_rows = sorted(rows, key=lambda x: x["date"])
+    window = [r for r in sorted_rows if r["date"] >= start_date and r["date"] <= today]
+
+    # 跳过起始日，从第 1 日开始计数
+    trading_days = len(window) - 1 if len(window) > 0 else 0
+    if trading_days < 5:
+        return "—"
+
+    # 取第 5 个交易日（0-based index 从 1 开始，第 5 天是 window[5]）
+    # window[0] 是起始日，window[1] 是第 1 日，...，window[5] 是第 5 日
+    if len(window) <= 5:
+        return "—"
+
+    day5_price = window[5]["last"]
+    start_price = window[0]["last"]
+    chg = (day5_price - start_price) / start_price * 100 if start_price else 0
+    pct_sign = "+" if chg >= 0 else ""
+    return f"{pct_sign}{chg:.2f}%"
+
+
 def date_to_timestamp(date_str: str) -> int:
     """YYYY-MM-DD → 毫秒时间戳（UTC，避免时区偏移）"""
     if not date_str:
@@ -481,7 +506,6 @@ def main():
     app_secret = os.environ.get("FEISHU_APP_SECRET", "")
     app_token  = os.environ.get("FEISHU_BITABLE_APP_TOKEN", "")
     table_id   = os.environ.get("FEISHU_SIM_TABLE_ID", "")
-    html_url   = os.environ.get("HTML_REPORT_URL", "")
 
     if not all([app_id, app_secret, app_token, table_id]):
         print("❌ 缺少必要环境变量", file=sys.stderr)
@@ -545,6 +569,7 @@ def main():
         trading_days   = calc_trading_days(start_date, verify_date)
         expected       = get_expected_range(preds, name)
         daily_seq      = build_daily_change_sequence(rows, start_date, verify_date)
+        five_day_chg   = calc_5day_change(rows, start_date)
 
         if today > verify_date:
             status = "已结束"
@@ -553,23 +578,20 @@ def main():
         else:
             status = "待开始"
 
-        print(f"  ✓  {sym}{start_price:.2f}→{sym}{latest_price:.2f} | {pct:+.2f}% | {status}", file=sys.stderr)
+        print(f"  ✓  {sym}{start_price:.2f}→{sym}{latest_price:.2f} | {pct:+.2f}% | 5日: {five_day_chg} | {status}", file=sys.stderr)
 
         results.append({
             "code":           code,
             "name":           name,
             "start_date":     start_date,
             "verify_date":    verify_date,
-            "start_price":    start_price,
             "start_amount":   start_amount,
-            "latest_date":    latest_date,
-            "latest_price":   latest_price,
-            "current_amount": current_amount,
             "pnl":            pnl,
             "pct":            pct,
             "trading_days":   trading_days,
             "expected":       expected,
             "daily_seq":      daily_seq,
+            "five_day_chg":   five_day_chg,
             "status":         status,
             "is_us":          is_us,
             "sym":            sym,
@@ -589,27 +611,18 @@ def main():
     records = []
     updated_at = datetime.now().strftime("%Y-%m-%d %H:%M")
 
-    # 自动生成网页版 URL（用 htmlpreview.github.io，无需启用 GitHub Pages）
-    if not html_url:
-        html_url = "https://htmlpreview.github.io/?https://raw.githubusercontent.com/hucares164/my-trendradar/master/output/simulation/simulation_table.html"
-
-    # 首行元信息 — URL 写入专用的 🔗 网页版链接 字段（type=15），方可点击跳转
+    # 首行元信息
     records.append({
         "fields": {
-            "股票名称":            f"📊 模拟盘验证（更新于 {updated_at}）",
-            "股票代码":            "—",
+            "股票名称":            f"📊 更新于 {updated_at}",
             "起始日期":            date_to_timestamp(today),
-            "验证截止":            date_to_timestamp(today),
-            "起始价":              0.0,
+            "验证周期":           "元信息",
             "起始总价(×100股)":    0.0,
-            "最新价":              0.0,
-            "当前涨跌幅":          "—",
             "累计盈亏(100股)":     0.0,
             "预期方向/涨幅":       "—",
-            "验证周期(天)":        "元信息",
-            "验证状态":            f"更新于 {updated_at}",
-            "每日涨跌序列":        "见 🔗 网页版链接 字段",
-            "🔗 网页版链接":       {"link": html_url, "text": "点击查看网页版"},
+            "当前涨跌幅":          "—",
+            "前5日涨跌幅":         "—",
+            "每日涨跌序列":        f"更新于 {updated_at}",
         }
     })
 
@@ -619,17 +632,13 @@ def main():
         records.append({
             "fields": {
                 "股票名称":            r["name"],
-                "股票代码":            r["code"],
                 "起始日期":            date_to_timestamp(r["start_date"]),
-                "验证截止":            date_to_timestamp(r["verify_date"]),
-                "起始价":              round(r["start_price"], 2),
+                "验证周期":            f"{r['trading_days']} 天",
                 "起始总价(×100股)":    round(r["start_amount"], 2),
-                "最新价":              round(r["latest_price"], 2),
-                "当前涨跌幅":          f"{pct_sign}{r['pct']:.2f}%",
                 "累计盈亏(100股)":     round(r["pnl"], 2),
                 "预期方向/涨幅":       r["expected"],
-                "验证周期(天)":        r["status"],
-                "验证状态":            str(r["trading_days"]) + " 天",
+                "当前涨跌幅":          f"{pct_sign}{r['pct']:.2f}%",
+                "前5日涨跌幅":         r["five_day_chg"],
                 "每日涨跌序列":        r["daily_seq"],
             }
         })
