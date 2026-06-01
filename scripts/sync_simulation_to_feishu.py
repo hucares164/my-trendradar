@@ -589,14 +589,9 @@ def main():
     records = []
     updated_at = datetime.now().strftime("%Y-%m-%d %H:%M")
 
-    # 自动生成网页版 URL（GitHub Pages > htmlpreview）
+    # 自动生成网页版 URL（用 htmlpreview.github.io，无需启用 GitHub Pages）
     if not html_url:
-        # GitHub Pages（需手动在 repo Settings → Pages 中启用，source=master, folder=/(root)）
-        html_url = "https://hucares164.github.io/my-trendradar/output/simulation/simulation_table.html"
-        # 兜底：htmlpreview.github.io（无需额外配置即可用）
-        html_url_fallback = "https://htmlpreview.github.io/?https://raw.githubusercontent.com/hucares164/my-trendradar/master/output/simulation/simulation_table.html"
-    else:
-        html_url_fallback = html_url
+        html_url = "https://htmlpreview.github.io/?https://raw.githubusercontent.com/hucares164/my-trendradar/master/output/simulation/simulation_table.html"
 
     # 首行元信息 — URL 写入专用的 🔗 网页版链接 字段（type=15），方可点击跳转
     records.append({
