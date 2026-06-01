@@ -586,7 +586,216 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-31",
+      "content": "云服务商液冷散热渗透率加速提升，英维克等核心供应商于2026年Q3将获大额订单公告",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-08-31",
+      "basis": "信号来源「全国首个绿色算力全栈AI平台上线」与「AI一个月烧5亿美元」→AI算力与电力的矛盾迫使数据中心必须升级散热方案，液冷是2026年最具性价比的解决方案→预计招标高峰在Q3集中释放，英维克作为华为和三大运营商的核心供应商，将率先受益",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-31",
+      "content": "美伊谈判在2026年8月前破裂，国际油价将报复性反弹至90美元/桶以上",
+      "confidence": "低",
+      "signal_type": "F",
+      "verify_date": "2026-08-31",
+      "basis": "信号来源「美伊协议预期砸崩油价，这家投行警告市场跟现实严重脱节」→双方核心诉求（伊核+霍尔木兹）矛盾不可调和，当前油价已过度反映和谈预期→一旦谈判失败，风险溢价将快速回归，原油期货短期暴涨",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-31",
+      "content": "港股大模型公司（MiniMax）上市后估值将承压，其毛利率低于30%",
+      "confidence": "高",
+      "signal_type": "PEAD",
+      "verify_date": "2026-09-30",
+      "basis": "信号来源「一家公司一个月在Claude烧掉5亿美元」与「MiniMax再冲A股」→大模型公司普遍面临高算力成本，导致毛利率极低→上市后，公开财报将暴露其盈利能力不足，引发估值回调",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-31",
+      "content": "MiniMax 2026年9月底前完成港交所聆讯，发行市值超过3000亿港元",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-30",
+      "basis": "财联社报道「MiniMax再冲A股」→ 大模型资本化趋势+港股流动性支撑→高概率完成上市",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-31",
+      "content": "2026年Q3，国内主要AI云厂商将密集发布绿色算力液冷解决方案，同环比增速超50%",
+      "confidence": "高",
+      "signal_type": "F",
+      "verify_date": "2026-09-30",
+      "basis": "多个信号显示「AI Token消耗踩急刹」+「电力负荷新高」+「绿色算力平台上线」→ 需求与政策双轮驱动→厂商加速推新方案",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-31",
+      "content": "2026年Q4，A股半导体指数将因台积电技术领先叙事和华为昇腾出货预期，阶段性跑赢大盘",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-12-31",
+      "basis": "凤凰网报道「台积电领先10年？黄仁勋误读了华为韬定律」→ 刺激国产替代叙事再次发酵→半导体板块资金博弈偏好提升",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-31",
+      "content": "高盛MLCC报告后一个月内，A股MLCC概念板块（风华高科、三环集团、火炬电子）出现一轮10%以上涨幅",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-07-15",
+      "basis": "高盛报告「MLCC是新存储，已成AI服务器第三大成本项」→ AI服务器出货量持续增长，高容MLCC需求每代翻倍 → MLCC国产替代概念受追捧",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-31",
+      "content": "2026年7月核心城市电力负荷同比再增15%以上，带动科华数据、英维克等绿色算力相关股价受益",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-15",
+      "basis": "「多地电力负荷连创新高」+「算力用电年均或增超千亿度」→ 夏季用电高峰叠加算力中心扩张 → 电力设备/液冷需求确认",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-05-31",
+      "content": "GitHub按token计费新规实施后，国产AI编程工具（通义灵码、CodeGeeX）企业用户注册量在3个月内增长50%-100%",
+      "confidence": "中",
+      "signal_type": "P",
+      "verify_date": "2026-09-01",
+      "basis": "GitHub不装了，用户炸锅了！AI编程的低价时代结束，从此按token计费 → 企业用户成本敏感，寻求替代方案 → 国产AI编程工具渗透率提升",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-01",
+      "content": "2026年Q3（9月30日前），中国主要液冷厂商（如英维克、申菱环境）将披露数据中心订单同比增长超过50%",
+      "confidence": "高",
+      "signal_type": "PEAD",
+      "verify_date": "2026-09-30",
+      "basis": "多地电力负荷创新高信号→算力用电瓶颈催生液冷刚需→订单落地可追踪",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-01",
+      "content": "未来3个月（截至2026年8月31日），A股半导体设备板块（北方华创、中微公司）股价将跑赢大盘10%以上",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-31",
+      "basis": "徐直军表态强化国产化叙事→政策利好预期持续→但需确认实际订单落地及政策文件发布",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-01",
+      "content": "截至2026年8月31日，A股MLCC相关公司（风华高科、三环集团）相关业务营收环比增速不低于15%",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-08-31",
+      "basis": "高盛加入AI瓶颈交易信号→MLCC价值重估→国产替代逻辑需要实际业务增速支撑",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-01",
+      "content": "未来3个月，将有1家以上省级政府发布“绿色算力”专项规划或补贴政策",
+      "confidence": "中",
+      "signal_type": "P",
+      "verify_date": "2026-08-31",
+      "basis": "全国首个绿色算力平台上线→政策示范效应扩散→但需跟踪各地区政策出台频率",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-01",
+      "content": "零跑汽车2026年6月交付量将维持在8万台以上，全年交付有望冲击100万台。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-07-01",
+      "basis": "PEAD类信号「零跑5月销量81569台同比增长81%」→ 零跑C系列车型及海外市场拓展放量，月均产能已突破8万台 → 6月销量将维持在8万台以上，符合全年增长趋势。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-01",
+      "content": "英伟达AI PC芯片于2026年第三季度正式发布后，将导致国内AI PC概念股（如联想、华勤技术）股价出现至少10%以上的波动。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-15",
+      "basis": "FEAD/S类信号「英伟达正面挑战英特尔」→ 新PC芯片+DSX平台将重塑PC生态，国产PC厂商面临竞争与合作并存的局面 → 短期内市场情绪会导致相关标的剧烈波动。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-01",
+      "content": "至2026年8月底，A股可控核聚变概念指数将跑赢沪深300指数5个百分点以上。",
+      "confidence": "低",
+      "signal_type": "F",
+      "verify_date": "2026-08-31",
+      "basis": "P类信号「上海加码未来产业，可控核聚变提速」+「《求是》刊发未来产业重要文章」→ 政策端催化叠加主题投资情绪升温 → 核聚变板块将获得超额收益，但该主题传导链较长，确定性较低。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-01",
+      "content": "存储芯片价格将在1个月内出现明显反弹",
+      "confidence": "高",
+      "signal_type": "F",
+      "verify_date": "2026-07-01",
+      "basis": "SK海力士工厂火灾（S类信号）→ 供给端短期急剧收缩，叠加AI HBM需求持续旺盛 → 预计DRAM合约价格在6月中旬开始上涨，7月合约价环比涨幅超5%",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-01",
+      "content": "华为nova 16系列首月销量将超300万台，同增20%以上",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-07-15",
+      "basis": "华为nova 16发布（消费电子信号）+ 时代少年团代言引流 → 中端5G手机需求旺盛，叠加618促销周期 → 供应链订单反馈正面",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-01",
+      "content": "科创50指数将在1个月内企稳反弹，目标反弹幅度10%以上",
+      "confidence": "低",
+      "signal_type": "F",
+      "verify_date": "2026-07-01",
+      "basis": "科创50当日跌幅过大（情绪极端）+ 国资改革方案下发+半导体国家大基金三期预期 → 短期超跌反弹需求较强，但需观察宏观情绪反转",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-05-30 13:46:41"
+  "last_updated": "2026-06-01 15:54:21"
 }
