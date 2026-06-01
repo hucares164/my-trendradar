@@ -729,7 +729,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-01",
+      "content": "零跑汽车2026年6月交付量将维持在8万台以上，全年交付有望冲击100万台。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-07-01",
+      "basis": "PEAD类信号「零跑5月销量81569台同比增长81%」→ 零跑C系列车型及海外市场拓展放量，月均产能已突破8万台 → 6月销量将维持在8万台以上，符合全年增长趋势。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-01",
+      "content": "英伟达AI PC芯片于2026年第三季度正式发布后，将导致国内AI PC概念股（如联想、华勤技术）股价出现至少10%以上的波动。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-15",
+      "basis": "FEAD/S类信号「英伟达正面挑战英特尔」→ 新PC芯片+DSX平台将重塑PC生态，国产PC厂商面临竞争与合作并存的局面 → 短期内市场情绪会导致相关标的剧烈波动。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-01",
+      "content": "至2026年8月底，A股可控核聚变概念指数将跑赢沪深300指数5个百分点以上。",
+      "confidence": "低",
+      "signal_type": "F",
+      "verify_date": "2026-08-31",
+      "basis": "P类信号「上海加码未来产业，可控核聚变提速」+「《求是》刊发未来产业重要文章」→ 政策端催化叠加主题投资情绪升温 → 核聚变板块将获得超额收益，但该主题传导链较长，确定性较低。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-01 06:59:19"
+  "last_updated": "2026-06-01 14:27:07"
 }
