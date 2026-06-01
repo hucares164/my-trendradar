@@ -107,3 +107,14 @@ jobs:
             git diff --cached --quiet || git commit -m "chore: update prediction tracking data"
             git push
           fi
+
+      - name: Sync simulation table to Feishu
+        if: always()
+        env:
+          FEISHU_APP_ID: ${{ secrets.FEISHU_APP_ID }}
+          FEISHU_APP_SECRET: ${{ secrets.FEISHU_APP_SECRET }}
+          FEISHU_BITABLE_APP_TOKEN: ${{ secrets.FEISHU_BITABLE_APP_TOKEN }}
+          FEISHU_SIM_TABLE_ID: ${{ secrets.FEISHU_SIM_TABLE_ID }}
+          HTML_REPORT_URL: ""
+        run: |
+          python3 scripts/sync_simulation_to_feishu.py || echo "[模拟盘] 同步跳过或失败"
