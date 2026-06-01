@@ -142,20 +142,107 @@ class FeishuBitableClient:
                 success = False
         return success
 
-    def ensure_table_fields(self) -> list:
+    # 期望字段顺序：（名称, 飞书字段类型）
+    #   1=文本  2=数字  5=日期
+    DESIRED_FIELDS = [
+        ("股票名称",        1),
+        ("起始日期",        5),
+        ("验证周期",        1),
+        ("起始总价(×100股)", 2),
+        ("累计盈亏(100股)",  2),
+        ("预期方向/涨幅",   1),
+        ("当前涨跌幅",      1),
+        ("前5日涨跌幅",     1),
+        ("每日涨跌序列",    1),
+        ("🔗网页版",        1),    # type 1 = 文本（存链接）
+    ]
+
+    # 网页版模拟盘地址
+    SIM_WEB_URL = "https://htmlpreview.github.io/?https://raw.githubusercontent.com/hucares164/my-trendradar/master/output/simulation/simulation_table.html"
+
+    def _list_fields_raw(self) -> list:
+        """获取字段原始列表 [{field_id, field_name, type}, ...]"""
         url = f"{self._base_url()}/fields"
         req = urllib.request.Request(url, headers=self._auth_headers())
         try:
             resp = json.loads(urllib.request.urlopen(req, timeout=15).read())
             if resp.get("code") == 0:
-                fields = [f["field_name"] for f in resp.get("data", {}).get("items", [])]
-                print(f"[飞书] 当前表字段: {fields}", file=sys.stderr)
-                return fields
-            else:
-                print(f"[飞书] get_fields: code={resp.get('code')} msg={resp.get('msg')}（非致命，继续）", file=sys.stderr)
+                return resp.get("data", {}).get("items", [])
+            print(f"[飞书] get_fields: code={resp.get('code')} msg={resp.get('msg')}", file=sys.stderr)
         except Exception as e:
-            print(f"[飞书] get_fields 异常: {e}（非致命，继续）", file=sys.stderr)
+            print(f"[飞书] get_fields 异常: {e}", file=sys.stderr)
         return []
+
+    def ensure_table_fields(self) -> list:
+        """获取当前字段名称列表（兼容旧接口）"""
+        fields_raw = self._list_fields_raw()
+        fields = [f["field_name"] for f in fields_raw]
+        print(f"[飞书] 当前表字段: {fields}", file=sys.stderr)
+        return fields
+
+    def reorder_fields_if_needed(self) -> bool:
+        """
+        检测字段顺序是否与期望一致；不一致则删除全部字段后按期望顺序重建。
+        返回 True 表示执行了重建（调用方应确保表中无旧数据）。
+        """
+        current_fields = self._list_fields_raw()
+        current_names = [f["field_name"] for f in current_fields]
+        desired_names = [name for name, _ in self.DESIRED_FIELDS]
+
+        # 同时检查名称顺序和字段类型
+        names_match = current_names == desired_names
+        types_match = all(
+            f["type"] == self.DESIRED_FIELDS[i][1]
+            for i, f in enumerate(current_fields)
+            if i < len(self.DESIRED_FIELDS)
+        )
+
+        if names_match and types_match:
+            print("[飞书] 字段顺序与类型均已正确，无需重排", file=sys.stderr)
+            return False
+
+        print(f"[飞书] ⚠️ 字段顺序不一致，开始重建...", file=sys.stderr)
+        print(f"  当前: {current_names}", file=sys.stderr)
+        print(f"  期望: {desired_names}", file=sys.stderr)
+
+        # 第一步：删除非主字段（倒序，主字段不可删除）
+        primary_field_id = current_fields[0]["field_id"] if current_fields else ""
+        for f in reversed(current_fields):
+            if f["field_id"] == primary_field_id:
+                print(f"  ⊘ 跳过主字段（不可删除）: {f['field_name']}", file=sys.stderr)
+                continue
+            field_id = f["field_id"]
+            del_url = f"{self._base_url()}/fields/{field_id}"
+            try:
+                req = urllib.request.Request(del_url, headers=self._auth_headers(), method="DELETE")
+                resp = json.loads(urllib.request.urlopen(req, timeout=10).read())
+                if resp.get("code") == 0:
+                    print(f"  ✓ 已删除: {f['field_name']}", file=sys.stderr)
+                else:
+                    print(f"  ✗ 删除失败 {f['field_name']}: {resp.get('msg')}", file=sys.stderr)
+            except Exception as e:
+                print(f"  ✗ 删除异常 {f['field_name']}: {e}", file=sys.stderr)
+
+        # 第二步：按期望顺序重建（跳过已存在的主字段）
+        existing_names = {f["field_name"] for f in self._list_fields_raw()}
+        for name, ftype in self.DESIRED_FIELDS:
+            if name in existing_names:
+                print(f"  ⊘ 跳过已存在: {name}", file=sys.stderr)
+                continue
+            create_url = f"{self._base_url()}/fields"
+            data = json.dumps({"field_name": name, "type": ftype}).encode("utf-8")
+            try:
+                req = urllib.request.Request(create_url, data=data, headers=self._auth_headers(), method="POST")
+                resp = json.loads(urllib.request.urlopen(req, timeout=10).read())
+                if resp.get("code") == 0:
+                    print(f"  ✓ 已创建: {name}", file=sys.stderr)
+                else:
+                    print(f"  ✗ 创建失败 {name}: {resp.get('msg')}", file=sys.stderr)
+            except Exception as e:
+                print(f"  ✗ 创建异常 {name}: {e}", file=sys.stderr)
+
+        print("[飞书] 字段重排完成", file=sys.stderr)
+        return True
 
 
 # ═══════════════════════════════════════════════
@@ -514,6 +601,9 @@ def main():
         sys.exit(1)
 
     client = FeishuBitableClient(app_id, app_secret, app_token, table_id)
+
+    # 确保字段顺序正确（不一致时重建，旧数据自动清除）
+    client.reorder_fields_if_needed()
     client.ensure_table_fields()
 
     # ── 2. 读取预判数据 ──────────────────────────
@@ -623,6 +713,7 @@ def main():
             "当前涨跌幅":          "—",
             "前5日涨跌幅":         "—",
             "每日涨跌序列":        f"更新于 {updated_at}",
+            "🔗网页版":            FeishuBitableClient.SIM_WEB_URL,
         }
     })
 
@@ -640,6 +731,7 @@ def main():
                 "当前涨跌幅":          f"{pct_sign}{r['pct']:.2f}%",
                 "前5日涨跌幅":         r["five_day_chg"],
                 "每日涨跌序列":        r["daily_seq"],
+                "🔗网页版":            FeishuBitableClient.SIM_WEB_URL,
             }
         })
 

@@ -240,6 +240,20 @@ def gen_html(results: list, path: str):
         pnl_sign  = "+" if r["pnl"] >= 0 else ""
         pct_sign  = "+" if r["pct"] >= 0 else ""
         bar_html  = gen_mini_bar(code, r["start_date"], r["verify_date"], r["all_rows"])
+        # 解析前5日涨跌幅数值用于颜色判断
+        five_day_chg_val = None
+        try:
+            five_day_str = r.get('five_day_chg', '—')
+            if five_day_str and five_day_str != '—' and '%' in five_day_str:
+                five_day_chg_val = float(five_day_str.replace('%', '').replace('+', ''))
+        except (ValueError, TypeError):
+            pass
+        if five_day_chg_val is not None and five_day_chg_val >= 0:
+            five_day_class = "pnl-positive"
+        elif five_day_chg_val is not None:
+            five_day_class = "pnl-negative"
+        else:
+            five_day_class = ""
         rows_html += f"""
         <tr>
             <td>{r['name']}<br><small>{code}</small></td>
@@ -249,7 +263,7 @@ def gen_html(results: list, path: str):
             <td class="{pnl_class}">{pnl_sign}{r['pnl']:.2f}<br><small>{pct_sign}{r['pct']:.2f}%</small></td>
             <td>{r['expected']}</td>
             <td class="{pnl_class}">{pct_sign}{r['pct']:.2f}%</td>
-            <td>{r.get('five_day_chg', '—')}</td>
+            <td class="{five_day_class}">{r.get('five_day_chg', '—')}</td>
             <td>{bar_html}</td>
         </tr>"""
 
