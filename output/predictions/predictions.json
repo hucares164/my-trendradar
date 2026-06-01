@@ -795,7 +795,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-01",
+      "content": "英伟达PC芯片将在2026年Q3获得至少2家全球前5大PC品牌商（联想、戴尔）的高端机型订单，带动全球AI PC渗透率从当前不足10%快速提升至25%以上",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-09-01",
+      "basis": "华尔街见闻「英伟达掀桌，Windows 终于迎来真 AI PC」→英伟达以其AI生态和计算平台优势入局PC市场，将推动OEM厂商加速拥抱→预判核心合作客户在3个月内落地",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-01",
+      "content": "因美国对华AI芯片出口限制升级至“总部在中国均受限”，寒武纪、海光信息等国产AI芯片企业在下半年将获得国内互联网巨头（如字节、阿里）额外30%以上的AI芯片采购订单",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-09-01",
+      "basis": "凤凰网「美方变本加厉：只要总部在中国，都不准买」→国产替代逻辑强化→国内云厂商被迫切换采购来源→预判国产芯片设计公司将受益",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-01",
+      "content": "豆包（字节跳动）正式开启付费后，其在2026年Q3（7-9月）的月活用户数将出现10-15%的环比下滑，但付费转化率将维持稳定在2-3%",
+      "confidence": "低",
+      "signal_type": "F",
+      "verify_date": "2026-10-01",
+      "basis": "微博热搜「豆包将正式付费」+百度热搜「豆包预计6月下旬正式收费」→C端AI应用从免费转向付费模型将面临用户流失阵痛→预判用户规模与付费收入达新平衡",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-01 15:54:21"
+  "last_updated": "2026-06-01 21:28:31"
 }
