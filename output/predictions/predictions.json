@@ -762,7 +762,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-01",
+      "content": "存储芯片价格将在1个月内出现明显反弹",
+      "confidence": "高",
+      "signal_type": "F",
+      "verify_date": "2026-07-01",
+      "basis": "SK海力士工厂火灾（S类信号）→ 供给端短期急剧收缩，叠加AI HBM需求持续旺盛 → 预计DRAM合约价格在6月中旬开始上涨，7月合约价环比涨幅超5%",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-01",
+      "content": "华为nova 16系列首月销量将超300万台，同增20%以上",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-07-15",
+      "basis": "华为nova 16发布（消费电子信号）+ 时代少年团代言引流 → 中端5G手机需求旺盛，叠加618促销周期 → 供应链订单反馈正面",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-01",
+      "content": "科创50指数将在1个月内企稳反弹，目标反弹幅度10%以上",
+      "confidence": "低",
+      "signal_type": "F",
+      "verify_date": "2026-07-01",
+      "basis": "科创50当日跌幅过大（情绪极端）+ 国资改革方案下发+半导体国家大基金三期预期 → 短期超跌反弹需求较强，但需观察宏观情绪反转",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-01 14:27:07"
+  "last_updated": "2026-06-01 15:54:21"
 }
