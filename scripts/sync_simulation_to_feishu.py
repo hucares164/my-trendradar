@@ -589,14 +589,19 @@ def main():
     records = []
     updated_at = datetime.now().strftime("%Y-%m-%d %H:%M")
 
-    # 首行元信息
-    link_text = f"🔗 网页版模拟盘（最后更新：{updated_at}）"
-    if html_url:
-        link_text += f"\n{html_url}"
+    # 自动生成网页版 URL（GitHub Pages > htmlpreview）
+    if not html_url:
+        # GitHub Pages（需手动在 repo Settings → Pages 中启用，source=master, folder=/(root)）
+        html_url = "https://hucares164.github.io/my-trendradar/output/simulation/simulation_table.html"
+        # 兜底：htmlpreview.github.io（无需额外配置即可用）
+        html_url_fallback = "https://htmlpreview.github.io/?https://raw.githubusercontent.com/hucares164/my-trendradar/master/output/simulation/simulation_table.html"
+    else:
+        html_url_fallback = html_url
 
+    # 首行元信息 — URL 写入专用的 🔗 网页版链接 字段（type=15），方可点击跳转
     records.append({
         "fields": {
-            "股票名称":            link_text,
+            "股票名称":            f"📊 模拟盘验证（更新于 {updated_at}）",
             "股票代码":            "—",
             "起始日期":            date_to_timestamp(today),
             "验证截止":            date_to_timestamp(today),
@@ -608,7 +613,8 @@ def main():
             "预期方向/涨幅":       "—",
             "验证周期(天)":        "元信息",
             "验证状态":            f"更新于 {updated_at}",
-            "每日涨跌序列":        link_text,
+            "每日涨跌序列":        "见 🔗 网页版链接 字段",
+            "🔗 网页版链接":       {"link": html_url, "text": "点击查看网页版"},
         }
     })
 

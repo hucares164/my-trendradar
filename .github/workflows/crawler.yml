@@ -107,6 +107,13 @@ jobs:
             git push
           fi
 
+      - name: Build simulation HTML
+        if: always()
+        run: |
+          if [ -f scripts/build_simulation_table.py ]; then
+            python3 scripts/build_simulation_table.py || echo "[模拟盘] 网页生成跳过"
+          fi
+
       - name: Sync simulation table to Feishu
         if: always()
         env:
@@ -114,6 +121,5 @@ jobs:
           FEISHU_APP_SECRET: ${{ secrets.FEISHU_APP_SECRET }}
           FEISHU_BITABLE_APP_TOKEN: ${{ secrets.FEISHU_BITABLE_APP_TOKEN }}
           FEISHU_SIM_TABLE_ID: ${{ secrets.FEISHU_SIM_TABLE_ID }}
-          HTML_REPORT_URL: ""
         run: |
           python3 scripts/sync_simulation_to_feishu.py || echo "[模拟盘] 同步跳过或失败"
