@@ -25,6 +25,7 @@ import sys
 import re
 import urllib.request
 import time
+import calendar
 from datetime import datetime, timedelta
 from typing import Optional
 
@@ -62,10 +63,11 @@ class FeishuBitableClient:
                 self._token = resp["tenant_access_token"]
                 self._token_expire = time.time() + resp.get("expire", 7188) - 60
                 return self._token
-            print(f"[飞书] 获取 token 失败: {resp}", file=sys.stderr)
+            print(f"[飞书] 获取 token 失败: code={resp.get('code')} msg={resp.get('msg')}", file=sys.stderr)
         except Exception as e:
             print(f"[飞书] token 请求异常: {e}", file=sys.stderr)
-        return ""
+        print("[飞书] 无法获取 tenant_access_token，退出", file=sys.stderr)
+        sys.exit(1)
 
     def _auth_headers(self) -> dict:
         return {
@@ -150,8 +152,10 @@ class FeishuBitableClient:
                 fields = [f["field_name"] for f in resp.get("data", {}).get("items", [])]
                 print(f"[飞书] 当前表字段: {fields}", file=sys.stderr)
                 return fields
+            else:
+                print(f"[飞书] get_fields: code={resp.get('code')} msg={resp.get('msg')}（非致命，继续）", file=sys.stderr)
         except Exception as e:
-            print(f"[飞书] get_fields 异常: {e}", file=sys.stderr)
+            print(f"[飞书] get_fields 异常: {e}（非致命，继续）", file=sys.stderr)
         return []
 
 
@@ -165,6 +169,14 @@ YAHOO_MAP = {
     "usFUTU":    "FUTU",
     "usTIGR.OQ": "TIGR",
     "usMU":      "MU",
+}
+
+# 新浪美股符号映射: westock 代码 → 新浪 symbol
+SINA_US_MAP = {
+    "usFUTU":    "futu",
+    "usTIGR.OQ": "tigr",
+    "usNVDA":    "nvda",
+    "usMU":      "mu",
 }
 
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
@@ -240,26 +252,55 @@ def _fetch_kline_yahoo(symbol: str, limit: int) -> list:
         return []
 
 
+def _fetch_kline_sina_us(symbol: str, limit: int) -> list:
+    """新浪财经美股 K 线 API（境内可用）。返回 [{date, open, high, low, last}, ...]"""
+    url = f"http://stock.finance.sina.com.cn/usstock/api/json_v2.php/US_MinKService.getDailyK?symbol={symbol}&num={limit}&type=d"
+    req = urllib.request.Request(url, headers={"Referer": "https://finance.sina.com.cn"})
+    try:
+        raw = urllib.request.urlopen(req, timeout=15).read().decode("gbk", errors="replace")
+        rows = json.loads(raw)
+        result = []
+        for r in rows:
+            result.append({
+                "date": r["d"],
+                "open": float(r["o"]),
+                "high": float(r["h"]),
+                "low":  float(r["l"]),
+                "last": float(r["c"]),
+            })
+        return result
+    except Exception as e:
+        print(f"  [新浪] {symbol} 获取失败: {e}", file=sys.stderr)
+        return []
+
+
 def fetch_kline(code: str, limit: int = 60) -> list:
     """
     统一 K 线获取入口：
     - A 股 (sh/sz 开头) → 腾讯财经
-    - 美股 (us 开头)    → Yahoo Finance（优先） → 腾讯兜底（数据量有限）
+    - 美股 (us 开头)    → Yahoo Finance → 新浪财经 → 腾讯兜底
     """
     is_us = code.startswith("us")
 
     if not is_us:
         return _fetch_kline_tencent(code, limit)
 
-    # 美股：Yahoo → 腾讯
+    # 美股：Yahoo → 新浪 → 腾讯
     yahoo_symbol = YAHOO_MAP.get(code, code.replace("us", "").replace(".OQ", ""))
     rows = _fetch_kline_yahoo(yahoo_symbol, limit)
     if rows:
         print(f"  [数据源] Yahoo Finance ({len(rows)} 条)", file=sys.stderr)
         return rows
 
-    # Yahoo 失败则降级到腾讯（数据有限，仅作兜底）
-    print(f"  [数据源] Yahoo 不可用，降级到腾讯", file=sys.stderr)
+    # Yahoo 失败 → 新浪（境内可用）
+    sina_symbol = SINA_US_MAP.get(code, yahoo_symbol.lower())
+    rows = _fetch_kline_sina_us(sina_symbol, limit)
+    if rows:
+        print(f"  [数据源] 新浪财经 ({len(rows)} 条)", file=sys.stderr)
+        return rows
+
+    # 都失败 → 腾讯
+    print(f"  [数据源] Yahoo/新浪 不可用，降级到腾讯", file=sys.stderr)
     return _fetch_kline_tencent(code, limit)
 
 
@@ -420,12 +461,12 @@ def build_daily_change_sequence(rows: list, start_date: str, verify_date: str) -
 
 
 def date_to_timestamp(date_str: str) -> int:
-    """YYYY-MM-DD → 毫秒时间戳"""
+    """YYYY-MM-DD → 毫秒时间戳（UTC，避免时区偏移）"""
     if not date_str:
         return int(time.time() * 1000)
     try:
         dt = time.strptime(date_str, "%Y-%m-%d")
-        return int(time.mktime(dt) * 1000)
+        return calendar.timegm(dt) * 1000
     except ValueError:
         return int(time.time() * 1000)
 
@@ -565,14 +606,13 @@ def main():
             "当前涨跌幅":          "—",
             "累计盈亏(100股)":     0.0,
             "预期方向/涨幅":       "—",
-            "验证周期(天)":        0,
-            "验证状态":            "元信息",
+            "验证周期(天)":        "元信息",
+            "验证状态":            f"更新于 {updated_at}",
             "每日涨跌序列":        link_text,
         }
     })
 
     for r in results:
-        sign = "+" if r["pnl"] >= 0 else ""
         pct_sign = "+" if r["pct"] >= 0 else ""
 
         records.append({
@@ -587,8 +627,8 @@ def main():
                 "当前涨跌幅":          f"{pct_sign}{r['pct']:.2f}%",
                 "累计盈亏(100股)":     round(r["pnl"], 2),
                 "预期方向/涨幅":       r["expected"],
-                "验证周期(天)":        r["trading_days"],
-                "验证状态":            r["status"],
+                "验证周期(天)":        r["status"],
+                "验证状态":            str(r["trading_days"]) + " 天",
                 "每日涨跌序列":        r["daily_seq"],
             }
         })
