@@ -894,7 +894,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-02",
+      "content": "中际旭创2026年Q2归母净利润同比增长超120%（含非经常性损益）",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-08-31",
+      "basis": "「黄仁勋钦点光连接」→光模块订单激增→龙头中际旭创1.6T产品出货放量，毛利率提升→Q2业绩超预期",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-02",
+      "content": "存储芯片现货价格在2周内上涨5-10%（DDR5/3D NAND），7月后因产能恢复而回落",
+      "confidence": "中",
+      "signal_type": "S",
+      "verify_date": "2026-06-16",
+      "basis": "「海力士火灾+扩产计划」→供给收缩+情绪炒作→价格短期冲高→但海力士产能五年翻番计划长期利空价格→涨价不可持续",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-02",
+      "content": "A股光模块板块指数（8841250.WI）在1个月内跑赢中证500指数10个百分点以上",
+      "confidence": "高",
+      "signal_type": "F",
+      "verify_date": "2026-07-02",
+      "basis": "「谷歌800亿+慧与暴涨+黄仁勋论光连接」→三重共振→光模块板块资金流入→龙头个股估值修复→指数超额收益机会",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-02 17:12:31"
+  "last_updated": "2026-06-02 17:23:58"
 }
