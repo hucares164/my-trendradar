@@ -927,7 +927,18 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-02",
+      "content": "预判1：受谷歌800亿美元资本开支及慧与财报超预期影响，全球前三大云厂商2026年Q3资本开支总和将同比增长超25%",
+      "confidence": "高",
+      "signal_type": "PEAD",
+      "verify_date": "2026-09-30",
+      "basis": "谷歌800亿融资→AI基建浪潮信号明确→龙头资本开支竞赛→Q3财报验证",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-02 17:23:58"
+  "last_updated": "2026-06-02 19:57:49"
 }
