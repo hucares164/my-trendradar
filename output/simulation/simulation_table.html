@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>模拟盘验证表 v3</title>
+<title>模拟盘验证表 v4</title>
 <style>
     body       { font-family: -apple-system, 'PingFang SC', sans-serif; background: #f5f6fa; margin: 0; padding: 20px; }
     h1         { color: #333; margin-bottom: 4px; }
@@ -13,10 +13,6 @@
     tr:hover   { background: #f8f9ff; }
     .pnl-positive { color: #e74c3c; font-weight: bold; }
     .pnl-negative { color: #27ae60; font-weight: bold; }
-    .bar-container { display: flex; align-items: flex-end; gap: 2px; height: 38px; }
-    .bar       { width: 6px; border-radius: 2px 2px 0 0; min-height: 2px; }
-    .bar-pos   { background: #e74c3c; }
-    .bar-neg   { background: #27ae60; }
     .summary   { display: flex; gap: 16px; margin: 16px 0; flex-wrap: wrap; }
     .card      { background: white; padding: 14px 22px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); min-width: 110px; }
     .card h3   { margin: 0; color: #999; font-size: 11.5px; font-weight: normal; }
@@ -29,189 +25,204 @@
 </head>
 <body>
 <h1>📊 模拟盘验证表</h1>
-<p class="subtitle">生成时间: 2026-06-02 10:47 ｜ 数据来源: westock-data ｜ 每支股票模拟买入 100 股</p>
+<p class="subtitle">生成时间: 2026-06-02 11:52 ｜ 数据来源: westock-data ｜ 每支股票模拟买入 100 股</p>
 <div class="summary">
-    <div class="card"><h3>追踪股票</h3><div class="val">22</div></div>
-    <div class="card"><h3>盈利数</h3><div class="val pos">11</div></div>
-    <div class="card"><h3>亏损数</h3><div class="val neg">11</div></div>
-    <div class="card"><h3>总盈亏</h3><div class="val pos">¥+40758.00</div></div>
+    <div class="card"><h3>追踪股票</h3><div class="val">18</div></div>
+    <div class="card"><h3>盈利数</h3><div class="val pos">8</div></div>
+    <div class="card"><h3>亏损数</h3><div class="val neg">10</div></div>
+    <div class="card"><h3>总盈亏</h3><div class="val pos">¥+34696.00</div></div>
 </div>
 <table>
     <thead>
         <tr>
             <th>股票</th><th>起始日期</th><th>验证周期</th><th>起始总价<br>(×100股)</th>
-            <th>累计盈亏<br>(100股)</th><th>预期方向/涨幅</th><th>当前涨跌幅</th><th>前5日涨跌幅</th><th>每日涨跌</th>
+            <th>累计盈亏<br>(100股)</th><th>预期方向/涨幅</th><th>当前涨跌幅</th><th>首日涨跌幅</th><th>前3日涨跌幅</th><th>前5日涨跌幅</th>
         </tr>
     </thead>
     <tbody>
         
         <tr>
-            <td>北方华创<br><small>sz002371</small><br><span class="tag" style="background:#d63031">A股</span><span class="tag" style="background:#6c5ce7">半导体芯片</span></td>
+            <td>北方华创<br><small>sz002371</small><br><span class="tag" style="background:#6c5ce7">半导体芯片</span></td>
             <td>2026-05-19</td>
             <td>76天<br><small>→ 2026-09-01</small></td>
             <td><b>¥61970.00</b></td>
-            <td class="pnl-negative">-1092.00<br><small>-1.76%</small></td>
+            <td class="pnl-negative">-840.00<br><small>-1.36%</small></td>
             <td>↔ 方向不明</td>
-            <td class="pnl-negative">-1.76%</td>
+            <td class="pnl-negative">-1.36%</td>
+            <td class="pnl-positive">+5.86%</td>
+            <td class="pnl-positive">+7.96%</td>
             <td class="pnl-positive">+8.16%</td>
-            <td><div class="bar-container"><div class="bar bar-pos" style="height:23.4px" title="2026-05-20: +5.86%"></div><div class="bar bar-pos" style="height:4.3px" title="2026-05-21: +1.07%"></div><div class="bar bar-pos" style="height:3.6px" title="2026-05-22: +0.91%"></div><div class="bar bar-pos" style="height:17.5px" title="2026-05-25: +4.36%"></div><div class="bar bar-neg" style="height:16.0px" title="2026-05-26: -4.00%"></div><div class="bar bar-neg" style="height:9.2px" title="2026-05-27: -2.31%"></div><div class="bar bar-pos" style="height:2.6px" title="2026-05-28: +0.65%"></div><div class="bar bar-neg" style="height:17.7px" title="2026-05-29: -4.42%"></div><div class="bar bar-neg" style="height:25.4px" title="2026-06-01: -6.35%"></div><div class="bar bar-pos" style="height:12.8px" title="2026-06-02: +3.20%"></div></div></td>
         </tr>
         <tr>
-            <td>中微公司<br><small>sh688012</small><br><span class="tag" style="background:#d63031">A股</span><span class="tag" style="background:#6c5ce7">半导体芯片</span></td>
+            <td>中微公司<br><small>sh688012</small><br><span class="tag" style="background:#6c5ce7">半导体芯片</span></td>
             <td>2026-05-19</td>
             <td>76天<br><small>→ 2026-09-01</small></td>
             <td><b>¥32158.00</b></td>
-            <td class="pnl-negative">-4271.00<br><small>-13.28%</small></td>
+            <td class="pnl-negative">-4152.00<br><small>-12.91%</small></td>
             <td>↔ 方向不明</td>
-            <td class="pnl-negative">-13.28%</td>
+            <td class="pnl-negative">-12.91%</td>
+            <td class="pnl-positive">+2.26%</td>
+            <td class="pnl-negative">-2.07%</td>
             <td class="pnl-negative">-3.34%</td>
-            <td><div class="bar-container"><div class="bar bar-pos" style="height:9.0px" title="2026-05-20: +2.26%"></div><div class="bar bar-neg" style="height:11.9px" title="2026-05-21: -2.97%"></div><div class="bar bar-neg" style="height:5.2px" title="2026-05-22: -1.30%"></div><div class="bar bar-pos" style="height:13.4px" title="2026-05-25: +3.35%"></div><div class="bar bar-neg" style="height:18.0px" title="2026-05-26: -4.49%"></div><div class="bar bar-neg" style="height:7.3px" title="2026-05-27: -1.83%"></div><div class="bar bar-neg" style="height:2.0px" title="2026-05-28: -0.43%"></div><div class="bar bar-neg" style="height:8.1px" title="2026-05-29: -2.04%"></div><div class="bar bar-neg" style="height:33.2px" title="2026-06-01: -8.29%"></div><div class="bar bar-pos" style="height:8.6px" title="2026-06-02: +2.15%"></div></div></td>
         </tr>
         <tr>
-            <td>沪硅产业<br><small>sh688126</small><br><span class="tag" style="background:#d63031">A股</span><span class="tag" style="background:#6c5ce7">半导体芯片</span></td>
+            <td>沪硅产业<br><small>sh688126</small><br><span class="tag" style="background:#6c5ce7">半导体芯片</span></td>
             <td>2026-05-19</td>
             <td>76天<br><small>→ 2026-09-01</small></td>
             <td><b>¥2952.00</b></td>
-            <td class="pnl-negative">-448.00<br><small>-15.18%</small></td>
+            <td class="pnl-negative">-485.00<br><small>-16.43%</small></td>
             <td>↔ 方向不明</td>
-            <td class="pnl-negative">-15.18%</td>
+            <td class="pnl-negative">-16.43%</td>
+            <td class="pnl-negative">-0.71%</td>
+            <td class="pnl-negative">-5.79%</td>
             <td class="pnl-negative">-8.88%</td>
-            <td><div class="bar-container"><div class="bar bar-neg" style="height:2.8px" title="2026-05-20: -0.71%"></div><div class="bar bar-neg" style="height:22.2px" title="2026-05-21: -5.56%"></div><div class="bar bar-pos" style="height:2.0px" title="2026-05-22: +0.47%"></div><div class="bar bar-pos" style="height:17.8px" title="2026-05-25: +4.46%"></div><div class="bar bar-neg" style="height:29.6px" title="2026-05-26: -7.40%"></div><div class="bar bar-pos" style="height:17.4px" title="2026-05-27: +4.35%"></div><div class="bar bar-pos" style="height:36.0px" title="2026-05-28: +9.05%"></div><div class="bar bar-neg" style="height:36.0px" title="2026-05-29: -9.51%"></div><div class="bar bar-neg" style="height:26.3px" title="2026-06-01: -6.57%"></div><div class="bar bar-neg" style="height:13.0px" title="2026-06-02: -3.25%"></div></div></td>
         </tr>
         <tr>
-            <td>中国石油<br><small>sh601857</small><br><span class="tag" style="background:#d63031">A股</span><span class="tag" style="background:#fdcb6e">能源石化</span></td>
+            <td>中国石油<br><small>sh601857</small><br><span class="tag" style="background:#fdcb6e">能源石化</span></td>
             <td>2026-05-19</td>
             <td>67天<br><small>→ 2026-08-19</small></td>
             <td><b>¥1156.00</b></td>
-            <td class="pnl-negative">-86.00<br><small>-7.44%</small></td>
+            <td class="pnl-negative">-93.00<br><small>-8.04%</small></td>
             <td>↔ 方向不明</td>
-            <td class="pnl-negative">-7.44%</td>
+            <td class="pnl-negative">-8.04%</td>
+            <td class="pnl-positive">+0.61%</td>
+            <td class="pnl-negative">-4.15%</td>
             <td class="pnl-negative">-5.19%</td>
-            <td><div class="bar-container"><div class="bar bar-pos" style="height:2.4px" title="2026-05-20: +0.61%"></div><div class="bar bar-neg" style="height:11.7px" title="2026-05-21: -2.92%"></div><div class="bar bar-neg" style="height:7.4px" title="2026-05-22: -1.86%"></div><div class="bar bar-neg" style="height:12.6px" title="2026-05-25: -3.16%"></div><div class="bar bar-pos" style="height:8.6px" title="2026-05-26: +2.14%"></div><div class="bar bar-neg" style="height:5.8px" title="2026-05-27: -1.46%"></div><div class="bar bar-pos" style="height:2.0px" title="2026-05-28: +0.00%"></div><div class="bar bar-pos" style="height:2.6px" title="2026-05-29: +0.65%"></div><div class="bar bar-neg" style="height:2.0px" title="2026-06-01: -0.46%"></div><div class="bar bar-neg" style="height:4.4px" title="2026-06-02: -1.11%"></div></div></td>
         </tr>
         <tr>
-            <td>中油资本<br><small>sz000617</small><br><span class="tag" style="background:#d63031">A股</span><span class="tag" style="background:#fdcb6e">能源石化</span></td>
+            <td>中油资本<br><small>sz000617</small><br><span class="tag" style="background:#fdcb6e">能源石化</span></td>
             <td>2026-05-19</td>
             <td>24天<br><small>→ 2026-06-19</small></td>
             <td><b>¥859.00</b></td>
-            <td class="pnl-negative">-86.00<br><small>-10.01%</small></td>
+            <td class="pnl-negative">-87.00<br><small>-10.13%</small></td>
             <td>+5%以上</td>
-            <td class="pnl-negative">-10.01%</td>
+            <td class="pnl-negative">-10.13%</td>
+            <td class="pnl-positive">+0.35%</td>
+            <td class="pnl-negative">-5.36%</td>
             <td class="pnl-negative">-7.57%</td>
-            <td><div class="bar-container"><div class="bar bar-pos" style="height:2.0px" title="2026-05-20: +0.35%"></div><div class="bar bar-neg" style="height:17.2px" title="2026-05-21: -4.29%"></div><div class="bar bar-neg" style="height:5.8px" title="2026-05-22: -1.45%"></div><div class="bar bar-neg" style="height:6.9px" title="2026-05-25: -1.72%"></div><div class="bar bar-neg" style="height:2.5px" title="2026-05-26: -0.63%"></div><div class="bar bar-neg" style="height:10.1px" title="2026-05-27: -2.52%"></div><div class="bar bar-pos" style="height:2.0px" title="2026-05-28: +0.39%"></div><div class="bar bar-pos" style="height:2.0px" title="2026-05-29: +0.39%"></div><div class="bar bar-pos" style="height:4.1px" title="2026-06-01: +1.03%"></div><div class="bar bar-neg" style="height:7.6px" title="2026-06-02: -1.90%"></div></div></td>
         </tr>
         <tr>
-            <td>新国都<br><small>sz300130</small><br><span class="tag" style="background:#d63031">A股</span><span class="tag" style="background:#fd79a8">金融科技</span></td>
+            <td>新国都<br><small>sz300130</small><br><span class="tag" style="background:#fd79a8">金融科技</span></td>
             <td>2026-05-19</td>
             <td>24天<br><small>→ 2026-06-19</small></td>
             <td><b>¥2250.00</b></td>
-            <td class="pnl-positive">+100.00<br><small>+4.44%</small></td>
+            <td class="pnl-positive">+113.00<br><small>+5.02%</small></td>
             <td>+5%以上</td>
+            <td class="pnl-positive">+5.02%</td>
             <td class="pnl-positive">+4.44%</td>
+            <td class="pnl-positive">+8.18%</td>
             <td class="pnl-positive">+9.11%</td>
-            <td><div class="bar-container"><div class="bar bar-pos" style="height:17.8px" title="2026-05-20: +4.44%"></div><div class="bar bar-pos" style="height:2.0px" title="2026-05-21: +0.47%"></div><div class="bar bar-pos" style="height:12.4px" title="2026-05-22: +3.09%"></div><div class="bar bar-pos" style="height:9.2px" title="2026-05-25: +2.30%"></div><div class="bar bar-neg" style="height:5.6px" title="2026-05-26: -1.41%"></div><div class="bar bar-neg" style="height:3.1px" title="2026-05-27: -0.77%"></div><div class="bar bar-pos" style="height:2.0px" title="2026-05-28: +0.04%"></div><div class="bar bar-neg" style="height:24.1px" title="2026-05-29: -6.03%"></div><div class="bar bar-pos" style="height:20.3px" title="2026-06-01: +5.07%"></div><div class="bar bar-neg" style="height:9.3px" title="2026-06-02: -2.33%"></div></div></td>
         </tr>
         <tr>
-            <td>兆易创新<br><small>sh603986</small><br><span class="tag" style="background:#d63031">A股</span><span class="tag" style="background:#6c5ce7">半导体芯片</span></td>
+            <td>兆易创新<br><small>sh603986</small><br><span class="tag" style="background:#6c5ce7">半导体芯片</span></td>
             <td>2026-05-19</td>
             <td>133天<br><small>→ 2026-11-19</small></td>
             <td><b>¥40381.00</b></td>
-            <td class="pnl-positive">+6606.00<br><small>+16.36%</small></td>
+            <td class="pnl-positive">+7379.00<br><small>+18.27%</small></td>
             <td>📉 预期下跌</td>
-            <td class="pnl-positive">+16.36%</td>
+            <td class="pnl-positive">+18.27%</td>
+            <td class="pnl-positive">+10.02%</td>
+            <td class="pnl-positive">+15.89%</td>
             <td class="pnl-positive">+30.31%</td>
-            <td><div class="bar-container"><div class="bar bar-pos" style="height:36.0px" title="2026-05-20: +10.02%"></div><div class="bar bar-neg" style="height:11.8px" title="2026-05-21: -2.95%"></div><div class="bar bar-pos" style="height:34.2px" title="2026-05-22: +8.54%"></div><div class="bar bar-pos" style="height:36.0px" title="2026-05-25: +10.01%"></div><div class="bar bar-pos" style="height:8.8px" title="2026-05-26: +2.21%"></div><div class="bar bar-neg" style="height:9.2px" title="2026-05-27: -2.29%"></div><div class="bar bar-neg" style="height:24.3px" title="2026-05-28: -6.06%"></div><div class="bar bar-neg" style="height:13.2px" title="2026-05-29: -3.31%"></div><div class="bar bar-pos" style="height:2.0px" title="2026-06-01: +0.21%"></div><div class="bar bar-pos" style="height:2.0px" title="2026-06-02: +0.40%"></div></div></td>
         </tr>
         <tr>
-            <td>中际旭创<br><small>sz300308</small><br><span class="tag" style="background:#d63031">A股</span><span class="tag" style="background:#00b894">光通信</span></td>
+            <td>中际旭创<br><small>sz300308</small><br><span class="tag" style="background:#00b894">光通信</span></td>
             <td>2026-05-20</td>
             <td>44天<br><small>→ 2026-07-20</small></td>
             <td><b>¥103700.00</b></td>
-            <td class="pnl-positive">+14300.00<br><small>+13.79%</small></td>
+            <td class="pnl-positive">+16208.00<br><small>+15.63%</small></td>
             <td>5%~20%</td>
-            <td class="pnl-positive">+13.79%</td>
+            <td class="pnl-positive">+15.63%</td>
+            <td class="pnl-negative">-4.21%</td>
+            <td class="pnl-positive">+5.40%</td>
             <td class="pnl-positive">+7.17%</td>
-            <td><div class="bar-container"><div class="bar bar-neg" style="height:16.8px" title="2026-05-21: -4.21%"></div><div class="bar bar-pos" style="height:18.0px" title="2026-05-22: +4.49%"></div><div class="bar bar-pos" style="height:21.2px" title="2026-05-25: +5.30%"></div><div class="bar bar-pos" style="height:3.7px" title="2026-05-26: +0.91%"></div><div class="bar bar-pos" style="height:3.0px" title="2026-05-27: +0.76%"></div><div class="bar bar-pos" style="height:31.2px" title="2026-05-28: +7.79%"></div><div class="bar bar-neg" style="height:12.3px" title="2026-05-29: -3.07%"></div><div class="bar bar-neg" style="height:10.7px" title="2026-06-01: -2.68%"></div><div class="bar bar-pos" style="height:17.7px" title="2026-06-02: +4.42%"></div></div></td>
         </tr>
         <tr>
-            <td>新易盛<br><small>sz300502</small><br><span class="tag" style="background:#d63031">A股</span><span class="tag" style="background:#00b894">光通信</span></td>
+            <td>新易盛<br><small>sz300502</small><br><span class="tag" style="background:#00b894">光通信</span></td>
             <td>2026-05-20</td>
             <td>44天<br><small>→ 2026-07-20</small></td>
             <td><b>¥58797.00</b></td>
-            <td class="pnl-positive">+13755.00<br><small>+23.39%</small></td>
+            <td class="pnl-positive">+15542.00<br><small>+26.43%</small></td>
             <td>5%~20%</td>
-            <td class="pnl-positive">+23.39%</td>
+            <td class="pnl-positive">+26.43%</td>
+            <td class="pnl-negative">-3.74%</td>
+            <td class="pnl-positive">+12.08%</td>
             <td class="pnl-positive">+18.20%</td>
-            <td><div class="bar-container"><div class="bar bar-neg" style="height:14.9px" title="2026-05-21: -3.74%"></div><div class="bar bar-pos" style="height:28.8px" title="2026-05-22: +7.20%"></div><div class="bar bar-pos" style="height:34.4px" title="2026-05-25: +8.61%"></div><div class="bar bar-pos" style="height:24.9px" title="2026-05-26: +6.22%"></div><div class="bar bar-neg" style="height:2.9px" title="2026-05-27: -0.71%"></div><div class="bar bar-pos" style="height:13.4px" title="2026-05-28: +3.36%"></div><div class="bar bar-neg" style="height:6.6px" title="2026-05-29: -1.66%"></div><div class="bar bar-neg" style="height:15.1px" title="2026-06-01: -3.77%"></div><div class="bar bar-pos" style="height:26.9px" title="2026-06-02: +6.72%"></div></div></td>
         </tr>
         <tr>
-            <td>申昊科技<br><small>sz300853</small><br><span class="tag" style="background:#d63031">A股</span><span class="tag" style="background:#e17055">机器人工控</span></td>
+            <td>申昊科技<br><small>sz300853</small><br><span class="tag" style="background:#e17055">机器人工控</span></td>
             <td>2026-05-22</td>
             <td>66天<br><small>→ 2026-08-22</small></td>
             <td><b>¥3340.00</b></td>
-            <td class="pnl-positive">+489.00<br><small>+14.64%</small></td>
+            <td class="pnl-positive">+445.00<br><small>+13.32%</small></td>
             <td>±20%</td>
-            <td class="pnl-positive">+14.64%</td>
+            <td class="pnl-positive">+13.32%</td>
+            <td class="pnl-positive">+6.11%</td>
+            <td class="pnl-positive">+10.75%</td>
             <td class="pnl-positive">+13.41%</td>
-            <td><div class="bar-container"><div class="bar bar-pos" style="height:24.4px" title="2026-05-25: +6.11%"></div><div class="bar bar-pos" style="height:26.0px" title="2026-05-26: +6.49%"></div><div class="bar bar-neg" style="height:7.9px" title="2026-05-27: -1.99%"></div><div class="bar bar-pos" style="height:10.2px" title="2026-05-28: +2.54%"></div><div class="bar bar-neg" style="height:2.0px" title="2026-05-29: -0.13%"></div><div class="bar bar-pos" style="height:2.3px" title="2026-06-01: +0.58%"></div><div class="bar bar-pos" style="height:2.0px" title="2026-06-02: +0.50%"></div></div></td>
         </tr>
         <tr>
-            <td>亿嘉和<br><small>sh603666</small><br><span class="tag" style="background:#d63031">A股</span><span class="tag" style="background:#e17055">机器人工控</span></td>
+            <td>亿嘉和<br><small>sh603666</small><br><span class="tag" style="background:#e17055">机器人工控</span></td>
             <td>2026-05-22</td>
             <td>66天<br><small>→ 2026-08-22</small></td>
             <td><b>¥3121.00</b></td>
-            <td class="pnl-negative">-229.00<br><small>-7.34%</small></td>
+            <td class="pnl-negative">-224.00<br><small>-7.18%</small></td>
             <td>±20%</td>
-            <td class="pnl-negative">-7.34%</td>
+            <td class="pnl-negative">-7.18%</td>
+            <td class="pnl-positive">+4.04%</td>
+            <td class="pnl-positive">+0.26%</td>
             <td class="pnl-negative">-5.00%</td>
-            <td><div class="bar-container"><div class="bar bar-pos" style="height:16.1px" title="2026-05-25: +4.04%"></div><div class="bar bar-neg" style="height:7.6px" title="2026-05-26: -1.91%"></div><div class="bar bar-neg" style="height:7.0px" title="2026-05-27: -1.76%"></div><div class="bar bar-neg" style="height:6.5px" title="2026-05-28: -1.63%"></div><div class="bar bar-neg" style="height:14.7px" title="2026-05-29: -3.67%"></div><div class="bar bar-neg" style="height:2.0px" title="2026-06-01: -0.47%"></div><div class="bar bar-neg" style="height:8.0px" title="2026-06-02: -2.00%"></div></div></td>
         </tr>
         <tr>
-            <td>神州数码<br><small>sz000034</small><br><span class="tag" style="background:#d63031">A股</span><span class="tag" style="background:#0984e3">AI软件</span></td>
+            <td>神州数码<br><small>sz000034</small><br><span class="tag" style="background:#0984e3">AI软件</span></td>
             <td>2026-05-22</td>
             <td>66天<br><small>→ 2026-08-22</small></td>
             <td><b>¥2907.00</b></td>
-            <td class="pnl-negative">-309.00<br><small>-10.63%</small></td>
+            <td class="pnl-negative">-296.00<br><small>-10.18%</small></td>
             <td>↔ 方向不明</td>
-            <td class="pnl-negative">-10.63%</td>
+            <td class="pnl-negative">-10.18%</td>
+            <td class="pnl-positive">+1.55%</td>
+            <td class="pnl-negative">-10.97%</td>
             <td class="pnl-negative">-11.11%</td>
-            <td><div class="bar-container"><div class="bar bar-pos" style="height:6.2px" title="2026-05-25: +1.55%"></div><div class="bar bar-neg" style="height:22.4px" title="2026-05-26: -5.59%"></div><div class="bar bar-neg" style="height:28.6px" title="2026-05-27: -7.14%"></div><div class="bar bar-pos" style="height:6.0px" title="2026-05-28: +1.51%"></div><div class="bar bar-neg" style="height:6.5px" title="2026-05-29: -1.64%"></div><div class="bar bar-pos" style="height:11.6px" title="2026-06-01: +2.90%"></div><div class="bar bar-neg" style="height:9.2px" title="2026-06-02: -2.29%"></div></div></td>
         </tr>
         <tr>
-            <td>拓维信息<br><small>sz002261</small><br><span class="tag" style="background:#d63031">A股</span><span class="tag" style="background:#0984e3">AI软件</span></td>
+            <td>拓维信息<br><small>sz002261</small><br><span class="tag" style="background:#0984e3">AI软件</span></td>
             <td>2026-05-22</td>
             <td>66天<br><small>→ 2026-08-22</small></td>
             <td><b>¥3223.00</b></td>
-            <td class="pnl-negative">-237.00<br><small>-7.35%</small></td>
+            <td class="pnl-negative">-239.00<br><small>-7.42%</small></td>
             <td>↔ 方向不明</td>
-            <td class="pnl-negative">-7.35%</td>
+            <td class="pnl-negative">-7.42%</td>
+            <td class="pnl-positive">+2.92%</td>
+            <td class="pnl-negative">-5.21%</td>
             <td class="pnl-negative">-7.91%</td>
-            <td><div class="bar-container"><div class="bar bar-pos" style="height:11.7px" title="2026-05-25: +2.92%"></div><div class="bar bar-neg" style="height:11.1px" title="2026-05-26: -2.77%"></div><div class="bar bar-neg" style="height:21.1px" title="2026-05-27: -5.27%"></div><div class="bar bar-pos" style="height:4.1px" title="2026-05-28: +1.01%"></div><div class="bar bar-neg" style="height:15.3px" title="2026-05-29: -3.82%"></div><div class="bar bar-pos" style="height:10.8px" title="2026-06-01: +2.70%"></div><div class="bar bar-neg" style="height:8.1px" title="2026-06-02: -2.03%"></div></div></td>
         </tr>
         <tr>
-            <td>金山办公<br><small>sh688111</small><br><span class="tag" style="background:#d63031">A股</span><span class="tag" style="background:#0984e3">AI软件</span></td>
+            <td>金山办公<br><small>sh688111</small><br><span class="tag" style="background:#0984e3">AI软件</span></td>
             <td>2026-05-25</td>
             <td>65天<br><small>→ 2026-08-23</small></td>
             <td><b>¥24534.00</b></td>
-            <td class="pnl-positive">+1472.00<br><small>+6.00%</small></td>
+            <td class="pnl-positive">+1254.00<br><small>+5.11%</small></td>
             <td>+80%以上</td>
-            <td class="pnl-positive">+6.00%</td>
+            <td class="pnl-positive">+5.11%</td>
+            <td class="pnl-negative">-1.08%</td>
+            <td class="pnl-negative">-3.65%</td>
             <td class="pnl-positive">+4.39%</td>
-            <td><div class="bar-container"><div class="bar bar-neg" style="height:4.3px" title="2026-05-26: -1.08%"></div><div class="bar bar-neg" style="height:10.2px" title="2026-05-27: -2.54%"></div><div class="bar bar-neg" style="height:2.0px" title="2026-05-28: -0.06%"></div><div class="bar bar-pos" style="height:3.6px" title="2026-05-29: +0.90%"></div><div class="bar bar-pos" style="height:29.5px" title="2026-06-01: +7.38%"></div><div class="bar bar-pos" style="height:6.2px" title="2026-06-02: +1.55%"></div></div></td>
         </tr>
         <tr>
-            <td>用友网络<br><small>sh600588</small><br><span class="tag" style="background:#d63031">A股</span><span class="tag" style="background:#0984e3">AI软件</span></td>
+            <td>用友网络<br><small>sh600588</small><br><span class="tag" style="background:#0984e3">AI软件</span></td>
             <td>2026-05-25</td>
             <td>65天<br><small>→ 2026-08-23</small></td>
             <td><b>¥1094.00</b></td>
-            <td class="pnl-positive">+27.00<br><small>+2.47%</small></td>
+            <td class="pnl-positive">+26.00<br><small>+2.38%</small></td>
             <td>+80%以上</td>
-            <td class="pnl-positive">+2.47%</td>
+            <td class="pnl-positive">+2.38%</td>
+            <td class="pnl-negative">-2.19%</td>
+            <td class="pnl-negative">-3.84%</td>
             <td class="pnl-positive">+4.30%</td>
-            <td><div class="bar-container"><div class="bar bar-neg" style="height:8.8px" title="2026-05-26: -2.19%"></div><div class="bar bar-neg" style="height:15.0px" title="2026-05-27: -3.74%"></div><div class="bar bar-pos" style="height:8.5px" title="2026-05-28: +2.14%"></div><div class="bar bar-neg" style="height:5.7px" title="2026-05-29: -1.43%"></div><div class="bar bar-pos" style="height:36.0px" title="2026-06-01: +10.03%"></div><div class="bar bar-neg" style="height:7.0px" title="2026-06-02: -1.75%"></div></div></td>
         </tr>
         <tr>
-            <td>中国石化<br><small>sh600028</small><br><span class="tag" style="background:#d63031">A股</span><span class="tag" style="background:#fdcb6e">能源石化</span></td>
+            <td>中国石化<br><small>sh600028</small><br><span class="tag" style="background:#fdcb6e">能源石化</span></td>
             <td>2026-05-25</td>
             <td>65天<br><small>→ 2026-08-23</small></td>
             <td><b>¥492.00</b></td>
@@ -219,76 +230,35 @@
             <td>±15%</td>
             <td class="pnl-negative">-1.83%</td>
             <td class="pnl-negative">-1.02%</td>
-            <td><div class="bar-container"><div class="bar bar-neg" style="height:4.1px" title="2026-05-26: -1.02%"></div><div class="bar bar-neg" style="height:3.3px" title="2026-05-27: -0.82%"></div><div class="bar bar-neg" style="height:2.0px" title="2026-05-28: -0.41%"></div><div class="bar bar-pos" style="height:3.3px" title="2026-05-29: +0.83%"></div><div class="bar bar-pos" style="height:2.0px" title="2026-06-01: +0.41%"></div><div class="bar bar-neg" style="height:3.3px" title="2026-06-02: -0.82%"></div></div></td>
+            <td class="pnl-negative">-2.24%</td>
+            <td class="pnl-negative">-1.02%</td>
         </tr>
         <tr>
-            <td>精达股份<br><small>sh600577</small><br><span class="tag" style="background:#d63031">A股</span><span class="tag" style="background:#fdcb6e">能源石化</span></td>
+            <td>精达股份<br><small>sh600577</small><br><span class="tag" style="background:#fdcb6e">能源石化</span></td>
             <td>2026-05-29</td>
             <td>111天<br><small>→ 2026-10-31</small></td>
             <td><b>¥1300.00</b></td>
             <td class="pnl-negative">-32.00<br><small>-2.46%</small></td>
             <td>📈 预期上涨</td>
             <td class="pnl-negative">-2.46%</td>
+            <td class="pnl-negative">-3.23%</td>
             <td class="">—</td>
-            <td><div class="bar-container"><div class="bar bar-neg" style="height:12.9px" title="2026-06-01: -3.23%"></div><div class="bar bar-pos" style="height:3.2px" title="2026-06-02: +0.79%"></div></div></td>
+            <td class="">—</td>
         </tr>
         <tr>
-            <td>比亚迪<br><small>sz002594</small><br><span class="tag" style="background:#d63031">A股</span><span class="tag" style="background:#00cec9">电动车</span></td>
+            <td>比亚迪<br><small>sz002594</small><br><span class="tag" style="background:#00cec9">电动车</span></td>
             <td>2026-06-01</td>
             <td>45天<br><small>→ 2026-07-31</small></td>
             <td><b>¥9365.00</b></td>
-            <td class="pnl-positive">+193.00<br><small>+2.06%</small></td>
+            <td class="pnl-positive">+186.00<br><small>+1.99%</small></td>
             <td>↔ 方向不明</td>
-            <td class="pnl-positive">+2.06%</td>
+            <td class="pnl-positive">+1.99%</td>
+            <td class="pnl-positive">+1.99%</td>
             <td class="">—</td>
-            <td><div class="bar-container"><div class="bar bar-pos" style="height:8.2px" title="2026-06-02: +2.06%"></div></div></td>
-        </tr>
-        <tr>
-            <td>富途控股<br><small>usFUTU</small><br><span class="tag" style="background:#0984e3">美股</span><span class="tag" style="background:#fd79a8">金融科技</span></td>
-            <td>2026-05-26</td>
-            <td>10天<br><small>→ 2026-06-06</small></td>
-            <td><b>$10770.00</b></td>
-            <td class="pnl-negative">-485.00<br><small>-4.50%</small></td>
-            <td>±20%</td>
-            <td class="pnl-negative">-4.50%</td>
             <td class="">—</td>
-            <td><div class="bar-container"><div class="bar bar-pos" style="height:9.4px" title="2026-05-27: +2.34%"></div><div class="bar bar-neg" style="height:19.3px" title="2026-05-28: -4.82%"></div><div class="bar bar-neg" style="height:3.2px" title="2026-05-29: -0.80%"></div><div class="bar bar-neg" style="height:4.7px" title="2026-06-01: -1.17%"></div></div></td>
-        </tr>
-        <tr>
-            <td>老虎证券<br><small>usTIGR.OQ</small><br><span class="tag" style="background:#0984e3">美股</span><span class="tag" style="background:#fd79a8">金融科技</span></td>
-            <td>2026-05-26</td>
-            <td>10天<br><small>→ 2026-06-06</small></td>
-            <td><b>$501.00</b></td>
-            <td class="pnl-positive">+16.00<br><small>+3.19%</small></td>
-            <td>±20%</td>
-            <td class="pnl-positive">+3.19%</td>
-            <td class="">—</td>
-            <td><div class="bar-container"><div class="bar bar-pos" style="height:7.2px" title="2026-05-27: +1.80%"></div><div class="bar bar-neg" style="height:7.1px" title="2026-05-28: -1.76%"></div><div class="bar bar-pos" style="height:10.4px" title="2026-05-29: +2.59%"></div><div class="bar bar-pos" style="height:2.3px" title="2026-06-01: +0.58%"></div></div></td>
-        </tr>
-        <tr>
-            <td>英伟达<br><small>usNVDA</small><br><span class="tag" style="background:#0984e3">美股</span><span class="tag" style="background:#6c5ce7">半导体芯片</span></td>
-            <td>2026-05-19</td>
-            <td>75天<br><small>→ 2026-08-31</small></td>
-            <td><b>$22061.00</b></td>
-            <td class="pnl-positive">+375.00<br><small>+1.70%</small></td>
-            <td>↔ 方向不明</td>
-            <td class="pnl-positive">+1.70%</td>
-            <td class="pnl-negative">-3.63%</td>
-            <td><div class="bar-container"><div class="bar bar-pos" style="height:5.2px" title="2026-05-20: +1.30%"></div><div class="bar bar-neg" style="height:7.1px" title="2026-05-21: -1.77%"></div><div class="bar bar-neg" style="height:7.6px" title="2026-05-22: -1.90%"></div><div class="bar bar-neg" style="height:2.0px" title="2026-05-26: -0.22%"></div><div class="bar bar-neg" style="height:4.2px" title="2026-05-27: -1.05%"></div><div class="bar bar-pos" style="height:3.1px" title="2026-05-28: +0.78%"></div><div class="bar bar-neg" style="height:5.8px" title="2026-05-29: -1.45%"></div><div class="bar bar-pos" style="height:25.0px" title="2026-06-01: +6.26%"></div></div></td>
-        </tr>
-        <tr>
-            <td>美光科技<br><small>usMU</small><br><span class="tag" style="background:#0984e3">美股</span><span class="tag" style="background:#6c5ce7">半导体芯片</span></td>
-            <td>2026-05-27</td>
-            <td>67天<br><small>→ 2026-08-27</small></td>
-            <td><b>$92841.00</b></td>
-            <td class="pnl-positive">+10709.00<br><small>+11.53%</small></td>
-            <td>±30%</td>
-            <td class="pnl-positive">+11.53%</td>
-            <td class="">—</td>
-            <td><div class="bar-container"><div class="bar bar-neg" style="height:2.1px" title="2026-05-28: -0.53%"></div><div class="bar bar-pos" style="height:20.6px" title="2026-05-29: +5.14%"></div><div class="bar bar-pos" style="height:26.6px" title="2026-06-01: +6.64%"></div></div></td>
         </tr>
     </tbody>
 </table>
-<p class="footer">■ 红色=涨(盈) ｜ ■ 绿色=跌(亏) ｜ 非交易日自动顺延 ｜ 美股报价货币为美元($) ｜ 验证周期 = verify_date - date（固定天数）</p>
+<p class="footer">■ 红色=涨(盈) ｜ ■ 绿色=跌(亏) ｜ 非交易日自动顺延 ｜ 全A股（¥） ｜ 验证周期 = verify_date - date（固定天数）</p>
 </body>
 </html>

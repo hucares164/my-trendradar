@@ -152,11 +152,11 @@ class FeishuBitableClient:
         ("累计盈亏(100股)",  2),
         ("预期方向/涨幅",   1),
         ("当前涨跌幅",      1),
+        ("首日涨跌幅",      1),
+        ("前3日涨跌幅",     1),
         ("前5日涨跌幅",     1),
-        ("每日涨跌序列",    1),
-        ("市场",            1),    # A股 / 美股 / 港股
         ("赛道",            1),    # 半导体芯片 / 光通信 / AI软件 等
-        ("🔗网页版",        1),    # type 1 = 文本（存链接）
+        ("🔗网页版",        1),
     ]
 
     # 网页版模拟盘地址
@@ -420,10 +420,6 @@ STOCK_ALIASES = {
     "中国石化": ["中国石化", "中石化"],
     "精达股份": ["精达股份"],
     "比亚迪":   ["比亚迪", "BYD"],
-    "富途控股": ["富途控股", "富途", "FUTU"],
-    "老虎证券": ["老虎证券", "老虎", "TIGR"],
-    "英伟达":   ["英伟达", "NVIDIA", "NVDA"],
-    "美光科技": ["美光科技", "美光", "MU"],
 }
 
 STOCKS = [
@@ -445,36 +441,28 @@ STOCKS = [
     ("sh600028",  "中国石化"),
     ("sh600577",  "精达股份"),
     ("sz002594",  "比亚迪"),
-    ("usFUTU",    "富途控股"),
-    ("usTIGR.OQ", "老虎证券"),
-    ("usNVDA",    "英伟达"),
-    ("usMU",      "美光科技"),
 ]
 
-# 股票分类：{名称: (赛道, 市场)}
-STOCK_META = {
-    "北方华创":  ("半导体芯片", "A股"),
-    "中微公司":  ("半导体芯片", "A股"),
-    "沪硅产业":  ("半导体芯片", "A股"),
-    "兆易创新":  ("半导体芯片", "A股"),
-    "英伟达":    ("半导体芯片", "美股"),
-    "美光科技":  ("半导体芯片", "美股"),
-    "中际旭创":  ("光通信",     "A股"),
-    "新易盛":    ("光通信",     "A股"),
-    "金山办公":  ("AI软件",     "A股"),
-    "用友网络":  ("AI软件",     "A股"),
-    "神州数码":  ("AI软件",     "A股"),
-    "拓维信息":  ("AI软件",     "A股"),
-    "申昊科技":  ("机器人工控", "A股"),
-    "亿嘉和":    ("机器人工控", "A股"),
-    "中国石油":  ("能源石化",   "A股"),
-    "中油资本":  ("能源石化",   "A股"),
-    "中国石化":  ("能源石化",   "A股"),
-    "精达股份":  ("能源石化",   "A股"),
-    "比亚迪":    ("电动车",     "A股"),
-    "新国都":    ("金融科技",   "A股"),
-    "富途控股":  ("金融科技",   "美股"),
-    "老虎证券":  ("金融科技",   "美股"),
+# 股票赛道分类：{名称: 赛道}
+STOCK_SECTOR = {
+    "北方华创":  "半导体芯片",
+    "中微公司":  "半导体芯片",
+    "沪硅产业":  "半导体芯片",
+    "兆易创新":  "半导体芯片",
+    "中际旭创":  "光通信",
+    "新易盛":    "光通信",
+    "金山办公":  "AI软件",
+    "用友网络":  "AI软件",
+    "神州数码":  "AI软件",
+    "拓维信息":  "AI软件",
+    "申昊科技":  "机器人工控",
+    "亿嘉和":    "机器人工控",
+    "中国石油":  "能源石化",
+    "中油资本":  "能源石化",
+    "中国石化":  "能源石化",
+    "精达股份":  "能源石化",
+    "比亚迪":    "电动车",
+    "新国都":    "金融科技",
 }
 
 
@@ -600,6 +588,34 @@ def calc_5day_change(rows: list, start_date: str) -> str:
     return f"{pct_sign}{chg:.2f}%"
 
 
+def calc_first_day_change(rows: list, start_date: str) -> str:
+    """首个交易日的涨跌幅（不足1日返回 —）"""
+    today = datetime.now().strftime("%Y-%m-%d")
+    sorted_rows = sorted(rows, key=lambda x: x["date"])
+    window = [r for r in sorted_rows if r["date"] >= start_date and r["date"] <= today]
+    if len(window) < 2:
+        return "—"
+    day1_price = window[1]["last"]
+    start_price = window[0]["last"]
+    chg = (day1_price - start_price) / start_price * 100 if start_price else 0
+    pct_sign = "+" if chg >= 0 else ""
+    return f"{pct_sign}{chg:.2f}%"
+
+
+def calc_3day_change(rows: list, start_date: str) -> str:
+    """前 3 个交易日的累计涨跌幅（不足 3 日返回 —）"""
+    today = datetime.now().strftime("%Y-%m-%d")
+    sorted_rows = sorted(rows, key=lambda x: x["date"])
+    window = [r for r in sorted_rows if r["date"] >= start_date and r["date"] <= today]
+    if len(window) < 4:
+        return "—"
+    day3_price = window[3]["last"]
+    start_price = window[0]["last"]
+    chg = (day3_price - start_price) / start_price * 100 if start_price else 0
+    pct_sign = "+" if chg >= 0 else ""
+    return f"{pct_sign}{chg:.2f}%"
+
+
 def date_to_timestamp(date_str: str) -> int:
     """YYYY-MM-DD → 毫秒时间戳（UTC，避免时区偏移）"""
     if not date_str:
@@ -649,9 +665,6 @@ def main():
     today = datetime.now().strftime("%Y-%m-%d")
 
     for code, name in STOCKS:
-        is_us = code.startswith("us")
-        sym = "$" if is_us else "¥"
-
         print(f"\n处理 {name}({code})...", file=sys.stderr)
 
         first_date, verify_date = get_first_date_and_verify_date(preds, name)
@@ -686,8 +699,9 @@ def main():
         pct            = (latest_price - start_price) / start_price * 100 if start_price else 0
         trading_days   = calc_trading_days(start_date, verify_date)
         expected       = get_expected_range(preds, name)
-        daily_seq      = build_daily_change_sequence(rows, start_date, verify_date)
         five_day_chg   = calc_5day_change(rows, start_date)
+        first_day_chg  = calc_first_day_change(rows, start_date)
+        three_day_chg  = calc_3day_change(rows, start_date)
 
         if today > verify_date:
             status = "已结束"
@@ -696,7 +710,7 @@ def main():
         else:
             status = "待开始"
 
-        print(f"  ✓  {sym}{start_price:.2f}→{sym}{latest_price:.2f} | {pct:+.2f}% | 5日: {five_day_chg} | {status}", file=sys.stderr)
+        print(f"  ✓  ¥{start_price:.2f}→¥{latest_price:.2f} | {pct:+.2f}% | 首日:{first_day_chg} 3日:{three_day_chg} 5日:{five_day_chg} | {status}", file=sys.stderr)
 
         results.append({
             "code":           code,
@@ -708,11 +722,10 @@ def main():
             "pct":            pct,
             "trading_days":   trading_days,
             "expected":       expected,
-            "daily_seq":      daily_seq,
+            "first_day_chg":  first_day_chg,
+            "three_day_chg":  three_day_chg,
             "five_day_chg":   five_day_chg,
             "status":         status,
-            "is_us":          is_us,
-            "sym":            sym,
         })
 
     if not results:
@@ -739,9 +752,9 @@ def main():
             "累计盈亏(100股)":     0.0,
             "预期方向/涨幅":       "—",
             "当前涨跌幅":          "—",
+            "首日涨跌幅":          "—",
+            "前3日涨跌幅":         "—",
             "前5日涨跌幅":         "—",
-            "每日涨跌序列":        f"更新于 {updated_at}",
-            "市场":               "—",
             "赛道":               "—",
             "🔗网页版":            FeishuBitableClient.SIM_WEB_URL,
         }
@@ -749,7 +762,7 @@ def main():
 
     for r in results:
         pct_sign = "+" if r["pct"] >= 0 else ""
-        sector, market = STOCK_META.get(r["name"], ("—", "—"))
+        sector = STOCK_SECTOR.get(r["name"], "—")
 
         records.append({
             "fields": {
@@ -760,9 +773,9 @@ def main():
                 "累计盈亏(100股)":     round(r["pnl"], 2),
                 "预期方向/涨幅":       r["expected"],
                 "当前涨跌幅":          f"{pct_sign}{r['pct']:.2f}%",
+                "首日涨跌幅":          r["first_day_chg"],
+                "前3日涨跌幅":         r["three_day_chg"],
                 "前5日涨跌幅":         r["five_day_chg"],
-                "每日涨跌序列":        r["daily_seq"],
-                "市场":               market,
                 "赛道":               sector,
                 "🔗网页版":            FeishuBitableClient.SIM_WEB_URL,
             }
