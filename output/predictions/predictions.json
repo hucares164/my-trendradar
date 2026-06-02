@@ -861,7 +861,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-02",
+      "content": "2026年第三季度，国内头部AI应用（如豆包）付费转化率将超预期，推动相关概念股迎来新一轮上涨。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-30",
+      "basis": "信号来源：「豆包AI开始收费」此S类信号→传导逻辑：商业化后，用户付费意愿和留存数据将成为核心指标，数据好于预期将带动板块估值修复→预判结论",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-02",
+      "content": "在AI基建投资和“光连接”与“铜连接”并行的指引下，光模块和高端连接器供应商（如中际旭创、新易盛）在2026年下半年收入增速将持续提升，季度业绩超出指引。",
+      "confidence": "高",
+      "signal_type": "PEAD",
+      "verify_date": "2026-11-15",
+      "basis": "信号来源：「黄仁勋钦点Marvell，光连接与铜连接并行」+「谷歌募资800亿美元砸AI基建」均为PEAD类强信号→传导逻辑：巨头资本开支持续高企，技术路线清晰，上游供应链企业订单确定性强，业绩将兑现→预判结论",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-02",
+      "content": "受到中东局势升级（伊朗封锁霍尔木兹海峡）扰动，布伦特原油价格在三个月内将突破并站稳100美元/桶关口。",
+      "confidence": "中",
+      "signal_type": "G",
+      "verify_date": "2026-09-02",
+      "basis": "信号来源：「伊朗计划彻底封锁霍尔木兹海峡」此G类信号→传导逻辑：全球约20%石油经过该海峡，封锁将引发全球性供油中断，地缘溢价将持续推动油价上涨→预判结论",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-02 07:26:44"
+  "last_updated": "2026-06-02 17:12:31"
 }
