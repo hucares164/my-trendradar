@@ -938,7 +938,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-03",
+      "content": "国内CPO及光模块龙头公司（如中际旭创、新易盛）将在2026年Q3实现营收和利润环比高增长，受益于英伟达Spectrum-X硅光交换机量产带来的订单。",
+      "confidence": "高",
+      "signal_type": "PEAD",
+      "verify_date": "2026-09-01",
+      "basis": "华尔街见闻「基于CPO技术！英伟达Spectrum-X硅光交换机全面量产」→ 上游光模块及器件供应商将率先获得批量订单，出货量增加直接推升营收和利润→国内CPO/光模块龙头公司Q3业绩预增",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-03",
+      "content": "受海力士火灾影响，DDR5及HBM3E等存储芯片价格将在2026年Q3出现5-10%的环比上涨，利好A股存储模组及封测厂商。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-01",
+      "basis": "贴吧热搜「海力士火灾,内存涨价理由+1」→ 供给端短期扰动叠加AI存储需求景气，将催化存储涨价预期，部分下游厂商可能进行补库存操作→存储芯片现货价格在Q3出现明显上涨",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-03",
+      "content": "特朗普签署的AI行政令将导致北美科技巨头在AI安全、合规审计方面的投入增加，利好AI安全赛道的相关公司。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-01",
+      "basis": "财联社热门「特朗普签署人工智能行政令，要求企业向政府提前开放模型访问权限」→ 监管要求执行将直接增加企业合规成本，头部云厂商需采购第三方安全服务和审计工具→AI安全服务商Q3财报将体现新增订单",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-02 19:57:49"
+  "last_updated": "2026-06-03 07:45:03"
 }
