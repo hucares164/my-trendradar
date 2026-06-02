@@ -482,6 +482,12 @@ def find_price_on_or_after(rows: list, target_date: str) -> Optional[dict]:
     return sorted_rows[-1]
 
 
+def date_to_timestamp(date_str: str) -> int:
+    """将 YYYY-MM-DD 转为飞书日期字段所需的毫秒时间戳"""
+    dt = datetime.strptime(date_str, "%Y-%m-%d")
+    return int(calendar.timegm(dt.timetuple()) * 1000)
+
+
 def calc_trading_days(start: str, end: str) -> int:
     """两个日期之间的日历天数（含起止日，跳过周末）"""
     try:

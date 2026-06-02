@@ -16,7 +16,9 @@ import re
 from datetime import datetime, timedelta
 
 SCRIPT = "/Users/luominyi/.workbuddy/plugins/marketplaces/cb_teams_marketplace/plugins/finance-data/skills/westock-data/scripts/index.js"
-PRED_PATH = "/Users/luominyi/WorkBuddy/2026-05-28-19-34-18/my-trendradar/output/predictions/predictions.json"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.dirname(SCRIPT_DIR)
+PRED_PATH = os.path.join(REPO_ROOT, "output", "predictions", "predictions.json")
 
 # 股票列表：(westock代码, 名称)
 STOCKS = [
@@ -557,7 +559,7 @@ def main():
               f'| 1日:{r["day1_chg"]} | 3日:{r["day3_chg"]} | 5日:{r["day5_chg"]} | 10日:{r["day10_chg"]} | 20日:{r["day20_chg"]}')
 
     # 保存 CSV
-    csv_path = "/Users/luominyi/WorkBuddy/2026-05-28-19-34-18/my-trendradar/output/simulation/simulation_table.csv"
+    csv_path = os.path.join(REPO_ROOT, "output", "simulation", "simulation_table.csv")
     os.makedirs(os.path.dirname(csv_path), exist_ok=True)
     with open(csv_path, "w", encoding="utf-8") as f:
         f.write("股票代码,股票名称,首次预判日期,起始日期,验证周期(天),信号类型,置信度,"
@@ -574,7 +576,7 @@ def main():
     print(f"\nCSV 已保存: {csv_path}", file=sys.stderr)
 
     # 生成 HTML
-    html_path = "/Users/luominyi/WorkBuddy/2026-05-28-19-34-18/my-trendradar/output/simulation/simulation_table.html"
+    html_path = os.path.join(REPO_ROOT, "output", "simulation", "simulation_table.html")
     gen_html(results, html_path)
     print(f"HTML 已保存: {html_path}", file=sys.stderr)
 
