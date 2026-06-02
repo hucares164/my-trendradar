@@ -45,6 +45,34 @@ STOCKS = [
     ("usMU",      "美光科技"),
 ]
 
+# 股票分类：{名称: (赛道, 市场)}
+# 市场：A股(沪市/深市/科创板) / 美股 / 港股
+# 赛道：半导体芯片 / 光通信 / AI软件 / 能源石化 / 电动车 / 金融科技 / 机器人工控
+STOCK_META = {
+    "北方华创":  ("半导体芯片", "A股"),
+    "中微公司":  ("半导体芯片", "A股"),
+    "沪硅产业":  ("半导体芯片", "A股"),
+    "兆易创新":  ("半导体芯片", "A股"),
+    "英伟达":    ("半导体芯片", "美股"),
+    "美光科技":  ("半导体芯片", "美股"),
+    "中际旭创":  ("光通信",     "A股"),
+    "新易盛":    ("光通信",     "A股"),
+    "金山办公":  ("AI软件",     "A股"),
+    "用友网络":  ("AI软件",     "A股"),
+    "神州数码":  ("AI软件",     "A股"),
+    "拓维信息":  ("AI软件",     "A股"),
+    "申昊科技":  ("机器人工控", "A股"),
+    "亿嘉和":    ("机器人工控", "A股"),
+    "中国石油":  ("能源石化",   "A股"),
+    "中油资本":  ("能源石化",   "A股"),
+    "中国石化":  ("能源石化",   "A股"),
+    "精达股份":  ("能源石化",   "A股"),
+    "比亚迪":    ("电动车",     "A股"),
+    "新国都":    ("金融科技",   "A股"),
+    "富途控股":  ("金融科技",   "美股"),
+    "老虎证券":  ("金融科技",   "美股"),
+}
+
 STOCK_ALIASES = {
     "北方华创":   ["北方华创"],
     "中微公司":   ["中微公司", "中微"],
@@ -231,6 +259,23 @@ def gen_mini_bar(code: str, start_date: str, verify_date: str, all_rows: list) -
 
 
 def gen_html(results: list, path: str):
+    # 赛道颜色映射
+    SECTOR_COLORS = {
+        "半导体芯片": "#6c5ce7",
+        "光通信":     "#00b894",
+        "AI软件":     "#0984e3",
+        "机器人工控": "#e17055",
+        "能源石化":   "#fdcb6e",
+        "电动车":     "#00cec9",
+        "金融科技":   "#fd79a8",
+    }
+    # 市场标签颜色
+    MKT_COLORS = {
+        "A股": "#d63031",
+        "美股": "#0984e3",
+        "港股": "#6c5ce7",
+    }
+
     rows_html = ""
     for r in results:
         code   = r["code"]
@@ -254,9 +299,17 @@ def gen_html(results: list, path: str):
             five_day_class = "pnl-negative"
         else:
             five_day_class = ""
+
+        # 赛道 & 市场标签
+        sector, market = STOCK_META.get(r["name"], ("—", "—"))
+        s_color = SECTOR_COLORS.get(sector, "#636e72")
+        m_color = MKT_COLORS.get(market, "#636e72")
+        sector_tag = f'<span class="tag" style="background:{s_color}">{sector}</span>'
+        market_tag = f'<span class="tag" style="background:{m_color}">{market}</span>'
+
         rows_html += f"""
         <tr>
-            <td>{r['name']}<br><small>{code}</small></td>
+            <td>{r['name']}<br><small>{code}</small><br>{market_tag}{sector_tag}</td>
             <td>{r['start_date']}</td>
             <td>{r['trading_days']}天<br><small>→ {r['verify_date']}</small></td>
             <td><b>{sym}{r['start_amount']:.2f}</b></td>
@@ -296,6 +349,7 @@ def gen_html(results: list, path: str):
     .val.pos   {{ color: #e74c3c; }}
     .val.neg   {{ color: #27ae60; }}
     .footer    {{ margin-top: 18px; color: #aaa; font-size: 12px; }}
+    .tag       {{ display: inline-block; font-size: 10px; color: white; padding: 1px 5px; border-radius: 3px; margin: 1px 1px 0 0; font-weight: normal; }}
 </style>
 </head>
 <body>
