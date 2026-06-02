@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """
-模拟盘验证表生成脚本 v4
-修复：
-- 仅保留 A 股（删除美股）
-- 删除「市场」列、「每日涨跌序列」列
-- 新增「首日涨跌幅」「前3日涨跌幅」
+模拟盘验证表生成脚本 v5
+新增：
+- 「信号类型」「置信度」从预判数据同步
+- 「1日/3日/5日/10日/20日涨跌」（交易日维度）
+- 「信息补充」：起始日期后新增的相关预判内容
+- 重命名字段：首日→1日、前3日→3日、前5日→5日、当前涨跌幅→当前累计涨跌幅
 """
 
 import json
@@ -184,55 +185,82 @@ def get_expected_range(preds: list, stock_name: str) -> str:
     return "—"
 
 
-def calc_5day_change(all_rows: list, start_date: str) -> str:
+def get_signal_info(preds: list, stock_name: str) -> tuple:
     """
-    前 5 个交易日的涨跌幅（从起始日开始计，不足 5 日则为空）。
+    从预判数据中提取：信号类型、置信度。
+    返回 (signal_type, confidence)，未匹配返回 ("—", "—")
+    """
+    aliases = STOCK_ALIASES.get(stock_name, [stock_name])
+    for p in preds:
+        content = p.get("content", "")
+        if any(a in content for a in aliases):
+            return p.get("signal_type", "—"), p.get("confidence", "—")
+    return "—", "—"
+
+
+def get_info_supplement(preds: list, stock_name: str, first_date: str) -> str:
+    """
+    扫描起始日期之后新增的、提及该股票的预判内容。
+    拼接为多条信息补充，用「｜」分隔。
+    """
+    aliases = STOCK_ALIASES.get(stock_name, [stock_name])
+    supplements = []
+    for p in sorted(preds, key=lambda x: x.get("date", "")):
+        content = p.get("content", "")
+        pdate = p.get("date", "")
+        # 只取起始日期之后的预判
+        if pdate <= first_date:
+            continue
+        if any(a in content for a in aliases):
+            # 截取关键内容（去除过长文本）
+            short = content[:80] + "…" if len(content) > 80 else content
+            supplements.append(f"[{pdate}] {short}")
+    return " ｜ ".join(supplements) if supplements else "—"
+
+
+def calc_nday_change(all_rows: list, start_date: str, n: int) -> str:
+    """
+    前 N 个交易日的累计涨跌幅（从起始日开始计）。
+    N=1: 第1个交易日; N=3: 第3个交易日; N=5: 第5个交易日...
+    不足 N 个交易日返回 "—"
     """
     today = datetime.now().strftime("%Y-%m-%d")
     sorted_rows = sorted(all_rows, key=lambda x: x["date"])
     window = [r for r in sorted_rows if r["date"] >= start_date and r["date"] <= today]
 
-    trading_days = len(window) - 1 if len(window) > 0 else 0
-    if trading_days < 5 or len(window) <= 5:
+    if len(window) <= n:
         return "—"
 
-    day5_price = window[5]["last"]
+    day_price = window[n]["last"]
     start_price = window[0]["last"]
-    chg = (day5_price - start_price) / start_price * 100 if start_price else 0
+    chg = (day_price - start_price) / start_price * 100 if start_price else 0
     pct_sign = "+" if chg >= 0 else ""
     return f"{pct_sign}{chg:.2f}%"
 
 
-def calc_first_day_change(all_rows: list, start_date: str) -> str:
-    """首个交易日的涨跌幅（不足1日返回 —）"""
-    today = datetime.now().strftime("%Y-%m-%d")
-    sorted_rows = sorted(all_rows, key=lambda x: x["date"])
-    window = [r for r in sorted_rows if r["date"] >= start_date and r["date"] <= today]
-
-    if len(window) < 2:
-        return "—"
-
-    day1_price = window[1]["last"]
-    start_price = window[0]["last"]
-    chg = (day1_price - start_price) / start_price * 100 if start_price else 0
-    pct_sign = "+" if chg >= 0 else ""
-    return f"{pct_sign}{chg:.2f}%"
+def calc_1day_change(all_rows: list, start_date: str) -> str:
+    """第1个交易日的涨跌幅"""
+    return calc_nday_change(all_rows, start_date, 1)
 
 
 def calc_3day_change(all_rows: list, start_date: str) -> str:
-    """前 3 个交易日的累计涨跌幅（不足 3 日返回 —）"""
-    today = datetime.now().strftime("%Y-%m-%d")
-    sorted_rows = sorted(all_rows, key=lambda x: x["date"])
-    window = [r for r in sorted_rows if r["date"] >= start_date and r["date"] <= today]
+    """前3个交易日累计涨跌幅"""
+    return calc_nday_change(all_rows, start_date, 3)
 
-    if len(window) < 4:
-        return "—"
 
-    day3_price = window[3]["last"]
-    start_price = window[0]["last"]
-    chg = (day3_price - start_price) / start_price * 100 if start_price else 0
-    pct_sign = "+" if chg >= 0 else ""
-    return f"{pct_sign}{chg:.2f}%"
+def calc_5day_change(all_rows: list, start_date: str) -> str:
+    """前5个交易日累计涨跌幅"""
+    return calc_nday_change(all_rows, start_date, 5)
+
+
+def calc_10day_change(all_rows: list, start_date: str) -> str:
+    """前10个交易日累计涨跌幅"""
+    return calc_nday_change(all_rows, start_date, 10)
+
+
+def calc_20day_change(all_rows: list, start_date: str) -> str:
+    """前20个交易日累计涨跌幅"""
+    return calc_nday_change(all_rows, start_date, 20)
 
 
 def gen_html(results: list, path: str):
@@ -265,27 +293,89 @@ def gen_html(results: list, path: str):
         pct_sign  = "+" if r["pct"] >= 0 else ""
 
         # 涨跌幅颜色
-        first_class = _pct_class(r.get("first_day_chg", "—"))
-        three_class = _pct_class(r.get("three_day_chg", "—"))
-        five_class  = _pct_class(r.get("five_day_chg", "—"))
+        day1_class  = _pct_class(r.get("day1_chg", "—"))
+        day3_class  = _pct_class(r.get("day3_chg", "—"))
+        day5_class  = _pct_class(r.get("day5_chg", "—"))
+        day10_class = _pct_class(r.get("day10_chg", "—"))
+        day20_class = _pct_class(r.get("day20_chg", "—"))
 
         # 赛道标签
         sector = STOCK_SECTOR.get(r["name"], "—")
         s_color = SECTOR_COLORS.get(sector, "#636e72")
         sector_tag = f'<span class="tag" style="background:{s_color}">{sector}</span>'
 
+        # 置信度标签
+        conf = r.get("confidence", "—")
+        conf_colors = {"高": "#27ae60", "中": "#f39c12", "低": "#e74c3c"}
+        conf_color = conf_colors.get(conf, "#95a5a6")
+        conf_tag = f'<span class="tag" style="background:{conf_color}">{conf}</span>' if conf != "—" else "—"
+
         rows_html += f"""
         <tr>
             <td>{r['name']}<br><small>{code}</small><br>{sector_tag}</td>
             <td>{r['start_date']}</td>
+            <td><b>{r.get('signal_type', '—')}</b></td>
+            <td>{conf_tag}</td>
             <td>{r['trading_days']}天<br><small>→ {r['verify_date']}</small></td>
+            <td>{r['expected']}</td>
             <td><b>¥{r['start_amount']:.2f}</b></td>
             <td class="{pnl_class}">{pnl_sign}{r['pnl']:.2f}<br><small>{pct_sign}{r['pct']:.2f}%</small></td>
-            <td>{r['expected']}</td>
+            <td class="{day1_class}">{r.get('day1_chg', '—')}</td>
+            <td class="{day3_class}">{r.get('day3_chg', '—')}</td>
+            <td class="{day5_class}">{r.get('day5_chg', '—')}</td>
+            <td class="{day10_class}">{r.get('day10_chg', '—')}</td>
+            <td class="{day20_class}">{r.get('day20_chg', '—')}</td>
             <td class="{pnl_class}">{pct_sign}{r['pct']:.2f}%</td>
-            <td class="{first_class}">{r.get('first_day_chg', '—')}</td>
-            <td class="{three_class}">{r.get('three_day_chg', '—')}</td>
-            <td class="{five_class}">{r.get('five_day_chg', '—')}</td>
+            <td>{sector_tag}</td>
+            <td><a href="{FeishuBitableClient.SIM_WEB_URL if False else '#'}" target="_blank">🔗</a></td>
+            <td style="max-width:240px;font-size:11px;white-space:normal">{r.get('info_supplement', '—')}</td>
+        </tr>"""
+
+    # ... actually let me redo this with the proper URL
+    sim_url = "https://htmlpreview.github.io/?https://raw.githubusercontent.com/hucares164/my-trendradar/master/output/simulation/simulation_table.html"
+
+    # Rebuild rows_html with proper URL
+    rows_html = ""
+    for r in results:
+        code   = r["code"]
+        pnl_class = "pnl-positive" if r["pnl"] >= 0 else "pnl-negative"
+        pnl_sign  = "+" if r["pnl"] >= 0 else ""
+        pct_sign  = "+" if r["pct"] >= 0 else ""
+
+        day1_class  = _pct_class(r.get("day1_chg", "—"))
+        day3_class  = _pct_class(r.get("day3_chg", "—"))
+        day5_class  = _pct_class(r.get("day5_chg", "—"))
+        day10_class = _pct_class(r.get("day10_chg", "—"))
+        day20_class = _pct_class(r.get("day20_chg", "—"))
+
+        sector = STOCK_SECTOR.get(r["name"], "—")
+        s_color = SECTOR_COLORS.get(sector, "#636e72")
+        sector_tag = f'<span class="tag" style="background:{s_color}">{sector}</span>'
+
+        conf = r.get("confidence", "—")
+        conf_colors = {"高": "#27ae60", "中": "#f39c12", "低": "#e74c3c"}
+        conf_color = conf_colors.get(conf, "#95a5a6")
+        conf_tag = f'<span class="tag" style="background:{conf_color}">{conf}</span>' if conf != "—" else "—"
+
+        rows_html += f"""
+        <tr>
+            <td>{r['name']}<br><small>{code}</small><br>{sector_tag}</td>
+            <td>{r['start_date']}</td>
+            <td><b>{r.get('signal_type', '—')}</b></td>
+            <td>{conf_tag}</td>
+            <td>{r['trading_days']}天<br><small>→ {r['verify_date']}</small></td>
+            <td>{r['expected']}</td>
+            <td><b>¥{r['start_amount']:.2f}</b></td>
+            <td class="{pnl_class}">{pnl_sign}{r['pnl']:.2f}<br><small>{pct_sign}{r['pct']:.2f}%</small></td>
+            <td class="{day1_class}">{r.get('day1_chg', '—')}</td>
+            <td class="{day3_class}">{r.get('day3_chg', '—')}</td>
+            <td class="{day5_class}">{r.get('day5_chg', '—')}</td>
+            <td class="{day10_class}">{r.get('day10_chg', '—')}</td>
+            <td class="{day20_class}">{r.get('day20_chg', '—')}</td>
+            <td class="{pnl_class}">{pct_sign}{r['pct']:.2f}%</td>
+            <td>{sector_tag}</td>
+            <td><a href="{sim_url}" target="_blank">🔗</a></td>
+            <td style="max-width:240px;font-size:11px;white-space:normal">{r.get('info_supplement', '—')}</td>
         </tr>"""
 
     total_pnl = sum(r["pnl"] for r in results)
@@ -295,14 +385,15 @@ def gen_html(results: list, path: str):
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>模拟盘验证表 v4</title>
+<title>模拟盘验证表 v5</title>
 <style>
     body       {{ font-family: -apple-system, 'PingFang SC', sans-serif; background: #f5f6fa; margin: 0; padding: 20px; }}
     h1         {{ color: #333; margin-bottom: 4px; }}
     .subtitle  {{ color: #888; font-size: 13px; margin-bottom: 16px; }}
-    table      {{ border-collapse: collapse; width: 100%; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }}
-    th         {{ background: #2c3e50; color: white; padding: 9px 11px; text-align: left; font-size: 12.5px; }}
-    td         {{ padding: 7px 11px; border-bottom: 1px solid #eee; font-size: 12.5px; }}
+    .table-wrap {{ overflow-x: auto; }}
+    table      {{ border-collapse: collapse; width: 100%; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); font-size: 11.5px; }}
+    th         {{ background: #2c3e50; color: white; padding: 8px 6px; text-align: left; font-size: 11px; white-space: nowrap; }}
+    td         {{ padding: 6px 6px; border-bottom: 1px solid #eee; font-size: 11px; }}
     tr:hover   {{ background: #f8f9ff; }}
     .pnl-positive {{ color: #e74c3c; font-weight: bold; }}
     .pnl-negative {{ color: #27ae60; font-weight: bold; }}
@@ -317,7 +408,7 @@ def gen_html(results: list, path: str):
 </style>
 </head>
 <body>
-<h1>📊 模拟盘验证表</h1>
+<h1>📊 模拟盘验证表 v5</h1>
 <p class="subtitle">生成时间: {datetime.now().strftime("%Y-%m-%d %H:%M")} ｜ 数据来源: westock-data ｜ 每支股票模拟买入 100 股</p>
 <div class="summary">
     <div class="card"><h3>追踪股票</h3><div class="val">{len(results)}</div></div>
@@ -325,18 +416,22 @@ def gen_html(results: list, path: str):
     <div class="card"><h3>亏损数</h3><div class="val neg">{sum(1 for r in results if r['pnl'] < 0)}</div></div>
     <div class="card"><h3>总盈亏</h3><div class="val {pnl_tag}">¥{total_pnl:+.2f}</div></div>
 </div>
+<div class="table-wrap">
 <table>
     <thead>
         <tr>
-            <th>股票</th><th>起始日期</th><th>验证周期</th><th>起始总价<br>(×100股)</th>
-            <th>累计盈亏<br>(100股)</th><th>预期方向/涨幅</th><th>当前涨跌幅</th><th>首日涨跌幅</th><th>前3日涨跌幅</th><th>前5日涨跌幅</th>
+            <th>股票</th><th>起始日期</th><th>信号类型</th><th>置信度</th><th>验证周期</th>
+            <th>预期方向/涨幅</th><th>起始总价<br>(×100股)</th><th>累计盈亏<br>(100股)</th>
+            <th>1日涨跌</th><th>3日涨跌</th><th>5日涨跌</th><th>10日涨跌</th><th>20日涨跌</th>
+            <th>当前累计<br>涨跌幅</th><th>赛道</th><th>🔗</th><th>信息补充</th>
         </tr>
     </thead>
     <tbody>
         {rows_html}
     </tbody>
 </table>
-<p class="footer">■ 红色=涨(盈) ｜ ■ 绿色=跌(亏) ｜ 非交易日自动顺延 ｜ 全A股（¥） ｜ 验证周期 = verify_date - date（固定天数）</p>
+</div>
+<p class="footer">■ 红色=涨(盈) ｜ ■ 绿色=跌(亏) ｜ 非交易日自动顺延 ｜ 全A股（¥） ｜ N日涨跌 = 第N个交易日累计涨跌幅 ｜ 验证周期 = verify_date - date（固定天数）</p>
 </body>
 </html>"""
     with open(path, "w", encoding="utf-8") as f:
@@ -348,16 +443,20 @@ def main():
         data = json.load(f)
     preds = data.get("predictions", [])
 
-    # 建立：股票名称 -> 首次 date + verify_date（取最早出现的那条预判）
+    # 建立：股票名称 → 首次 date + verify_date + signal_type + confidence（取最早出现的那条预判）
     stock_dates = {}
+    stock_signals = {}
     for p in preds:
         content = p.get("content", "")
         d       = p.get("date", "")
         vd      = p.get("verify_date", "")
+        st      = p.get("signal_type", "—")
+        cf      = p.get("confidence", "—")
         for name, aliases in STOCK_ALIASES.items():
             if any(a in content for a in aliases):
                 if name not in stock_dates:
                     stock_dates[name] = (d, vd)
+                    stock_signals[name] = (st, cf)
 
     results = []
 
@@ -367,12 +466,12 @@ def main():
             continue
 
         first_date, verify_date = stock_dates[name]
+        signal_type, confidence = stock_signals.get(name, ("—", "—"))
         if not verify_date:
             print(f"⚠️  {name} 无 verify_date，跳过", file=sys.stderr)
             continue
 
-        is_us = code.startswith("us")
-        print(f"处理: {name} ({code})，首次: {first_date}，验证: {verify_date}...", file=sys.stderr)
+        print(f"处理: {name} ({code})，首次: {first_date}，验证: {verify_date}，信号: {signal_type}，置信度: {confidence}...", file=sys.stderr)
 
         stdout = run_westock(["kline", code, "--period", "day", "--limit", "120", "--fq", "qfq"])
         rows = parse_kline_markdown(stdout)
@@ -393,46 +492,54 @@ def main():
         latest_price = latest_row["last"]
         latest_date  = latest_row["date"]
 
-        # 最终涨跌幅仅供打印
-        _final_pct   = (latest_price - start_price) / start_price * 100 if start_price else 0
-
         shares        = 100
         start_amount  = round(start_price * shares, 2)
         current_amount = round(latest_price * shares, 2)
         pnl  = round(current_amount - start_amount, 2)
         pct  = round((latest_price - start_price) / start_price * 100, 2) if start_price else 0
 
-        # 验证周期 = verify_date - first_date（固定天数）
         trading_days = calc_trading_days_fixed(first_date, verify_date)
         expected     = get_expected_range(preds, name)
-        first_day_chg = calc_first_day_change(rows, start_date)
-        three_day_chg = calc_3day_change(rows, start_date)
-        five_day_chg  = calc_5day_change(rows, start_date)
+
+        # N 日涨跌
+        day1_chg  = calc_1day_change(rows, start_date)
+        day3_chg  = calc_3day_change(rows, start_date)
+        day5_chg  = calc_5day_change(rows, start_date)
+        day10_chg = calc_10day_change(rows, start_date)
+        day20_chg = calc_20day_change(rows, start_date)
+
+        # 信息补充
+        info_supplement = get_info_supplement(preds, name, first_date)
 
         results.append({
-            "code":          code,
-            "name":          name,
-            "first_date":    first_date,
-            "start_date":    start_date,
-            "verify_date":   verify_date,
-            "start_price":   start_price,
-            "latest_date":   latest_date,
-            "latest_price":  latest_price,
-            "shares":        shares,
+            "code":           code,
+            "name":           name,
+            "first_date":     first_date,
+            "start_date":     start_date,
+            "verify_date":    verify_date,
+            "signal_type":    signal_type,
+            "confidence":     confidence,
+            "start_price":    start_price,
+            "latest_date":    latest_date,
+            "latest_price":   latest_price,
+            "shares":         shares,
             "start_amount":   start_amount,
             "current_amount": current_amount,
-            "pnl":           pnl,
-            "pct":           pct,
-            "trading_days":  trading_days,
-            "expected":      expected,
-            "first_day_chg": first_day_chg,
-            "three_day_chg": three_day_chg,
-            "five_day_chg":  five_day_chg,
-            "all_rows":      rows,
+            "pnl":            pnl,
+            "pct":            pct,
+            "trading_days":   trading_days,
+            "expected":       expected,
+            "day1_chg":       day1_chg,
+            "day3_chg":       day3_chg,
+            "day5_chg":       day5_chg,
+            "day10_chg":      day10_chg,
+            "day20_chg":      day20_chg,
+            "info_supplement": info_supplement,
+            "all_rows":       rows,
         })
         print(f"  ✓  起始={start_date} ¥{start_price:.2f} → 最新={latest_date} ¥{latest_price:.2f}，"
               f"涨跌={pct:+.2f}%，PNL=¥{pnl:+.2f}，"
-              f"验证周期={trading_days}天，首日={first_day_chg}，3日={three_day_chg}，5日={five_day_chg}", file=sys.stderr)
+              f"1日={day1_chg}，3日={day3_chg}，5日={day5_chg}，10日={day10_chg}，20日={day20_chg}", file=sys.stderr)
 
     # 输出汇总
     print("\n" + "=" * 80)
@@ -441,22 +548,29 @@ def main():
     for r in results:
         code   = r["code"]
         arrow  = "📈" if r["pnl"] >= 0 else "📉"
-        print(f'{arrow} {r["name"]}({code}) | 起始:{r["start_date"]} ¥{r["start_price"]:.2f} '
+        print(f'{arrow} {r["name"]}({code}) | 信号:{r["signal_type"]} 置信度:{r["confidence"]} '
+              f'| 起始:{r["start_date"]} ¥{r["start_price"]:.2f} '
               f'| 最新:{r["latest_date"]} ¥{r["latest_price"]:.2f} '
               f'| 100股: ¥{r["start_amount"]:.0f}→¥{r["current_amount"]:.0f} '
               f'| PNL: ¥{r["pnl"]:+.2f} ({r["pct"]:+.2f}%) '
               f'| 验证:{r["trading_days"]}天 | 预期:{r["expected"]}'
-              f'| 首日:{r["first_day_chg"]} | 3日:{r["three_day_chg"]} | 5日:{r["five_day_chg"]}')
+              f'| 1日:{r["day1_chg"]} | 3日:{r["day3_chg"]} | 5日:{r["day5_chg"]} | 10日:{r["day10_chg"]} | 20日:{r["day20_chg"]}')
 
     # 保存 CSV
     csv_path = "/Users/luominyi/WorkBuddy/2026-05-28-19-34-18/my-trendradar/output/simulation/simulation_table.csv"
     os.makedirs(os.path.dirname(csv_path), exist_ok=True)
     with open(csv_path, "w", encoding="utf-8") as f:
-        f.write("股票代码,股票名称,首次预判日期,起始日期,验证周期(天),起始总价(×100股),累计盈亏(100股),累计涨幅,预期涨幅区间,首日涨跌幅,前3日涨跌幅,前5日涨跌幅\n")
+        f.write("股票代码,股票名称,首次预判日期,起始日期,验证周期(天),信号类型,置信度,"
+                "起始总价(×100股),累计盈亏(100股),当前累计涨跌幅,预期涨幅区间,"
+                "1日涨跌,3日涨跌,5日涨跌,10日涨跌,20日涨跌,信息补充\n")
         for r in results:
+            pct_sign = "+" if r["pct"] >= 0 else ""
             f.write(f'{r["code"]},{r["name"]},{r["first_date"]},{r["start_date"]},{r["trading_days"]},'
-                    f'{r["start_amount"]},{r["pnl"]},{r["pct"]},'
-                    f'{r["expected"]},{r["first_day_chg"]},{r["three_day_chg"]},{r["five_day_chg"]}\n')
+                    f'{r["signal_type"]},{r["confidence"]},'
+                    f'{r["start_amount"]},{r["pnl"]},{pct_sign}{r["pct"]:.2f}%,'
+                    f'{r["expected"]},'
+                    f'{r["day1_chg"]},{r["day3_chg"]},{r["day5_chg"]},{r["day10_chg"]},{r["day20_chg"]},'
+                    f'"{r.get("info_supplement", "—")}"\n')
     print(f"\nCSV 已保存: {csv_path}", file=sys.stderr)
 
     # 生成 HTML

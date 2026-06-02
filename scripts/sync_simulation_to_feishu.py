@@ -145,18 +145,23 @@ class FeishuBitableClient:
     # 期望字段顺序：（名称, 飞书字段类型）
     #   1=文本  2=数字  5=日期
     DESIRED_FIELDS = [
-        ("股票名称",        1),
-        ("起始日期",        5),
-        ("验证周期",        1),
-        ("起始总价(×100股)", 2),
-        ("累计盈亏(100股)",  2),
-        ("预期方向/涨幅",   1),
-        ("当前涨跌幅",      1),
-        ("首日涨跌幅",      1),
-        ("前3日涨跌幅",     1),
-        ("前5日涨跌幅",     1),
-        ("赛道",            1),    # 半导体芯片 / 光通信 / AI软件 等
-        ("🔗网页版",        1),
+        ("股票名称",              1),
+        ("起始日期",              5),
+        ("信号类型",              1),    # M/PEAD/P/S/G/F
+        ("置信度",               1),    # 高/中/低
+        ("验证周期",              1),
+        ("预期方向/涨幅",         1),
+        ("起始总价(×100股)",      2),
+        ("累计盈亏(100股)",       2),
+        ("1日涨跌",              1),
+        ("3日涨跌",              1),
+        ("5日涨跌",              1),
+        ("10日涨跌",             1),
+        ("20日涨跌",             1),
+        ("当前累计涨跌幅",        1),
+        ("赛道",                 1),
+        ("🔗网页版",             1),
+        ("信息补充",              1),
     ]
 
     # 网页版模拟盘地址
@@ -616,7 +621,57 @@ def calc_3day_change(rows: list, start_date: str) -> str:
     return f"{pct_sign}{chg:.2f}%"
 
 
-def date_to_timestamp(date_str: str) -> int:
+def calc_10day_change(rows: list, start_date: str) -> str:
+    """前10个交易日累计涨跌幅"""
+    today = datetime.now().strftime("%Y-%m-%d")
+    sorted_rows = sorted(rows, key=lambda x: x["date"])
+    window = [r for r in sorted_rows if r["date"] >= start_date and r["date"] <= today]
+    if len(window) <= 10:
+        return "—"
+    day10_price = window[10]["last"]
+    start_price = window[0]["last"]
+    chg = (day10_price - start_price) / start_price * 100 if start_price else 0
+    pct_sign = "+" if chg >= 0 else ""
+    return f"{pct_sign}{chg:.2f}%"
+
+
+def calc_20day_change(rows: list, start_date: str) -> str:
+    """前20个交易日累计涨跌幅"""
+    today = datetime.now().strftime("%Y-%m-%d")
+    sorted_rows = sorted(rows, key=lambda x: x["date"])
+    window = [r for r in sorted_rows if r["date"] >= start_date and r["date"] <= today]
+    if len(window) <= 20:
+        return "—"
+    day20_price = window[20]["last"]
+    start_price = window[0]["last"]
+    chg = (day20_price - start_price) / start_price * 100 if start_price else 0
+    pct_sign = "+" if chg >= 0 else ""
+    return f"{pct_sign}{chg:.2f}%"
+
+
+def get_signal_info(preds: list, stock_name: str) -> tuple:
+    """从预判数据中提取：信号类型、置信度"""
+    aliases = STOCK_ALIASES.get(stock_name, [stock_name])
+    for p in preds:
+        content = p.get("content", "")
+        if any(a in content for a in aliases):
+            return p.get("signal_type", "—"), p.get("confidence", "—")
+    return "—", "—"
+
+
+def get_info_supplement(preds: list, stock_name: str, first_date: str) -> str:
+    """扫描起始日期之后新增的、提及该股票的预判内容"""
+    aliases = STOCK_ALIASES.get(stock_name, [stock_name])
+    supplements = []
+    for p in sorted(preds, key=lambda x: x.get("date", "")):
+        content = p.get("content", "")
+        pdate = p.get("date", "")
+        if pdate <= first_date:
+            continue
+        if any(a in content for a in aliases):
+            short = content[:80] + "…" if len(content) > 80 else content
+            supplements.append(f"[{pdate}] {short}")
+    return " ｜ ".join(supplements) if supplements else "—"
     """YYYY-MM-DD → 毫秒时间戳（UTC，避免时区偏移）"""
     if not date_str:
         return int(time.time() * 1000)
@@ -672,6 +727,8 @@ def main():
             print(f"  ⚠️  预判数据中未找到 {name}，跳过", file=sys.stderr)
             continue
 
+        signal_type, confidence = get_signal_info(preds, name)
+
         days_needed = (datetime.now() - datetime.strptime(first_date, "%Y-%m-%d")).days + 10
         limit = max(days_needed, 30)
 
@@ -699,9 +756,13 @@ def main():
         pct            = (latest_price - start_price) / start_price * 100 if start_price else 0
         trading_days   = calc_trading_days(start_date, verify_date)
         expected       = get_expected_range(preds, name)
-        five_day_chg   = calc_5day_change(rows, start_date)
-        first_day_chg  = calc_first_day_change(rows, start_date)
-        three_day_chg  = calc_3day_change(rows, start_date)
+
+        day1_chg  = calc_first_day_change(rows, start_date)
+        day3_chg  = calc_3day_change(rows, start_date)
+        day5_chg  = calc_5day_change(rows, start_date)
+        day10_chg = calc_10day_change(rows, start_date)
+        day20_chg = calc_20day_change(rows, start_date)
+        info_supplement = get_info_supplement(preds, name, first_date)
 
         if today > verify_date:
             status = "已结束"
@@ -710,21 +771,28 @@ def main():
         else:
             status = "待开始"
 
-        print(f"  ✓  ¥{start_price:.2f}→¥{latest_price:.2f} | {pct:+.2f}% | 首日:{first_day_chg} 3日:{three_day_chg} 5日:{five_day_chg} | {status}", file=sys.stderr)
+        print(f"  ✓  ¥{start_price:.2f}→¥{latest_price:.2f} | {pct:+.2f}% | "
+              f"信号:{signal_type} 置信度:{confidence} | "
+              f"1日:{day1_chg} 3日:{day3_chg} 5日:{day5_chg} 10日:{day10_chg} 20日:{day20_chg} | {status}", file=sys.stderr)
 
         results.append({
             "code":           code,
             "name":           name,
             "start_date":     start_date,
             "verify_date":    verify_date,
+            "signal_type":    signal_type,
+            "confidence":     confidence,
             "start_amount":   start_amount,
             "pnl":            pnl,
             "pct":            pct,
             "trading_days":   trading_days,
             "expected":       expected,
-            "first_day_chg":  first_day_chg,
-            "three_day_chg":  three_day_chg,
-            "five_day_chg":   five_day_chg,
+            "day1_chg":       day1_chg,
+            "day3_chg":       day3_chg,
+            "day5_chg":       day5_chg,
+            "day10_chg":      day10_chg,
+            "day20_chg":      day20_chg,
+            "info_supplement": info_supplement,
             "status":         status,
         })
 
@@ -745,18 +813,23 @@ def main():
     # 首行元信息
     records.append({
         "fields": {
-            "股票名称":            f"📊 更新于 {updated_at}",
-            "起始日期":            date_to_timestamp(today),
-            "验证周期":           "元信息",
-            "起始总价(×100股)":    0.0,
-            "累计盈亏(100股)":     0.0,
-            "预期方向/涨幅":       "—",
-            "当前涨跌幅":          "—",
-            "首日涨跌幅":          "—",
-            "前3日涨跌幅":         "—",
-            "前5日涨跌幅":         "—",
-            "赛道":               "—",
-            "🔗网页版":            FeishuBitableClient.SIM_WEB_URL,
+            "股票名称":                f"📊 更新于 {updated_at}",
+            "起始日期":                date_to_timestamp(today),
+            "信号类型":                "—",
+            "置信度":                 "—",
+            "验证周期":               "元信息",
+            "预期方向/涨幅":           "—",
+            "起始总价(×100股)":        0.0,
+            "累计盈亏(100股)":         0.0,
+            "1日涨跌":                "—",
+            "3日涨跌":                "—",
+            "5日涨跌":                "—",
+            "10日涨跌":               "—",
+            "20日涨跌":               "—",
+            "当前累计涨跌幅":          "—",
+            "赛道":                   "—",
+            "🔗网页版":                FeishuBitableClient.SIM_WEB_URL,
+            "信息补充":               "—",
         }
     })
 
@@ -766,18 +839,23 @@ def main():
 
         records.append({
             "fields": {
-                "股票名称":            r["name"],
-                "起始日期":            date_to_timestamp(r["start_date"]),
-                "验证周期":            f"{r['trading_days']} 天",
-                "起始总价(×100股)":    round(r["start_amount"], 2),
-                "累计盈亏(100股)":     round(r["pnl"], 2),
-                "预期方向/涨幅":       r["expected"],
-                "当前涨跌幅":          f"{pct_sign}{r['pct']:.2f}%",
-                "首日涨跌幅":          r["first_day_chg"],
-                "前3日涨跌幅":         r["three_day_chg"],
-                "前5日涨跌幅":         r["five_day_chg"],
-                "赛道":               sector,
-                "🔗网页版":            FeishuBitableClient.SIM_WEB_URL,
+                "股票名称":                r["name"],
+                "起始日期":                date_to_timestamp(r["start_date"]),
+                "信号类型":                r["signal_type"],
+                "置信度":                 r["confidence"],
+                "验证周期":               f"{r['trading_days']} 天",
+                "预期方向/涨幅":           r["expected"],
+                "起始总价(×100股)":        round(r["start_amount"], 2),
+                "累计盈亏(100股)":         round(r["pnl"], 2),
+                "1日涨跌":                r["day1_chg"],
+                "3日涨跌":                r["day3_chg"],
+                "5日涨跌":                r["day5_chg"],
+                "10日涨跌":               r["day10_chg"],
+                "20日涨跌":               r["day20_chg"],
+                "当前累计涨跌幅":          f"{pct_sign}{r['pct']:.2f}%",
+                "赛道":                   sector,
+                "🔗网页版":                FeishuBitableClient.SIM_WEB_URL,
+                "信息补充":               r.get("info_supplement", "—"),
             }
         })
 
