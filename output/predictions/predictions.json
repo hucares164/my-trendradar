@@ -971,7 +971,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-03",
+      "content": "火山引擎MaaS业务将在2026年Q3财报中贡献超预期的营收增长，并带动母公司股价上行",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-08-30",
+      "basis": "财联社报道「火山引擎提升MaaS营收目标至全年150亿元」→AI应用收入规模化和客户拓展顺利→母公司整体营收和利润率提升",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-03",
+      "content": "SK海力士火灾及三星劳资争议将导致全球DRAM/NAND价格在2026年Q3出现5-10%的环比上涨，利好国内存储模组企业",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-01",
+      "basis": "贴吧新闻「海力士火灾,内存涨价理由+1」+雅虎新闻报道「黄仁勋谈三星劳资争议」→供给端收缩预期强化→带动现货市场价格上行→国内存储模组企业受益于涨价预期",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-03",
+      "content": "若美伊冲突扩大，布伦特原油将在30天内站上90美元/桶，利好国内新能源车及光伏储能产业链",
+      "confidence": "低",
+      "signal_type": "G",
+      "verify_date": "2026-07-03",
+      "basis": "美军称伊朗发动袭击+国际油价涨超2%→地缘风险溢价推高油价→成本压力倒逼交通和能源系统加速向新能源切换",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-03 07:45:03"
+  "last_updated": "2026-06-03 20:31:05"
 }
