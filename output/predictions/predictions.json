@@ -1004,7 +1004,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-04",
+      "content": "在中东局势持续升级背景下，布伦特原油价格将在2026年7月底前突破105美元/桶，并带动A股油气板块（如中国石油、广汇能源）阶段性跑赢大盘。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-07-31",
+      "basis": "「中东局势再度升级」→ 伊朗打击美舰+海上封锁威胁→ 供给风险溢价上升→ 预判油价中枢上移",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-04",
+      "content": "受DeepSeek融资及火山引擎150亿目标驱动，AI算力板块（光模块、服务器）将在2026年Q3迎来新一轮订单密集公告期，龙头公司（中际旭创、新易盛）股价有望再创新高。",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-09-04",
+      "basis": "「DeepSeek估值4000亿融资」+「火山引擎MaaS营收目标150亿」→ AI军备竞赛加剧→ 算力需求确定性增长→ 预判产业链业绩兑现",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-04",
+      "content": "A股市场在新闻联播披露长线外资加仓硬科技后，将持续吸引增量资金，预计2026年7月底前，创业板指将突破2850点，科创50指数将突破1200点。",
+      "confidence": "低",
+      "signal_type": "F",
+      "verify_date": "2026-07-31",
+      "basis": "「A股再登新闻联播：长线外资看好中国，持续加码硬科技」→ 政策信号强化+外资趋势→ 市场信心提升→ 预判指数上涨，但存在G类地缘风险扰动，置信度偏低",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-03 20:31:05"
+  "last_updated": "2026-06-04 07:42:09"
 }
