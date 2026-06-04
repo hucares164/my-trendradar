@@ -1037,7 +1037,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-04",
+      "content": "台积电2026年Q3资本开支指引将超过市场预期，正式上调全年资本开支指引10%以上",
+      "confidence": "高",
+      "signal_type": "F",
+      "verify_date": "2026-07-17",
+      "basis": "财联社/华尔街见闻「台积电CEO称数年内都无法满足芯片需求，资本开支高点没看到」→AI芯片需求远超现有产能，扩产是唯一路径→台积电资本开支将超预期",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-04",
+      "content": "北方华创2026年中报营收增速将超50%，其中刻蚀设备订单增速最为显著",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-08-31",
+      "basis": "华尔街见闻「美滥用出口管制冲击全球半导体产供链稳定」→国产设备替代逻辑加速验证，北方华创为国产刻蚀/薄膜设备龙头→淡季不淡，业绩继续高增",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-04",
+      "content": "微信智能体接入功能上线后3个月内，接入厂商数量将超100家",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-04",
+      "basis": "财联社「微信开放手机厂商智能体接入」→中国互联网生态开放性提升，AI Agent商业化加速→微信作为最大流量池，生态效应将快速显现",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-04 07:42:09"
+  "last_updated": "2026-06-04 18:54:45"
 }
