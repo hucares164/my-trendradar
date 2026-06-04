@@ -1070,7 +1070,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-05",
+      "content": "以美光、海力士等为代表的存储芯片厂商将在2026年Q2-Q3财报中披露营收和毛利率显著超预期，确认涨价周期主升浪。",
+      "confidence": "高",
+      "signal_type": "PEAD",
+      "verify_date": "2026-09-05",
+      "basis": "「伯恩斯坦：存储价格将在Q2迎来主升浪」→存储供需关系(减产+AI需求)确认扭转→存储企业盈利能力大幅修复→季报超预期",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-05",
+      "content": "人形机器人「不到一万」的定价将不会是事件性炒作，到2026年底，至少有1-2家中国头部整机厂商的消费级人形机器人年出货量将突破10万台级别。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-12-05",
+      "basis": "「人形机器人集体降价」+「宇树IPO过会」→资本助力+供应链国产化降本→C端市场从0到1跨越→出货量和订单数据可验证",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-05",
+      "content": "台积电将在2026年下半年再次上调全年资本开支指引，由此带动整个半导体设备板块（尤其是先进封装和HBM相关设备）重新获得市场青睐。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-10-05",
+      "basis": "「台积电魏哲家：数年内都无法满足芯片需求，资本开支高点我也不知道」→需求确定性极高，现有产能无法支撑→必须追加投资→台积电资本开支指引上调将是设备板块的强催化剂",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-04 18:54:45"
+  "last_updated": "2026-06-05 07:08:42"
 }
