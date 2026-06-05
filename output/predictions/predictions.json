@@ -1136,7 +1136,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-06",
+      "content": "非农数据强劲将导致美联储鹰派措辞持续，A股成长股（尤其是AI应用与半导体）在未来2个月面临持续估值压力",
+      "confidence": "高",
+      "signal_type": "F",
+      "verify_date": "2026-08-06",
+      "basis": "华尔街见闻美国5月非农超预期→新美联储通讯社鹰派预期→全球科技股估值承压传导至A股",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-06",
+      "content": "因豆包月活下降验证AI应用付费困境，字节跳动将放缓或调整豆包商业化策略，转向企业级AI云服务",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-06",
+      "basis": "豆包月活数据下降→AI应用赛道信心受挫→字节战略转向to B AI服务",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-06",
+      "content": "国务院私募监管新政将导致A股中小市值公司因融资渠道收窄而股价承压，特别是依赖私募融资的创新药与硬科技公司，未来一季报现金流恶化",
+      "confidence": "中",
+      "signal_type": "P",
+      "verify_date": "2026-09-06",
+      "basis": "国办打击私募乱象→PE/VC募资难度加大→依赖外部融资的创新公司资金链紧张",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-05 19:18:33"
+  "last_updated": "2026-06-06 07:07:27"
 }
