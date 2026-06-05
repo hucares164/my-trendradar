@@ -1103,7 +1103,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-05",
+      "content": "博通/美光/三星股价暴跌将触发全球AI算力链避险情绪，中际旭创、新易盛等A股光模块龙头在未来2周内（至2026年6月20日）出现10%以上跌幅，但将是中期买入机会",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-06-20",
+      "basis": "AI泡沫警告信号（P+F类）→市场恐慌情绪传导至A股算力链，但国内资本开支不减且Q2业绩有支撑→短期超跌，中期反弹",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-05",
+      "content": "追觅科技创始人俞浩相关争议将导致该公司2026年Q2国内品牌销售额环比下滑超15%",
+      "confidence": "高",
+      "signal_type": "F",
+      "verify_date": "2026-07-31",
+      "basis": "创始人禁言为M类高确定性信号→治理风险暴露可能导致经销商观望、市场费用削减→传导至Q2营收报告，看好竞争对手「科沃斯」「石头科技」的份额增长",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-05",
+      "content": "千帆星座加速组网将推动中国卫星在2026年7月底前公告一项价值超5亿元的核心组件订单",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-07-31",
+      "basis": "千帆发射为P类信号（政策推进）→星座建设进入批量交付期，核心T/R组件订单将密集释放→头部供应商获得大额合同，卫星制造环节将出现第一个业绩催化点",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-05 07:08:42"
+  "last_updated": "2026-06-05 19:18:33"
 }
