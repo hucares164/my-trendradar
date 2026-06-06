@@ -1202,7 +1202,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-07",
+      "content": "受AI算力需求持续验证，HBM散热技术成为产业链核心瓶颈，相关配套企业（如中石科技、飞荣达）将在未来1-2个季度获得订单层级增长",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-09-30",
+      "basis": "「三大存储厂打响‘散热’攻关战」→AI芯片功耗密度逼近物理极限，液冷散热方案成为HBM4标准配置→带动散热材料企业业绩改善",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-07",
+      "content": "中国台湾岛东部海域执法行动将提升市场对军工/安防板块的关注度，具备水下监视和无人装备能力的企业（如中国海防、中科星图）将获得阶段性估值溢价",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-31",
+      "basis": "「反制日菲，大陆在台湾岛东部海域启动专项行动」→地缘紧张局势升温→国防预算执行加速，军工订单落地",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-07",
+      "content": "美国强劲非农数据将导致美联储降息预期彻底落空，A股和港股高估值科技板块将承压，价值风格相对占优",
+      "confidence": "高",
+      "signal_type": "F",
+      "verify_date": "2026-09-01",
+      "basis": "华尔街见闻“强劲非农后，高盛‘投降’”+财联社“九大科技股一日蒸发万亿美元”+财联社“美联储降息选项被彻底扫下台面”→全球利率环境收紧→成长股的估值逻辑受冲击",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-06 17:53:52"
+  "last_updated": "2026-06-07 07:02:23"
 }
