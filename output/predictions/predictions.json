@@ -1301,7 +1301,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-08",
+      "content": "美股科技股调整将导致A股半导体板块在6月出现一波10%-15%的调整，但国产替代逻辑标的（如中芯国际、北方华创）将率先企稳反弹",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-07-08",
+      "basis": "财联社热门「九大科技股一日蒸发万亿美元」→ 全球风险偏好下行，外资流出压力增大→ A股半导体板块短期承压，但国产替代逻辑支撑其回调后加仓价值",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-08",
+      "content": "华为PuraXMax全年累计销量将超过300万台，带动其核心零部件供应商如京东方A的柔性OLED出货量同比提升30%以上",
+      "confidence": "高",
+      "signal_type": "F",
+      "verify_date": "2026-09-08",
+      "basis": "知乎「华为PuraXMax首月销量近35万台」→ 验证了折叠屏高端市场需求强劲→ 叠加华为回归高端市场趋势，全年销量超预期",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-08",
+      "content": "随着HBM散热技术成为行业焦点，飞荣达或中石科技将在2026年下半年获得国内存储厂商的批量供货订单，从而引发股价一轮20%-30%的估值修复",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-12-08",
+      "basis": "财联社热门「三大存储厂打响散热攻关战」→ HBM散热需求爆发是确定的产业趋势→ 国内供应商将优先受益于国产替代和产业链配套需求",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-07 22:23:20"
+  "last_updated": "2026-06-08 07:03:56"
 }
