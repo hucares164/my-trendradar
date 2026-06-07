@@ -9,13 +9,12 @@
 """
 
 import json
-import subprocess
 import sys
 import os
 import re
+import urllib.request
 from datetime import datetime, timedelta
 
-SCRIPT = "/Users/luominyi/.workbuddy/plugins/marketplaces/cb_teams_marketplace/plugins/finance-data/skills/westock-data/scripts/index.js"
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.dirname(SCRIPT_DIR)
 PRED_PATH = os.path.join(REPO_ROOT, "output", "predictions", "predictions.json")
@@ -87,40 +86,32 @@ STOCK_ALIASES = {
 }
 
 
-def run_westock(args: list) -> str:
-    result = subprocess.run(
-        ["node", SCRIPT] + args,
-        capture_output=True, text=True, timeout=20,
-        cwd=os.path.dirname(SCRIPT)
-    )
-    return result.stdout.strip()
-
-
-def parse_kline_markdown(text: str) -> list:
-    """解析 westock-data kline 输出的 Markdown 表格，返回完整行数据"""
-    rows = []
-    in_table = False
-    for line in text.split("\n"):
-        line = line.strip()
-        if "date" in line and "last" in line and "|" in line:
-            in_table = True
-            continue
-        if in_table:
-            if line.startswith("|") and "---" not in line:
-                parts = [c.strip() for c in line.split("|")]
-                if len(parts) >= 6:
-                    try:
-                        dt    = parts[1]
-                        opn   = float(parts[2]) if parts[2] else 0
-                        lst   = float(parts[3]) if parts[3] else 0
-                        high  = float(parts[4]) if parts[4] else 0
-                        low   = float(parts[5]) if parts[5] else 0
-                        rows.append({"date": dt, "open": opn, "high": high, "low": low, "last": lst})
-                    except (ValueError, IndexError):
-                        pass
-            elif not line.startswith("|"):
-                in_table = False
-    return rows
+def fetch_kline(code: str, limit: int = 120) -> list:
+    """
+    调用腾讯财经 API 获取 A 股 K 线数据。
+    返回 [{date, open, high, low, last}, ...] 按日期升序排列。
+    """
+    url = f"http://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param={code},day,,,{limit},qfq"
+    req = urllib.request.Request(url, headers={"Referer": "https://finance.qq.com"})
+    try:
+        resp = json.loads(urllib.request.urlopen(req, timeout=15).read())
+        if resp.get("code") != 0:
+            return []
+        klines = resp.get("data", {}).get(code, {}).get("qfqday") or []
+        result = []
+        for row in klines:
+            if len(row) >= 5:
+                result.append({
+                    "date": row[0],
+                    "open": float(row[1]),
+                    "last": float(row[2]),
+                    "high": float(row[3]),
+                    "low":  float(row[4]),
+                })
+        return result
+    except Exception as e:
+        print(f"  [腾讯] {code} 获取失败: {e}", file=sys.stderr)
+        return []
 
 
 def find_start_row(rows: list, target_date: str) -> dict | None:
@@ -475,8 +466,7 @@ def main():
 
         print(f"处理: {name} ({code})，首次: {first_date}，验证: {verify_date}，信号: {signal_type}，置信度: {confidence}...", file=sys.stderr)
 
-        stdout = run_westock(["kline", code, "--period", "day", "--limit", "120", "--fq", "qfq"])
-        rows = parse_kline_markdown(stdout)
+        rows = fetch_kline(code, limit=120)
         if not rows:
             print(f"  ⚠️  无K线数据，跳过", file=sys.stderr)
             continue
