@@ -1268,7 +1268,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-07",
+      "content": "英维克/高澜股份等液冷厂商将在2026年Q3前获得至少一家存储大厂（三星/海力士）的HBM散热订单验证或联合研发公告，带动相关个股出现一轮主题性上涨",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-09-30",
+      "basis": "「三大存储厂打响散热攻关战」→HBM热管理成为下一轮军备竞赛核心→国产液冷厂商凭借性价比和交付速度切入供应链→相关公司股价获得订单催化",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-07",
+      "content": "若下周（6月8-12日）SpaceX上市首日涨幅超30%，将带动A股卫星互联网板块整体脉冲式上涨5-8%，但随后即回落，属于短期情绪炒作无法延续",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-06-15",
+      "basis": "「SpaceX上市募资要建太空数据中心」→事件驱动+A股映射标的稀缺→短期情绪催化但缺乏基本面支撑→先涨后落的脉冲走势",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-07",
+      "content": "截至2026年三季度末（9月30日），中国央行黄金储备量将突破7500万盎司，并带动黄金价格在2000-2200美元/盎司区间震荡上行",
+      "confidence": "高",
+      "signal_type": "F",
+      "verify_date": "2026-09-30",
+      "basis": "「中国央行加速增持黄金！连续19个月增持」→央行增储趋势明确叠加去美元化逻辑→全球央行购金量维持高位→黄金价格获底层支撑",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-07 18:22:07"
+  "last_updated": "2026-06-07 22:23:20"
 }
