@@ -1334,7 +1334,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-08",
+      "content": "通富微电将在2026年Q3财报中披露HBM相关封测收入占比提升至10%以上，带动市场对其HBM国产替代龙头地位的重新定价",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-09-08",
+      "basis": "英伟达海力士锁定HBM产能→国产替代紧迫性提升→通富微电作为国内HBM封测领先者已率先扩产→其HBM收入占比将会提升",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-08",
+      "content": "深圳华强(000062)半导体元器件分销业务营收在2026年Q3单季环比增长将超过20%",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-09-08",
+      "basis": "「深圳华强：存储、电源管理芯片、模拟芯片和MLCC在内的众多元器件出现缺货涨价情况」→元器件涨价周期开启→深圳华强作为国内最大电子元器件分销商直接受益→涨价周期带动营收与毛利率双升",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-08",
+      "content": "腾讯控股(00700)WXG旗下微信AI生态的商业化收入将在2026年下半年环比增长50%以上",
+      "confidence": "低",
+      "signal_type": "F",
+      "verify_date": "2026-12-31",
+      "basis": "「携程：已作为首批内测团队接入微信AI生态布局」→微信AI生态开始向合作伙伴开放→商业化变现逻辑初步验证→参考小程序生态爆发路径，AI生态若引流与交易转化数据优秀，收入跳升可期",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-08 07:03:56"
+  "last_updated": "2026-06-08 20:21:52"
 }
