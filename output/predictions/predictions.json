@@ -1433,7 +1433,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-10",
+      "content": "中国AI算力出口链板块（PCB、光模块）将因Q2业绩超预期而迎来新一轮上涨",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-08-30",
+      "basis": "PEAD信号「中国5月出口增速19.4%，AI需求强劲」→该趋势主要由AI硬件出口驱动，预计Q2财报中相关上市公司（如沪电股份、中际旭创）将公告超预期业绩→AI出口链股价上行",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-10",
+      "content": "受中美博弈加剧及供应链安全考虑，国内钨价将在未来3个月上涨10-15%",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-10",
+      "basis": "P类信号「中国对日本断供钨」→断供引发全球性供给收缩，国内钨资源公司（如厦门钨业）将受益于涨价预期→股价和钨价双升",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-10",
+      "content": "人形机器人龙头企业将在2026年下半年开始批量交付家庭服务机器人，带动相关供应链公司营收环比增长超过50%",
+      "confidence": "低",
+      "signal_type": "PEAD",
+      "verify_date": "2026-12-31",
+      "basis": "F类信号「人形机器人价格大跳水」→价格达到10,000元以内，消费级市场启动条件初步具备→若龙头企业（如小米、特斯拉）发布量产计划，将验证该趋势",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-09 18:52:19"
+  "last_updated": "2026-06-10 07:17:20"
 }
