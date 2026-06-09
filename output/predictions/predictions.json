@@ -1400,7 +1400,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-09",
+      "content": "英伟达Blackwell供不应求将持续至2027Q1，AI算力芯片设计、先进封装（台积电、长电科技、通富微电）及系统散热（申菱环境、英维克）等环节业绩受益明确。",
+      "confidence": "高",
+      "signal_type": "PEAD",
+      "verify_date": "2026-09-30",
+      "basis": "G类「英伟达Blackwell供应紧张」+G类「谷歌下单三百万AI芯片」→AI资本开支和需求短中期内不会衰减→英伟达及其供应链产能满载情况至少延续至下一财年末",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-09",
+      "content": "广东省充电设施建设新政将引发各省份半年内相继出台类似规划，充电桩/模块（盛弘股份、通合科技）上市公司新增订单将同比增50%以上。",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-12-31",
+      "basis": "P类「广东2027年300万个充电设施」→政策标杆效应→各省配套政策将密集出台，设备采购提前放量",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-09",
+      "content": "受美方多家中企列入涉军清单影响，中概股及A股科技板块短期情绪受冲击，但影响仅限于消息面，不改变基本面，外资经过1个月后重新回流。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-07-09",
+      "basis": "G类「美将阿里、百度等列入涉军清单」+往期G类事件规律→清单未涉及实质经营限制，情绪波动大于实质影响→外资净流出在初期放大，此后1个月内回流或回归常态",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-09 07:12:04"
+  "last_updated": "2026-06-09 18:52:19"
 }
