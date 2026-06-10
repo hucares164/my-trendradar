@@ -1499,7 +1499,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-10",
+      "content": "工信部将在1个月内出台「光电混合组网技术试验」的具体试点方案，并明确时间表",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-07-10",
+      "basis": "财联社热门P类信号「工信部聚焦AI+通信」→工信部政策一贯具有快速落地特征，从信号发出到试点方案出台通常30-60天→预计7月中上旬将看到相关信息",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-10",
+      "content": "受美国CPI超4和中东地缘冲突双重冲击，A股科技板块（特别是光通信/CPO概念）将在未来两周内持续调整，但半导体材料（国产替代线）将逆势走强",
+      "confidence": "中",
+      "signal_type": "G",
+      "verify_date": "2026-06-24",
+      "basis": "PEAD信号「美国CPI同比4.2%」+G类信号「中东局势升级」→外部流动性收紧与风险偏好下降压制高估值科技股→资金向政策催化明确、估值相对合理的半导体设备材料板块迁移",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-10",
+      "content": "「新能源车不能胖」热搜将倒逼2家以上A股整车企业在半年报或投资者交流中，明确提出轻量化技术路线和具体减重目标",
+      "confidence": "低",
+      "signal_type": "F",
+      "verify_date": "2026-09-10",
+      "basis": "百度热搜头部的F类信号→大众情绪发酵→传导至企业战略层面→轻量化成为行业标配",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-10 19:32:19"
+  "last_updated": "2026-06-10 21:35:04"
 }
