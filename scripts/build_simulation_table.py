@@ -372,7 +372,12 @@ def gen_html(results: list, path: str):
         </tr>"""
 
     total_pnl = sum(r["pnl"] for r in results)
+    total_cost = sum(r["start_amount"] for r in results)
+    total_balance = total_cost + total_pnl
+    total_return = (total_pnl / total_cost * 100) if total_cost else 0
     pnl_tag   = "pos" if total_pnl >= 0 else "neg"
+    ret_tag   = "pos" if total_return >= 0 else "neg"
+    ret_sign  = "+" if total_return >= 0 else ""
 
     html = f"""<!DOCTYPE html>
 <html lang="zh-CN">
@@ -402,12 +407,15 @@ def gen_html(results: list, path: str):
 </head>
 <body>
 <h1>📊 模拟盘验证表 v5</h1>
-<p class="subtitle">生成时间: {datetime.now().strftime("%Y-%m-%d %H:%M")} ｜ 数据来源: westock-data ｜ 每支股票模拟买入 100 股</p>
+<p class="subtitle">生成时间: {datetime.now().strftime("%Y-%m-%d %H:%M")} ｜ 数据来源: 腾讯财经API ｜ 每支股票模拟买入 100 股</p>
 <div class="summary">
     <div class="card"><h3>追踪股票</h3><div class="val">{len(results)}</div></div>
     <div class="card"><h3>盈利数</h3><div class="val pos">{sum(1 for r in results if r['pnl'] >= 0)}</div></div>
     <div class="card"><h3>亏损数</h3><div class="val neg">{sum(1 for r in results if r['pnl'] < 0)}</div></div>
     <div class="card"><h3>总盈亏</h3><div class="val {pnl_tag}">¥{total_pnl:+.2f}</div></div>
+    <div class="card"><h3>总成本</h3><div class="val">¥{total_cost:,.2f}</div></div>
+    <div class="card"><h3>总余额</h3><div class="val {ret_tag}">¥{total_balance:,.2f}</div></div>
+    <div class="card"><h3>总收益率</h3><div class="val {ret_tag}">{ret_sign}{total_return:.2f}%</div></div>
 </div>
 <div class="table-wrap">
 <table>
