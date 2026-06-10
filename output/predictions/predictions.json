@@ -1466,7 +1466,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-10",
+      "content": "未来3个月内（至2026年9月），受AI效率提升需求驱动，以存算一体或新型架构为主的非英伟达算力芯片公司（如寒武纪、中科曙光）将获得一笔以上亿元级战略投资或大客户订单确认，引发市场关注。",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-09-10",
+      "basis": "G信号（美对华芯片封锁）→S信号（Token烧不动，算力效率需求迫切）→非NVIDIA算力路线价值凸显→例如寒武纪获大客户订单。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-10",
+      "content": "未来3个月内（至2026年9月），中国对日的钨出口管制措施将导致国内钨企业（如厦门钨业、章源钨业）的盈利能力在2026年Q3财报中显著提升（毛利率或净利润环比增长超过10%）。",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-10-31",
+      "basis": "G信号（中国对日本断供钨）→S信号（供给减少，价格提升）→中国钨企盈利受益→需等待2026年三季报。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-10",
+      "content": "未来1个月内（至2026年7月），美国CPI数据公布（预计6月10日晚）后，若数据符合“整体通胀破4”的预期，将加剧市场对美联储维持高利率的担忧，引发美股科技股进一步回调，纳斯达克指数将跌破上周五低点，跌幅扩大至5%以上。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-07-10",
+      "basis": "F/PEAD类信号（科技股抛售潮与CPI数据临近）→市场形成通胀-利率-估值压制共振→科技股抛售延续→美股纳指在恐慌情绪短期释放后可能超跌。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-10 07:17:20"
+  "last_updated": "2026-06-10 19:32:19"
 }
