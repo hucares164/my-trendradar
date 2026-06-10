@@ -1532,7 +1532,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-11",
+      "content": "发改委人工智能+行动计划将在未来3个月内催化新一轮AI算力招标，直接利好光模块龙头中际旭创和新易盛，其订单预期将驱动股价上涨",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-09-11",
+      "basis": "发改委明确表态政策支持->AI算力建设需求爆发->电信与互联网企业开启光模块采购->中际旭创和新易盛订单增长。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-11",
+      "content": "受美国5月CPI重返4%及中东冲突升级影响，美联储9月前降息概率接近为零，A股成长股（尤其AI与芯片）估值将承压，红利防御风格将持续跑赢",
+      "confidence": "高",
+      "signal_type": "G",
+      "verify_date": "2026-09-11",
+      "basis": "美国CPI超预期->美联储维持高利率->全球流动性收紧->A股成长板块估值承压->银行类红利股如建行获资金抱团。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-11",
+      "content": "中国5月新能源车出口同比增长68.7%的趋势将巩固，比亚迪下半年出口量有望同比翻倍，带动其股价在Q3财报窗口超预期",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-09-30",
+      "basis": "5月出口数据确认高景气->海外市场需求旺盛->比亚迪新车汉出口版上市->产销量增加->Q3财报业绩超预期。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-10 21:35:04"
+  "last_updated": "2026-06-11 07:24:58"
 }
