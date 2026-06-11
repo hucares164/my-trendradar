@@ -1565,7 +1565,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-11",
+      "content": "钉钉新CEO陈宇森将在2026年Q3发布基于Agent的“日抛式”软件产品，企业用户月活（MAU）环比增长超过15%.",
+      "confidence": "高",
+      "signal_type": "M",
+      "verify_date": "2026-09-30",
+      "basis": "「钉钉换帅」新闻→阿里云战略转向AI原生→陈宇森产品规划曝光→预判产品将快速迭代并带动用户增长。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-11",
+      "content": "受霍尔木兹海峡事件影响，布伦特原油价格在1个月内突破100美元/桶，带动A股中曼石油（油气开采）和杰瑞股份（油服）股价上涨。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-07-11",
+      "basis": "「伊朗关闭海峡」G类信号→全球石油供应缺口扩大→油价上行→能源开采及服务企业业绩预期改善。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-11",
+      "content": "存储半导体涨价将传导至上游设备，北方华创和拓荆科技的HBM相关设备订单将在Q3同比增长超过50%.",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-10-31",
+      "basis": "SK海力士涨价申请→存储扩产周期启动→国产设备替代加速→龙头设备商订单激增。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-11 07:24:58"
+  "last_updated": "2026-06-11 20:04:12"
 }
