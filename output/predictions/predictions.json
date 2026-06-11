@@ -1598,7 +1598,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-12",
+      "content": "伊朗局势若在10天内未导致霍尔木兹海峡持续封锁，国际油价将回吐大部分地缘溢价，WTI原油回落至70-75美元区间",
+      "confidence": "中",
+      "signal_type": "G",
+      "verify_date": "2026-08-12",
+      "basis": "G类信号「伊朗局势骤然升级，原油大涨」→地缘紧张加剧推高油价但无实际供应中断→全球经济增长放缓压制需求，油价中期压力大",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-12",
+      "content": "OpenAI等厂商持续降价将导致2026年第三季度全球AI推理用GPU出货量环比增长超过30%，利好拥有多模态推理能力的国产AI芯片企业如寒武纪",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-12",
+      "basis": "PEAD类信号「OpenAI打响价格战」→Token价格下降刺激需求大增→推理算力需求成为芯片增长新引擎",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-12",
+      "content": "韩国KOSPI指数将在2026年8月底前反弹至2800点以上",
+      "confidence": "低",
+      "signal_type": "F",
+      "verify_date": "2026-08-31",
+      "basis": "F类信号「韩国惨烈去杠杆」→强制平仓潮接近尾声后超跌反弹→但全球经济不确定性高，反弹持续性存疑",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-11 20:04:12"
+  "last_updated": "2026-06-12 07:20:28"
 }
