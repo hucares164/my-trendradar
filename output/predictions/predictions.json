@@ -1664,7 +1664,51 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-13",
+      "content": "长鑫科技正式上市首日将大幅高开,带动A股半导体存储板块集体异动",
+      "confidence": "高",
+      "signal_type": "F",
+      "verify_date": "2026-09-01",
+      "basis": "长鑫科技IPO注册生效(PEAD类信号)→科创板迎来纯正国产DRAM龙头,对标海外三大厂具有稀缺性→上市首日融资规模和市场关注度极高,预计首日涨幅超50%",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-13",
+      "content": "若美伊正式签署谅解备忘录,布伦特原油价格将在一周内跌破70美元",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-07-15",
+      "basis": "美伊就备忘录文本达成共识(G类信号)→伊朗原油出口恢复预期增强→市场将提前Price in(短期)油价下行,配合全球需求疲软,油价或快速下跌",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-13",
+      "content": "华为开源盘古2.0模型将在未来3个月内直接带动鸿蒙开发者社区活跃度提升50%以上",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-12",
+      "basis": "华为发布开源盘古2.0(S类信号)→开发者获得强大AI能力→吸引更多第三方应用迁移和适配鸿蒙,特别是基于盘古2.0的垂直行业应用开发→鸿蒙生态价值提升,核心合作伙伴(软通、润和)获得业绩增量",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-13",
+      "content": "受华尔街大行限制亚洲芯片股杠杆影响,以及美方新一轮制裁,以中芯国际为代表的A股半导体制造板块将在未来两个月跑输大盘",
+      "confidence": "高",
+      "signal_type": "G",
+      "verify_date": "2026-08-15",
+      "basis": "SK海力士、三星、台积电同时被限(G类信号)+美方制裁中方个人及实体(G类信号)→资金面压制和情绪负面→传导至A股,特别是与先进制程相关的设备和制造龙头,短期估值承压",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-12 19:35:14"
+  "last_updated": "2026-06-13 07:16:16"
 }
