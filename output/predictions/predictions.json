@@ -1631,7 +1631,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-12",
+      "content": "长鑫存储IPO首日市值有望突破500-800亿元人民币，成为A股最大存储芯片公司",
+      "confidence": "高",
+      "signal_type": "F",
+      "verify_date": "2026-09-30",
+      "basis": "证监会批复长鑫IPO(P类信号)→国内DRAM市场国产化率极低且政策强力支持→长鑫作为唯一DRAM量产企业将享受高估值溢价→预计上市首日开启存储芯片板块新一轮行情。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-12",
+      "content": "受华尔街限制杠杆做多亚洲芯片股影响，A股半导体设备与材料公司（北方华创、中微公司）将获得资金流入，板块指数在未来三个月跑赢创业板指数至少10%",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-12",
+      "basis": "华尔街限制对亚洲芯片股杠杆押注(G类信号)→海外资金流出打压三星/海力士股价→国内资金寻求国产替代确定性子版块→半导体设备和材料因其高壁垒和国产化紧迫性成为首选→板块资金流入逻辑顺畅。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-12",
+      "content": "中国对菲律宾实施制裁后，南海地区安全风险短期升温，航运保险成本上升，但不会演变为大规模冲突，三个月内中菲关系将出现缓和信号",
+      "confidence": "低",
+      "signal_type": "G",
+      "verify_date": "2026-09-12",
+      "basis": "中国宣布制裁菲律宾防长(P类信号制裁力度相对克制)→外交对抗引发区域紧张→但双方经济联系紧密且无核心利益冲突→由外交渠道降温是大概率→短期影响航运和油气股情绪，中期回归常态。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-12 07:20:28"
+  "last_updated": "2026-06-12 19:35:14"
 }
