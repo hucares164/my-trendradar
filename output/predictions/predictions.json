@@ -1708,7 +1708,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-13",
+      "content": "鉴于美伊协议签署预期（尽管存在反复），WTI原油期货价格将在未来一个月内跌破70美元/桶。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-07-13",
+      "basis": "「美伊协议曙光终现」G类信号→中东原油供给预期增加→传导至替代能源（如新能源）需求减弱，利空传统能源股如中国石油，利好航空板块如中国国航。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-13",
+      "content": "受Claude 5出口管制事件刺激，中国AI算力芯片（如寒武纪、海光信息）及配套的国产服务器厂商（如浪潮信息）的股价将在未来3个月内开启一轮上涨行情，涨幅预计在15%以上。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-13",
+      "basis": "「Claude Fable 5全球暂停访问」G类信号→美对华AI技术封锁加码→国产替代逻辑强化，国内云厂商将增加对国产AI芯片的采购以应对供应链风险。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-13",
+      "content": "Space X的上市将引发A股商业航天板块的短期投机行情，但核心标的中长期业绩兑现能力弱，行情将在2个月内见顶回落。",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-08-13",
+      "basis": "SpaceX IPO估值示范「SpaceX首秀升19%突破2万亿」PEAD类信号→A股商业航天相关公司（如中国卫星、航天电器）短期内享受概念溢价，但业绩无法支撑高估值。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-13 07:16:16"
+  "last_updated": "2026-06-13 18:21:57"
 }
