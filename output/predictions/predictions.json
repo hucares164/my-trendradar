@@ -1741,7 +1741,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-14",
+      "content": "智谱或科大讯飞将在2026年8月底前发布对标Claude 5性能的新模型，并争取到至少10家大型金融机构/国企的订单。",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-08-31",
+      "basis": "华尔街见闻新闻“美国对Anthropic模型出口管制”→国内企业急需替代方案→智谱发布GLM-5.2+科大讯飞有星火模型，研发加速→预判国产大模型迎来密集替换期",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-14",
+      "content": "中际旭创（光模块龙头）2026年Q3财报营收环比增速将超过15%，验证AI算力需求持续爆发。",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-10-31",
+      "basis": "华尔街见闻/财联社新闻“亚马逊、Meta限制AI使用量+算力瓶颈”→云厂商增加资本开支→光模块是算力基础设施必需环节→预判产业链龙头业绩持续增长",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-14",
+      "content": "2026年9月前，WTI原油价格将跌破55美元/桶（2026年6月14日价格约60美元）。",
+      "confidence": "低",
+      "signal_type": "F",
+      "verify_date": "2026-09-14",
+      "basis": "华尔街见闻/凤凰网新闻“美伊协议曙光重现”→局势缓和→市场对供给中断的担忧减弱→预判油价回归/下行路径，但地缘博弈复杂，确定性低",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-13 18:21:57"
+  "last_updated": "2026-06-14 07:03:27"
 }
