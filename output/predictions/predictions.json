@@ -1807,7 +1807,29 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-15",
+      "content": "支付宝「阿宝」AI助手正式上线后，首月月活将超过5000万，金融产品转化率提升至6%",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-15",
+      "basis": "信号来源为华尔街见闻「支付宝酝酿改版引入AI助手阿宝」→支付宝拥有10亿用户基础且金融场景天然适配AI引导→预判上线首月活跃度与企业目标一致",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-15",
+      "content": "2026年9月前，中国数据中心光模块(400G/800G/1.6T) 出货量同比增速将维持30%以上",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-15",
+      "basis": "信号来源为「外媒称中国未来五年投2万亿建数据中心」→需求确认叠加人工智能算力驱动→预判龙头厂商财报数据验证",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-14 18:44:41"
+  "last_updated": "2026-06-15 07:08:13"
 }
