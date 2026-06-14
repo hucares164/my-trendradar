@@ -1774,7 +1774,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-14",
+      "content": "美伊短期谈判协议难以实质落地，原油价格将在未来一周内出现3%以上单日涨幅。",
+      "confidence": "低",
+      "signal_type": "F",
+      "verify_date": "2026-06-21",
+      "basis": "华尔街见闻多篇报道显示双方公开表态冲突（特朗普说14日签、伊方否认）→G类信号传导链长，不确定性高→预测认为谈判受阻将引发供给担忧，推高油价",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-14",
+      "content": "摩根大通关于“谁降价谁更弱势”的分析将加剧国内大模型厂商（如智谱、MiniMax）的价格战，导致多家厂商在Q2财报中利润率指引低于预期。",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-08-30",
+      "basis": "华尔街见闻「谁降价谁弱势」→PEAD类信号，揭示大模型行业陷入低价内卷的困境→传导至企业财报：营收增速放缓，利润承压，引发估值调整",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-14",
+      "content": "中国软件因被禁止参加政府采购，其2026年H2财报中政企相关营收将同比下降超过15%。",
+      "confidence": "高",
+      "signal_type": "PEAD",
+      "verify_date": "2026-10-31",
+      "basis": "财联社「中国软件被禁止参加政府采购一年」→M类信号，直接影响公司核心商业模式和收入来源→预测禁令将对公司H2政企业绩产生实质性利空影响",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-14 07:03:27"
+  "last_updated": "2026-06-14 18:44:41"
 }
