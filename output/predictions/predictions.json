@@ -1829,7 +1829,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-15",
+      "content": "MLCC现货价格在3个月内上涨15-25%",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-15",
+      "basis": "「MLCC缺货潮全面扩散」为S类信号→设备交付瓶颈确认缺货可持续性→MLCC价格上涨，利好风华高科、三环集团，利空下游消费电子组装厂",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-15",
+      "content": "美伊协议签署后一个月内（至7月15日），国际油价将维持低位（布伦特原油低于75美元/桶），全球通胀预期缓和，美联储9月降息概率上升至60%以上",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-07-15",
+      "basis": "「美伊达成和平协议」为G类全网共振信号（跨7个信息来源）→霍尔木兹海峡开放消除能源供应溢价→油价下跌传导至通胀预期→影响美联储决策",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-15",
+      "content": "茅台在2026年Q3财报中，营收增速较Q2继续放缓至个位数，营销费用大幅缩减，毛利率提升",
+      "confidence": "高",
+      "signal_type": "PEAD",
+      "verify_date": "2026-10-31",
+      "basis": "「茅台总经理王莉称停售冰淇淋、咖啡和巧克力，未来联名将非常谨慎」为M类信号→管理层收缩多元化战略聚焦主业→减少低效营销→成本优化但营收承压",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-15 07:08:13"
+  "last_updated": "2026-06-15 21:47:05"
 }
