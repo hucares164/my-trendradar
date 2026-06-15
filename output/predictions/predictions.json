@@ -1862,7 +1862,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-16",
+      "content": "国内MLCC龙头股（如风华高科、三环集团）将在未来3个月内，因MLCC涨价和订单可见度提升，跑赢大盘20%以上。",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-09-16",
+      "basis": "财联社热门新闻「MLCC缺货潮全面扩散」→ 缺货导致下游厂商恐慌性备货，推升MLCC价格和销量→ 国内MLCC龙头产能利用率提升，业绩超预期预期成为股价催化剂。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-16",
+      "content": "A股电子特气板块（如华特气体、金宏气体）将在Q3（2026年10月）公布的季报中，显示营收和利润同比增长超过50%。",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-10-31",
+      "basis": "36氪新闻报道「电子特气生产企业爆单」和华尔街见闻报道「日本六氟化钨断供危机」→下游半导体厂商为保障供应链安全，将更多订单转向国内企业→国内电子特气企业将进入量价齐升阶段。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-16",
+      "content": "美伊协议签署后一个月内，WTI原油价格将跌破70美元/桶，并在此期间持续承压。",
+      "confidence": "高",
+      "signal_type": "F",
+      "verify_date": "2026-07-16",
+      "basis": "华尔街见闻、凤凰网等多平台报道「美伊达成协议+霍尔木兹海峡复航」→全球原油供应预期增加，前期因中东局势产生的风险溢价将被消除→原油期货价格将大幅回调。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-15 21:47:05"
+  "last_updated": "2026-06-16 07:44:50"
 }
