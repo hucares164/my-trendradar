@@ -1939,7 +1939,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-17",
+      "content": "腾讯资本开支将在2026年Q3财报（约2026年11月）中呈现明显增长，增幅不低于50%，以响应政策要求及业务需求。",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-11-30",
+      "basis": "信号来源：「算力网开启万亿级投资周期」→传导逻辑:政策驱动叠加「腾讯大幅下调员工AI Token额度」事件，说明腾讯内部面临算力紧缺，为提升AI竞争力必将加大资本投入→预判结论:腾讯资本开支将显著增加",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-17",
+      "content": "国轩高科在2026年下半年将为问界车型贡献电池出货，驱动其2026年全年营收同比增长不低于30%。",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-12-31",
+      "basis": "信号来源:RSS新闻「国轩高科将上车问界」→传导逻辑:鸿蒙智行供应链开放→国轩高科获得新订单→营收增长→预判结论:国轩高科营收增长超30%",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-17",
+      "content": "2026年下半年（7-12月），A股汽车整车板块（以中证汽车指数为参考）将跑赢沪深300指数5个百分点以上，因消费刺激政策及新能源车渗透率提升。",
+      "confidence": "低",
+      "signal_type": "P",
+      "verify_date": "2027-01-15",
+      "basis": "信号来源:「中国5月社零同比下滑0.6%，汽车下滑16.1%」→传导逻辑:汽车消费数据极差+政策需要稳经济→强刺激政策出台概率高→板块底部反转→预判结论:汽车板块将阶段性跑赢大盘",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-16 20:46:10"
+  "last_updated": "2026-06-17 07:23:47"
 }
