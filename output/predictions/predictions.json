@@ -1895,7 +1895,51 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-16",
+      "content": "美伊和平协议签署后一个月内，全球海运费指数（SCFI）将出现明显下跌，预计降幅超10%。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-07-19",
+      "basis": "华尔街见闻报道「美伊协议明确重开霍尔木兹海峡」→ 海峡通行恢复，航运保险费率及绕行成本大幅下降 → 传导至集运及油运全航线运价下降",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-16",
+      "content": "受存储芯片涨价传导，预计第三季度A股存储封测（长电科技、通富微电）及材料（雅克科技）板块整体营收环比增长将超过15%。",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-10-15",
+      "basis": "财联社热门「存储红利向非AI扩散，两类内存年内涨价翻倍」→ 上游晶圆厂产能满载，涨价向下游传导 → 封测及材料企业量价齐升，业绩确定性增强",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-16",
+      "content": "中国5月份社零数据负增长，预计将引发一轮促消费政策出台。在此背景下，汽车以旧换新或新能源下乡补贴政策在7-8月加码的概率较大。",
+      "confidence": "高",
+      "signal_type": "P",
+      "verify_date": "2026-08-31",
+      "basis": "华尔街见闻「中国5月社零同比下降0.6%，汽车下滑16.1%成最大拖累」→ 内需消费是当前经济最大拖累项，是政策调控的首要目标 → 决策部门或将定向刺激汽车消费",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-16",
+      "content": "由于OpenAI巨额亏损数据流出，预计在下一轮融资或IPO前，其估值将面临压力，并引发市场对AI泡沫的广泛讨论，影响A股相关AI概念股情绪。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-01",
+      "basis": "雅虎财经「OpenAI 2025 financials leaked: $38.5B loss ahead of IPO」→ 市场重新评估AI公司盈利模型，担忧行业资本开支回报率 → 短期对A股纯概念炒作的AI公司估值构成利空",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-16 07:44:50"
+  "last_updated": "2026-06-16 20:46:10"
 }
