@@ -1972,7 +1972,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-17",
+      "content": "DeepSeek将在未来2个月内宣布与至少一家国产云服务商（如华为云、阿里云）的算力合作或自建算力集群计划，总投资额不低于20亿元",
+      "confidence": "高",
+      "signal_type": "F",
+      "verify_date": "2026-08-17",
+      "basis": "「DeepSeek 500亿融资」（PEAD类信号）→ 超大规模融资后算力是首要支出（大模型训练推理必需）→ 国产替代政策鼓励选择国产云/芯片→ 预判DeepSeek会与一家国产云厂商合作，拉动昇腾或国产GPU采购。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-17",
+      "content": "受SpaceX收购Cursor事件驱动，国内AI编码创业公司（如代码小浣熊、翼码）将在3个月内获得一轮超1亿美元融资或宣布大客户合作",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-17",
+      "basis": "「SpaceX 600亿收购Cursor」（S类+M类信号）→ 国内AI编码市场跟随效应明显（对标GitHub Copilot）→ 目前国内公司规模小、估值低→ 天价收购信号将刺激VC入场和重估。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-17",
+      "content": "台积电产能告急将导致2026年Q3（7-9月）部分AI芯片客户（如英伟达、AMD）向三星追加订单，三星代工业务营收环比增长超过15%",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-10-31",
+      "basis": "「台积电产能告急，三星代工需求火热」（S类信号）→ 台积电产能满载需3-6个月才能新建缓解→ 英伟达AI芯片需求旺盛，必须找第二供应商→ 三星3nm工艺已量产，有能力承接。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-17 07:23:47"
+  "last_updated": "2026-06-17 20:10:26"
 }
