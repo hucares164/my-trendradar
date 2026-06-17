@@ -2005,7 +2005,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-18",
+      "content": "国内AI大模型行业将出现至少1起较大规模裁员或业务整合事件",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-18",
+      "basis": "豆包商业数据（PEAD类信号）→AI大模型商业化困境（降本压力）→企业被迫进行组织和业务调整，以降低成本，聚焦核心场景",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-18",
+      "content": "美联储沃什鹰派表态将导致年内全球科技股（尤其是AI相关）估值承压，美股芯片指数面临10%以上回调",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-07-18",
+      "basis": "美联储首秀（M类信号）→内部鸽派集体转鹰（政策转向明确）→高估值科技股面临流动性收紧压力，估值回归",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-18",
+      "content": "中芯国际2026年三季度营收环比增长10%以上",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-10-18",
+      "basis": "台积电产能告急（S类信号）→客户转向国内代工（替代效应）→中芯国际产能利用率提升，营收受益",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-17 20:10:26"
+  "last_updated": "2026-06-18 07:22:59"
 }
