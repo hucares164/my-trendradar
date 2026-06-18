@@ -2038,7 +2038,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-18",
+      "content": "至2026年9月，工信部将出台AI消费终端补贴细则，补贴额度不低于售价20%，带动Q3国内AI手机出货量环比增长超过50%",
+      "confidence": "高",
+      "signal_type": "P",
+      "verify_date": "2026-09-30",
+      "basis": "P类信号「人工智能+消费实施意见」→类比2020年新能源汽车补贴政策，补贴细则通常1-3个月内出台→预判补贴细则落地时间和力度",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-18",
+      "content": "至2026年9月，因G7共同降低对中国稀土依赖的声明缺乏实际约束力，叠加国内稀土开采指标收紧，氧化镨钕价格将上涨超过15%",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-30",
+      "basis": "G类信号「G7称将降低对中国关键矿产的依赖」+「中方回应高市早苗担忧稀土限制」→地缘博弈加剧但中国已建立供应链壁垒，短期内无实质替代方案→预判稀土价格上行",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-18",
+      "content": "至2026年8月，因美联储鹰派转向和10月前加息预期被定价，沪指将承压，跌幅在3%-5%区间",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-31",
+      "basis": "PEAD类信号「沃什首秀放鹰，美股转跌」+「10月前加息已被充分定价」→全球资金回流美国，新兴市场面临压力→预判A股调整幅度",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-18 07:22:59"
+  "last_updated": "2026-06-18 19:45:10"
 }
