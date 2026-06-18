@@ -2071,7 +2071,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-19",
+      "content": "中际旭创将在8月底公布的中报中，营收增速超过70%，净利润超预期。",
+      "confidence": "高",
+      "signal_type": "PEAD",
+      "verify_date": "2026-08-31",
+      "basis": "72家公司业绩预警（PEAD类信号）→ 市场风格转向业绩验证，AI算力资本开支高增（微软烧Token等新闻佐证需求旺盛）→ 中际旭创作为最确定的算力基础设施“卖铲人”，业绩兑现确定性最强。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-19",
+      "content": "因美伊协议和霍尔木兹海峡重开，国际油价将在7月底前下跌10%-15%，布伦特原油跌至75美元/桶以下。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-07-31",
+      "basis": "美伊签署谅解备忘录（G类信号）→ 伊朗原油出口制裁解除预期+霍尔木兹海峡通行恢复→ 原油供给增加100-150万桶/日，油价承压。注意：若中东局势再起波澜，该预判将证伪。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-19",
+      "content": "因美联储沃什鹰派立场和高盛“连环加息”警告，美国10年期国债收益率将在9月底前升至4.8%以上，从而引发全球科技股（尤其美股AI板块）出现一轮10%-15%的估值回调。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-30",
+      "basis": "沃什鹰派首秀（P类信号）→ 美联储秋季加息预期升温（高盛预测）→ 无风险利率上升压制成长股估值，对高估值、尚未盈利的AI公司（如xAI等）打击最大，但对已盈利的龙头影响较小。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-18 19:45:10"
+  "last_updated": "2026-06-19 07:44:05"
 }
