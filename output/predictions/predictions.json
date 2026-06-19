@@ -2137,7 +2137,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-20",
+      "content": "英特尔在2026年第三季度财报中会将先进封装业务单列披露，并给出乐观指引，带动A股先进封装设备材料板块出现一波主题行情。",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-10-15",
+      "basis": "信号来源陈立武访谈明确押注先进封装→传导逻辑CEO战略公开后需业绩验证→预判结论三季度财报是首个验证节点",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-20",
+      "content": "比亚迪、蔚来等中国品牌在2026年下半年香港新能源车市占率将维持在75%以上，股价获外资增配，其中比亚迪最为显著。",
+      "confidence": "高",
+      "signal_type": "F",
+      "verify_date": "2026-12-15",
+      "basis": "信号来源香港国产EV占比超八成→传导逻辑香港市场是品牌出海的高质量样本，持续热销将强化全球投资者对国产车综合竞争力的信心→预判结论龙头品牌将获估值重估",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-20",
+      "content": "吴清表态后一个月（至2026年7月19日），A股科创50、创业板指数将出现3%-8%的调整，但调整后资金将向有真实订单和业绩的AI、半导体龙头集中。",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-07-19",
+      "basis": "信号来源吴清严查借科技之名操纵市场→传导逻辑监管表态通常引发短期主题炒作退潮→预判结论调整后分化加剧，有基本面支撑的龙头将率先企稳反弹",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-19 19:59:04"
+  "last_updated": "2026-06-20 06:55:35"
 }
