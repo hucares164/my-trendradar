@@ -2170,7 +2170,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-20",
+      "content": "中际旭创（300308）在2026年9月30日前股价较当前上涨不低于15%",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-30",
+      "basis": "「鸿海董事长：每1GW数据中心资本开支470亿美元」信号确认AI算力高景气→叠加光模块龙头地位稳固（市占率超30%）、1.6T产品放量→预判股价受业绩驱动上涨",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-20",
+      "content": "美国政府将在2026年9月前正式宣布特朗普访华行程",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-30",
+      "basis": "「特朗普：今年将再次访问中国」信号（P类）→结合「美伊谈判推迟」但「霍尔木兹重启」等缓和迹象，特朗普需外交成果→预判年内访华确定",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-20",
+      "content": "欧盟将在2026年9月前正式宣布对中国电动汽车加征关税，税率不低于25%",
+      "confidence": "高",
+      "signal_type": "F",
+      "verify_date": "2026-09-30",
+      "basis": "「欧盟又谋划对中国汽车下黑手」信号（P类，多次出现为跨平台确认）→欧盟对中国电动汽车反补贴调查已持续→预判关税落地",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-20 06:55:35"
+  "last_updated": "2026-06-20 18:26:11"
 }
