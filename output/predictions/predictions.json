@@ -2203,7 +2203,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-21",
+      "content": "霍尔木兹海峡封锁将在30天内解除，油价回落至80美元以下",
+      "confidence": "中",
+      "signal_type": "G",
+      "verify_date": "2026-07-21",
+      "basis": "多条新闻显示美军已宣布结束封锁「霍尔木兹重启进行时：美军宣布结束封锁」，伊朗谈判代表团抵达瑞士，各方存在外交解决动机→短期封锁是博弈筹码而非长期战争信号→油价将随封锁解除而回落",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-21",
+      "content": "美国7月加息预期将导致全球科技股出现5-10%的回调",
+      "confidence": "高",
+      "signal_type": "F",
+      "verify_date": "2026-07-31",
+      "basis": "德银报告明确预测2026年加息50基点，7月可能提前加息「德银“向沃什投降”：今年将加息50基点」→资金将从高估值科技股流出→以纳斯达克指数为观察标的，当前估值处于高位",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-21",
+      "content": "英伟达将在2026年底被谷歌和博通的“AI芯片闭环”策略蚕食部分市场份额，股价跑输同业",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-12-31",
+      "basis": "华尔街见闻9位「学习英伟达“好榜样”，谷歌和博通都开始“有样学样”」→科技巨头自研芯片将降低对英伟达GPU的单一依赖→长期影响英伟达定价权和市场份额",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-20 18:26:11"
+  "last_updated": "2026-06-21 07:06:42"
 }
