@@ -2269,7 +2269,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-22",
+      "content": "深交所史上最大规模IPO上市首日将高开低走，但中长期仍将带动其所属板块估值重构",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-22",
+      "basis": "华尔街见闻排名3新闻「明天，深交所史上最大规模IPO来了」→市场传闻及资金虹吸效应已提前释放→市场情绪在IPO当天达到顶峰后恐获利回吐，但大市值上市对板块的标杆效应会在3个月内显现",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-22",
+      "content": "受美伊谈判不确定性及霍尔木兹海峡关闭的G类信号驱动，布伦特原油价格将在7月内突破90美元/桶，并带动A股油气、航运板块主题性行情",
+      "confidence": "低",
+      "signal_type": "F",
+      "verify_date": "2026-07-22",
+      "basis": "G类信号「伊朗军方宣布关闭霍尔木兹海峡」→全球石油运输供应链中断预期→油价脉冲式上涨。但因谈判也在进行，长期干扰概率低，推演传导至股票市场时确定性已下降",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-22",
+      "content": "消费龙头跨界算力的PEAD类信号将导致跨界公司股价在未来2周内平均上涨15%-25%，之后回调分化，仅有明确技术路线和客户订单的公司能维持涨势",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-07-06",
+      "basis": "PEAD类信号「消费龙头们跨界半导体、算力赛道 多家公司出现股价异动」→市场反应大于基本面短期变化→股价先涨后分化的经典PEAD漂移路径",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-21 18:59:44"
+  "last_updated": "2026-06-22 07:11:38"
 }
