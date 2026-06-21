@@ -2236,7 +2236,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-21",
+      "content": "微信“小微”Agent平台将在3个月内接入超过5万个小程序，带动核心ISV供应商收入同比增长超50%",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-21",
+      "basis": "微信Agent灰度上线M类信号→腾讯生态足够大且AI需求已验证→接入量跨越式增长",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-21",
+      "content": "磷酸铁锂价格将在2026年三季度末达到9万元/吨，头部正极材料公司（德方纳米）Q3单季净利润创历史新高",
+      "confidence": "高",
+      "signal_type": "PEAD",
+      "verify_date": "2026-09-30",
+      "basis": "磷酸铁锂价格翻倍PEAD类信号+供需缺口两年内难缓解→Q3旺季叠加储能需求爆发→业绩兑现",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-21",
+      "content": "沃什首秀后，Fed将在2026年Q3进行一次25bp的预防性加息，引发全球科技股（尤其纳斯达克）10%以上回调",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-21",
+      "basis": "野村警告预防性加息P类信号+沃什鹰派历史背景+美国通胀未明显下行→市场重新定价利率路径→科技股估值承压",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-21 07:06:42"
+  "last_updated": "2026-06-21 18:59:44"
 }
