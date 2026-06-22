@@ -2302,7 +2302,29 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-22",
+      "content": "智谱AI将在3个月内宣布完成新一轮融资，估值或突破2000亿港元，且GLM-5.2将获得至少2家国内头部互联网企业的大模型API服务合同。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-22",
+      "basis": "智谱市值破万亿+GLM-5.2刷屏华尔街→验证国产大模型商业化能力提升→多轮融资及大客户合作锁定，可关注智谱官方公告及第三方行业报告。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-22",
+      "content": "截至2026年9月底，A股半导体设备指数（如中证半导体材料设备指数）将跑赢沪深300指数10个百分点以上，驱动因素是国产替代订单加速落地。",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-09-30",
+      "basis": "中国对美反制措施升级+商务部列入出口管制管控名单→美国设备出口受限→国内晶圆厂加速转向国产设备→设备龙头订单景气度上行，可跟踪国内晶圆厂设备招标数据。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-22 07:11:38"
+  "last_updated": "2026-06-22 21:27:22"
 }
