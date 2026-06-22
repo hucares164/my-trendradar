@@ -2324,7 +2324,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-23",
+      "content": "受半导体设备龙头业绩预告超预期及政府采购禁令双重利好催化，北方华创和中微公司在未来3个月内股价将跑赢半导体指数20%以上。",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-09-23",
+      "basis": "财联社热门报道的PEAD类信号（净利最高增长134%）→政策强化国产替代逻辑→机构持仓提升→股价超额收益",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-23",
+      "content": "券商板块此轮行情将因巨额成交量支撑和金融科技加持，其持续性强于今年前两波上涨，中信证券、东方财富二季报业绩将出现显著拐点。",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-09-01",
+      "basis": "财联社热门信号（券商与科技股共振）+华尔街见闻信号（印花税高增88.8%）→明确证明市场活跃度趋势性提升→券商确定受益",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-23",
+      "content": "受“智谱市值破万亿”及“DeepSeek开源社区热度”影响，A股以“算力-应用”为核心的AI板块将迎来新一轮上涨，液冷服务器、光模块等基础设施环节将是领涨主力。",
+      "confidence": "低",
+      "signal_type": "F",
+      "verify_date": "2026-09-23",
+      "basis": "智谱上市+美股英伟达新产品发布→市场情绪及资本注入→产业链投资启动。F类情绪信号为主，确定性较低",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-22 21:27:22"
+  "last_updated": "2026-06-23 07:17:48"
 }
