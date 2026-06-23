@@ -2357,7 +2357,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-23",
+      "content": "问界系列（赛力斯）2026年7月交付量同比增长超100%",
+      "confidence": "高",
+      "signal_type": "F",
+      "verify_date": "2026-08-01",
+      "basis": "华为“兜底”的M类信号驱动→该承诺直接消除了消费者在智驾安全上的最大顾虑，预计将显著提升到店试驾和订单转化率→预计Q3交付数据将出现大幅跃升",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-23",
+      "content": "A股智能驾驶板块（如赛力斯、德赛西威）将因华为“兜底”事件在1-2周内出现5%-10%的上涨行情",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-07-07",
+      "basis": "市场情绪和华为强品牌号召力是短期驱动力，属于M类信号的短期情绪反应，但需警惕大盘系统性下行风险带来的回调压力→A股市场短期情绪反应是主要驱动力",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-23",
+      "content": "国产算力/服务器相关概念股（如中科曙光、浪潮信息）将在未来1个月相对跑输大盘",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-07-23",
+      "basis": "G区信号（全球AI泡沫论）和S类信号（GPU租赁价格回落）叠加传导，引发市场对国内AI资本开支过热的担忧→投资者可能因“黑色星期二”恐慌，对高估值算力板块进行获利了结并重新评估其需求增长的可持续性",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-23 07:17:48"
+  "last_updated": "2026-06-23 18:54:25"
 }
