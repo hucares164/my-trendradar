@@ -2390,7 +2390,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-24",
+      "content": "国产AI算力（含超算）相关公司（如海光信息、中科曙光）在未来一个季度内将获得超预期的政策性订单或合作公告，股价有超额收益。",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-09-24",
+      "basis": "PEAD类信号'灵晟登顶Top500'→该事件证明国产算力性能已达世界一流水平，将直接催化国家及行业对国产算力的采购信心和政策倾斜→带动相关公司业绩指引上调和订单增长",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-24",
+      "content": "汽车改装产业将在未来3个月出现明显的政策题材炒作，相关概念股（如玲珑轮胎、均胜电子关联的改装业务）将有20%以上的脉冲式行情。",
+      "confidence": "高",
+      "signal_type": "P",
+      "verify_date": "2026-09-24",
+      "basis": "P类信号'汽车后市场新政落地'→政策清晰定向开放改装、赛事市场，此为全新的增量市场，在A股历史上类似开放催生了巨大的主题炒作行情→资金将快速挖掘相关标的，形成主题性机会",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-24",
+      "content": "美股AI龙头（如英伟达）股价将在未来1-2个月内出现显著的阶段性底，带动A股AI算力板块触底反弹。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-24",
+      "basis": "S类F类信号'美股AI概念股遭全球抛售'+'高盛警告AI泡沫'→当前抛售处于情绪极端点，历史上每一次科技股出现'泡沫论'高潮后，往往出现技术性反弹或进入横盘分化期→全球AI浪潮并未退潮，业绩仍在增长，当前恐慌给予长期投资者入场机会",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-23 18:54:25"
+  "last_updated": "2026-06-24 07:08:18"
 }
