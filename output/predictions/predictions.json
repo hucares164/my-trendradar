@@ -2456,7 +2456,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-25",
+      "content": "存储芯片超级周期继续强化，A股半导体设备龙头（北方华创、中微公司）未来3个月区间涨幅将超20%",
+      "confidence": "高",
+      "signal_type": "F",
+      "verify_date": "2026-09-25",
+      "basis": "美光财报超预期(PEAD类信号)→AI存储需求持续至2028年→设备企业订单确定性强→股价将持续反映业绩上修",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-25",
+      "content": "人形机器人出货量预测上调（大摩）及宇树降价（S类信号）将带动A股核心零部件企业进入主升浪，绿的谐波、汇川技术相关业务营收增速超市场预期",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-09-25",
+      "basis": "大摩上调出货量预测→产业链备货加速→减速器、电机龙头率先受益→预计三季度财报将有积极体现",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-25",
+      "content": "豆包收费验证C端AI商业化模式，将引发国产AI概念股第二波行情，金山办公、万兴科技等AI应用公司将受益于市场风险偏好提升",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-25",
+      "basis": "豆包收费(S类信号)→国产AI进入变现期→付费模式复制到B端→AI应用板块估值修复",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-24 18:40:50"
+  "last_updated": "2026-06-25 07:03:07"
 }
