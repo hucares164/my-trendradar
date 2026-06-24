@@ -2423,7 +2423,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-24",
+      "content": "北方华创、中微公司等A股半导体设备龙头，在未来三个月内相对大盘指数将获得5%以上的超额收益。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-24",
+      "basis": "「A股再现半导体大肉签」「科技赛道全线回暖」→全球芯片股调整（S类）导致资金避险，叠加「工信部加强算力网规划建设」（P类）政策加持，国产替代逻辑强化→资金将从美股/韩股半导体回流至A股半导体设备龙头",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-24",
+      "content": "北方稀土、中国稀土股价在未来三个月内将显著跑赢上证指数，涨幅或超10%。",
+      "confidence": "低",
+      "signal_type": "F",
+      "verify_date": "2026-09-24",
+      "basis": "「两名日本人涉嫌走私稀土被中方拘留」（G类）→「商务部公布《产业链供应链安全调查工作办法》」（P类），叠加中日关系紧张，市场将预期中国收紧稀土出口管制→稀土价格有望上行→龙头公司业绩弹性释放。此为长链推演，确定性较低。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-24",
+      "content": "字节跳动的豆包专业版在2026年Q3末将公布付费用户数突破20万。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-30",
+      "basis": "「豆包正式推出收费版」（PEAD类）→腾讯/字节等大厂商业化变现加速是确定性趋势（PEAD类驱动，高置信度）→豆包凭借流量优势，付费用户转化具备基础。可验证：等待字节官方或第三方机构数据公布。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-24 07:08:18"
+  "last_updated": "2026-06-24 18:40:50"
 }
