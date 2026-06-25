@@ -2522,7 +2522,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-26",
+      "content": "美光科技股价在财报发布后5个交易日内将继续上涨5%-10%，带动A股存储芯片ETF（516770）同步上涨",
+      "confidence": "高",
+      "signal_type": "PEAD",
+      "verify_date": "2026-07-03",
+      "basis": "华尔街日报「财报炸裂！美光让空头闭嘴」及「美光科技市值首超Meta」→市场对HBM超级周期预期一致→短期资金持续涌入存储板块→A股存储芯片ETF跟随上涨。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-26",
+      "content": "苹果全球提价20%后，中国区Q3(7-9月) iPhone/Mac/iPad出货量将同比下降5%-10%",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-10-15",
+      "basis": "澎湃新闻「涨价约20%！苹果官宣涨价」及华尔街见闻「存储成本压力山大」→涨价抑制消费者购买意愿→叠加安卓竞品在高端市场加速渗透→苹果出货量承压。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-26",
+      "content": "在“新型能源体系建设‘十五五’规划”发布后1个月内，华为数字能源相关A股供应商（易事特、英维克、科华数据）将出现15%-20%的区间涨幅",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-07-25",
+      "basis": "财联社热门「国家发改委、国家能源局印发《新型能源体系建设‘十五五’规划》」→政策驱动叠加华为数字能源在光伏/储能领域的龙头地位→资金政策博弈逻辑启动→相关标的受益。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-25 18:34:11"
+  "last_updated": "2026-06-26 07:16:48"
 }
