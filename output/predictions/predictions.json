@@ -2489,7 +2489,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-25",
+      "content": "美光业绩将带动A股存储芯片（如兆易创新、北京君正）及相关封测（长电科技、通富微电）在1个月内出现一轮主题性上涨行情。",
+      "confidence": "高",
+      "signal_type": "PEAD",
+      "verify_date": "2026-07-25",
+      "basis": "美光【PEAD】信号（营收增三倍+供应紧张持续）→A股半导体板块历来有跟风美光财报的习惯→预判A股存储及封测板块在美光财报落地后的第一个交易日开启上涨",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-25",
+      "content": "受中美经贸关系反复影响（美国拉清单/中方反制），以及黄金破4000美元、A股半日4300股下跌等信号，市场风险偏好将维持低位，上证指数在未来1个月内大概率在3000-3100点区间震荡。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-07-25",
+      "basis": "【P类】【G类】信号（中美贸易摩擦升级）→【F类】信号（A股普跌、黄金暴跌）反映市场避险情绪→预判指数承压",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-25",
+      "content": "受新型能源体系建设“十五五”规划【P类】信号驱动，光伏、储能及特高压板块将在1月内跑赢大盘，尤其关注具备海外出口能力的逆变器和组件企业。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-07-25",
+      "basis": "政策【P类】信号（国家能源局发布规划）→强政策驱动，具有传导确定性→预判新能源基建板块获资金关注",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-25 07:03:07"
+  "last_updated": "2026-06-25 18:34:11"
 }
