@@ -2555,7 +2555,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-26",
+      "content": "预判1：半导体硅片（沪硅产业）将在2026年Q3营收环比增长超过15%",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-09-26",
+      "basis": "财联社报道「半导体硅片新一轮涨价潮将至」→国内晶圆厂锁定国产硅片供应链以稳定成本→沪硅产业订单量和价格双升，驱动营收增长",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-26",
+      "content": "预判2：苹果涨价将导致其在中国区iPhone和Mac销量在2026年Q3同比下滑10%-15%，华为高端机型出货量同期上升5%-8%",
+      "confidence": "中",
+      "signal_type": "S",
+      "verify_date": "2026-09-26",
+      "basis": "苹果官宣涨价多平台共振→消费者购买力承受压力→华为作为最大高端替代选择，承接部分安卓用户的升级需求",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-26",
+      "content": "预判3：A股半导体设备板块（北方华创、中微公司）将在未来3个月跑赢沪深300指数10%以上",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-26",
+      "basis": "半导体硅片涨价+地缘政治强化国产替代逻辑→国内晶圆厂资本开支持续增加→推升国产设备商订单预期",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-26 07:16:48"
+  "last_updated": "2026-06-26 18:43:51"
 }
