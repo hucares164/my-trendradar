@@ -2588,7 +2588,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-27",
+      "content": "通富微电2026年第三季度财报中，HBM相关封装收入占比将首次突破10%",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-10-25",
+      "basis": "信号来自美光不可取消长协及苹果涨价压垮泡沫新闻→产能向中国倾斜趋势确认→国内HBM封测企业迎来首个季度放量",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-27",
+      "content": "金山办公2026年Q3财报中，AI付费用户将带动整体订阅收入同比增长超过30%",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-10-20",
+      "basis": "信号来自深DSeek扩招+豆包专业版上线→AI办公工具进入货币化兑现期→金山office对标微软Office+AI的替代逻辑",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-27",
+      "content": "截至2026年9月底，A股半导体设备指数将跑赢创业板指数至少10个百分点",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-10-01",
+      "basis": "信号来自存储/内存成本推动第三波通胀+日本驻华大使请求会面未果→地缘压力强化自主可控炒作→半导体设备板块资金持续流入",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-26 18:43:51"
+  "last_updated": "2026-06-27 07:04:26"
 }
