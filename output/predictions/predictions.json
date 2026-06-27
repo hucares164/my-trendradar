@@ -2654,7 +2654,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-28",
+      "content": "国内功率半导体龙头（如斯达半导、士兰微）将在2026Q3季报中披露毛利率环比提升，且超市场预期。",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-09-15",
+      "basis": "财联社+36氪报道功率半导体涨价和订单爆满→涨价周期启动并传导初期→Q2/Q3毛利率体现→Q3季报预告确认",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-28",
+      "content": "先进封装龙头（长电科技、通富微电）将在2026下半年获得华为昇腾950为代表的国产AI芯片封装订单，营收增速在Q3可能提升至30%以上。",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-10-31",
+      "basis": "DeepSeek与智谱声明大规模使用华为昇腾→昇腾芯片需求放量→先进封装产能供不应求→相关公司Q3营收数据验证",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-28",
+      "content": "随着欧洲热浪持续，6-8月中国空调出口欧洲销量同比增长超50%，美的集团2026Q3海外收入增速超20%。",
+      "confidence": "高",
+      "signal_type": "F",
+      "verify_date": "2026-10-01",
+      "basis": "多个热搜确认欧洲高温和中国空调需求→S类信号供给不足→传导至中国出口数据→Q3财报验证",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-27 17:56:27"
+  "last_updated": "2026-06-28 07:02:03"
 }
