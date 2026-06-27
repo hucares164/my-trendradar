@@ -2621,7 +2621,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-27",
+      "content": "国产算力替代加速，华为昇腾950在2026年下半年国内大模型训练集群中的渗透率将从当前预估25%提升至40%以上",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-27",
+      "basis": "DeepSeek和智谱确认使用昇腾950[知乎信号",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-27",
+      "content": "随着AI电源订单持续爆满，国内功率半导体龙头（如新洁能、斯达半导）2026年Q3营收将连续第二个季度环比增长超15%，并引发新一轮估值修复",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-10-30",
+      "basis": "「功率半导体订单爆满」[PEAD类信号",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-27",
+      "content": "若美伊冲突在2026年7月内升级至封锁霍尔木兹海峡，国际油价将短期冲击90美元/桶，触发A股能源板块（中国石油、中国海油）阶段性上涨",
+      "confidence": "低",
+      "signal_type": "G",
+      "verify_date": "2026-07-27",
+      "basis": "美军空袭伊朗[G类信号",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-27 07:04:26"
+  "last_updated": "2026-06-27 17:56:27"
 }
