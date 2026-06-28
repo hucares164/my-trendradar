@@ -2687,7 +2687,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-28",
+      "content": "功率半导体板块将在2026年Q3迎来业绩加速释放，华润微、新洁能季度营收环比增速将超过20%",
+      "confidence": "高",
+      "signal_type": "PEAD",
+      "verify_date": "2026-10-30",
+      "basis": "财联社新闻「功率半导体订单爆满，厂商阶梯式调价」→AI算力需求带动电源管理芯片紧缺→头部企业产能利用率和ASP同步提升→预判其Q3业绩兑现超预期",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-28",
+      "content": "美的集团在欧洲市场的空调出货量将在2026年7-8月同比激增超过100%，推升其海外营收占比显著提升",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2026-09-15",
+      "basis": "华尔街见闻与凤凰网新闻「欧洲热浪空调卖爆，美的二手价超新机」→极端高温催化需求→美的欧洲渠道优势突出→预判暑期出货数据将大幅攀升",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-28",
+      "content": "美伊冲突如果持续升级，国际油价将在未来一个月内突破85美元/桶，从而短暂拉动A股能源及军工板块表现",
+      "confidence": "低",
+      "signal_type": "G",
+      "verify_date": "2026-07-30",
+      "basis": "华尔街见闻与澎湃新闻「美伊冲突升级」→地缘G类信号→中东石油供给风险上升→油价上涨传导至油气股和军工股",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-28 07:02:03"
+  "last_updated": "2026-06-28 18:20:24"
 }
