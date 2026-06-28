@@ -2720,7 +2720,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-29",
+      "content": "先进封装龙头公司（长电科技/通富微电/华天科技）未来一个季度将公告多条新产能投建或订单公告",
+      "confidence": "高",
+      "signal_type": "PEAD",
+      "verify_date": "2026-09-30",
+      "basis": "财联社报道“半导体龙头集体加注先进封装”为S类信号（供需变化）→信号来源为行业龙头公开表态，反映需求确定性高→传导逻辑：先进封装产能供不应求→龙头扩产，设备/材料上游率先受益→预判长电科技Q2-Q3新项目中标量环比上升20%以上",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-29",
+      "content": "中东地缘冲突不会升级为全面战争，油价在一周内回吐大部分涨幅，A股石油板块（中国石油）股价回吐5%左右",
+      "confidence": "中",
+      "signal_type": "G",
+      "verify_date": "2026-07-06",
+      "basis": "华尔街见闻报道“美军连续第二天空袭伊朗”为G类信号（地缘政治）→但RSS中“Dow Jones Futures Rise On U.S.-Iran News”和“Stock market today: ...as a halt to US-Iranian attacks is called”表明市场预期缓和→传导逻辑：地缘事件通常脉冲式反应→油价涨速快、持续时间短→预判一周内局势可控",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-29",
+      "content": "功率半导体涨价潮将推动斯达半导/士兰微等公司在7月公告一次产品提价，提价幅度5-10%",
+      "confidence": "中",
+      "signal_type": "S",
+      "verify_date": "2026-07-31",
+      "basis": "财联社报道“功率半导体再启阶梯式调价”为PEAD类信号→信号来源为下游厂商反馈，逻辑链短、时效强→传导逻辑：AI电源订单爆满→供需缺口→涨价传导到芯片厂商端→预判提价公告1个月内出现",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-28 18:20:24"
+  "last_updated": "2026-06-29 07:02:10"
 }
