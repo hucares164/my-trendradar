@@ -2786,7 +2786,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-30",
+      "content": "存储芯片板块（特别是长鑫存储关联股如通富微电、华天科技）将在未来6周内获得显著超额收益，源于市场对韩国集体诉讼事件的过度解读和乐观预期",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-08-15",
+      "basis": "华尔街见闻「苹果想从长鑫买内存」是需求侧验证→紧接着韩国巨头遭集体诉讼制造了供应缺口→市场将期待中国DRAM厂商快速填补→结论是相关标的将获资金追捧",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-30",
+      "content": "A股主板指数（沪指）将在9月底前突破4200点，主要由AI、半导体等“新质生产力”结构性板块带动，而非全面牛市",
+      "confidence": "低",
+      "signal_type": "F",
+      "verify_date": "2026-09-30",
+      "basis": "券商「A股相对外盘更具韧性」判断→叠加国常会加力AI政策（信号来源）→政策落地后将对AI相关企业订单产生实质影响（传导逻辑）→从而在Q3财报季引发市场价值重估行情（预判结论）",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-30",
+      "content": "尊界S800发布后，江淮汽车股价将出现“发布即利好出尽”的走势，叠加股东减持，预计一个月内股价下跌超15%",
+      "confidence": "高",
+      "signal_type": "F",
+      "verify_date": "2026-08-05",
+      "basis": "知乎热点「尊界S800发布之际江淮大股东大幅减持」是M类信号→股东减持是明确信号，表明内部人士在股价高点出货（传导逻辑）→市场将跟随该信号下调江淮估值，尤其在新车放量预期不明朗的情况下（预判结论）",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-29 20:23:53"
+  "last_updated": "2026-06-30 06:55:26"
 }
