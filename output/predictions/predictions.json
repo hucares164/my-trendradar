@@ -2753,7 +2753,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-29",
+      "content": "长鑫存储在2026年Q3将公布进入苹果供应链的实质进展，带动相关产业链（通富微电、长电科技）股价上涨10-20%。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-30",
+      "basis": "苹果转单长鑫新闻（华尔街见闻）→存储缺口持续扩大需要新供应商→长鑫的DDR5性能通过苹果认证→进入苹果供应链公告",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-29",
+      "content": "半导体设备指数（北方华创/中微公司/华海清科）将在未来2个月跑赢大盘15%以上，因全球扩产潮和中国需求叠加，设备企业订单增速将超预期。",
+      "confidence": "高",
+      "signal_type": "PEAD",
+      "verify_date": "2026-08-31",
+      "basis": "韩国扩产计划（华尔街见闻）+全球设备支出迈向2500亿美金（雅虎财经BofA报告）→设备供不应求→国内设备企业订单大增→业绩超预期与估值提升",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-29",
+      "content": "兆易创新将在全球最火存储ETF首次纳入后，于2026年Q3获得海外资金持续买入，股价创历史新高。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-30",
+      "basis": "全球最火存储ETF首次纳入兆易创新（36氪新闻）→外资被动配置+主动买入→纳入后资金流入效应延续→股价向上突破",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-29 07:02:10"
+  "last_updated": "2026-06-29 20:23:53"
 }
