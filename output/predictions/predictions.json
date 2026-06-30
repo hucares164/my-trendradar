@@ -2852,7 +2852,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-07-01",
+      "content": "国产存储（长鑫存储及供应链）将迎来业绩密集释放期，AI算力所需的HBM和DDR5带动长鑫出货量显著攀升",
+      "confidence": "高",
+      "signal_type": "PEAD",
+      "verify_date": "2026-10-31",
+      "basis": "腾讯长鑫约200亿长协→高确定性订单驱动晶圆厂产能利用率回升→带动其设备商（北方华创）及封测（长电科技）订单增长→预判2026年Q3/Q4财报将出现盈利超预期。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-07-01",
+      "content": "八部门规划将引发智算中心新一轮建设高潮，直接利好温控和电源环节企业，相关公司年内营收将同比提升超50%",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2027-01-01",
+      "basis": "八部门推动工业互联网与智算设施规划→政策落地后将带动地方政府和运营商集中启动招标→英维克等空调温控厂商作为液冷方案核心供应商获得海量订单→预判2026全年业绩因项目建设周期延至2027年初得到确认。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-07-01",
+      "content": "寒武纪将在2026年下半年出现一轮显著回调，高估值无法匹配AI芯片商业化渗透率缓慢的现实",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-09-30",
+      "basis": "央视提示风险+公司自身提示风险→PEAD类信号，前期涨幅依赖情绪而非实绩→国产芯片在英伟达高端卡限制下仍处追赶，大客户采购谨慎→预判估值将向中期合理区间回归，回调幅度可能超30%。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-30 18:48:55"
+  "last_updated": "2026-07-01 07:10:41"
 }
