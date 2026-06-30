@@ -2819,7 +2819,40 @@
       "status": "pending",
       "actual_result": "",
       "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-30",
+      "content": "存储板块景气度将持续至2027年，以长鑫存储为核心的国产DRAM供应链企业（如通富微电、深科技）将在2026年Q3财报中体现业绩改善。",
+      "confidence": "高",
+      "signal_type": "PEAD",
+      "verify_date": "2026-10-31",
+      "basis": "「腾讯被曝与长鑫存储签下超200亿长协大单」→下游大客户锁定产能标志着国产存储从“可用”到“好用”的转折，订单可预测性强，将直接增厚代工和封测环节业绩→预判趋势性增长。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-30",
+      "content": "北方华创、中微公司2026年全年营收增速将分别超过50%和40%，股价将随订单落地而继续上行。",
+      "confidence": "中",
+      "signal_type": "PEAD",
+      "verify_date": "2027-04-30",
+      "basis": "「中方将日本20家实体列入出口管控名单」→日本设备进入大陆受阻，国内晶圆厂被迫导入国产设备，验证窗口缩短→预判头部设备商订单爆发。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
+    },
+    {
+      "date": "2026-06-30",
+      "content": "A股主板与科创板的分化将加剧，科创50指数在下半年（至2026年12月31日）仍有至少15%的上行空间，而恒生指数则受制于流动性虹吸，涨幅有限。",
+      "confidence": "中",
+      "signal_type": "F",
+      "verify_date": "2026-12-31",
+      "basis": "上半年科创50涨64%而恒生指数跌超10%均为事实→AI硬件需求与部分港股“旧经济”企业形成鲜明对比，资金流出后难以回流→预判结构性牛熊将持续。",
+      "status": "pending",
+      "actual_result": "",
+      "deviation_reason": ""
     }
   ],
-  "last_updated": "2026-06-30 06:55:26"
+  "last_updated": "2026-06-30 18:48:55"
 }
